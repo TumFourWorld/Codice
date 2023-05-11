@@ -9,6 +9,5 @@
         <h1><%= "HOME" %></h1>
         <br/>
         <a href="hello-servlet">Hello Servlet</a>
-        <a href="hello-servlet">Hello Servlet2</a>
     </body>
 </html>
