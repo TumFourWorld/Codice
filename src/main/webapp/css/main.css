@@ -11,9 +11,6 @@ body {
     padding: 20px 10px;
 }
 
-.header top {
-    text-align: center;
-}
 
 .header a {
     float: left;
@@ -29,7 +26,10 @@ body {
 .header a.logo {
     font-size: 25px;
     font-weight: bold;
+    text-align: center;
+    color: red;
 }
+
 
 .header a:hover {
     background-color: #ddd;
