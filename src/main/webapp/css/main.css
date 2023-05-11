@@ -82,7 +82,7 @@ textarea{
 
 .header-right {
     float: right;
-    padding-right: 1%;
+    padding-right: 2%;
 }
 
 @media screen and (max-width: 500px) {
