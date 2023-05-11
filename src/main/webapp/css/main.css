@@ -24,10 +24,10 @@ body {
 }
 
 .header a.logo {
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
-    text-align: center;
     color: black;
+    padding-left: 2%;
 }
 
 
@@ -43,6 +43,7 @@ body {
 
 .header-right {
     float: right;
+    padding-right: 2%;
 }
 
 @media screen and (max-width: 500px) {
