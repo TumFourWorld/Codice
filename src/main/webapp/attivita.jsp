@@ -14,7 +14,7 @@
     <jsp:include page="sezioni/header.jsp"/>
 </header>
 <body>
-    <h1><%= "attivita" %></h1>
+    <h1><%= "attività" %></h1>
 </body>
 <footer>
     <jsp:include page="sezioni/footer.jsp"/>

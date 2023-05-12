@@ -1,10 +1,36 @@
-* {
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html{
+    height: 100%;
     box-sizing: border-box;
 }
 
 body {
+    position: relative;
     margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    padding: 10px;
+    width: 40%;
+    height: 10%;
+    resize: none;
+    font-size: 0.6rem;
+    border-radius: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
 }
 
 .header {
@@ -31,7 +57,7 @@ body {
     text-align: center;
     padding: 12px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 25px;
     border-radius: 4px;
 }
@@ -73,18 +99,21 @@ body {
 }
 
 .footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left:0;
+    padding: 0.5rem;
+    text-align: center;
     overflow: hidden;
     background-color: #f1f1f1;
-    padding: 20px 10px;
 }
 
 .footer a {
-    float: left;
     color: black;
     text-align: center;
-    padding: 12px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 25px;
     border-radius: 4px;
 }

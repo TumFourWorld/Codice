@@ -8,6 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link href="css/main.css" rel="stylesheet" type="text/css">
 
+<head>
+    <link rel="icon" href="../logo/Logo.ico" />
+</head>
 <div class="header">
     <h2 class="logo">TUM4WORLD</h2>
     <div class="header-right">

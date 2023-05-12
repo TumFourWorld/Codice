@@ -12,7 +12,8 @@
         <br/>
         <a href="hello-servlet">Hello Servlet</a>
     </body>
-    <footer>
-        <jsp:include page="sezioni/footer.jsp"/>
-    </footer>
+
+
+    <jsp:include page="sezioni/footer.jsp"/>
+
 </html>
