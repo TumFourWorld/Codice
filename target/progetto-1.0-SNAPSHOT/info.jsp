@@ -10,15 +10,13 @@
 <head>
     <title>TUM4WORLD</title>
 </head>
+<header>
+    <jsp:include page="sezioni/header.jsp"/>
+</header>
 <body>
-    <div>
-        <a href="index.jsp">Home</a>
-        <a href="attivita.jsp">attivita</a>
-        <a href="contatti.jsp">contatti</a>
-        <a href="#">info</a>
-        <a href="registrazione.jsp">registrazione</a>
-        <a href="login.jsp">login</a>
-    </div>
     <h1><%= "Info" %></h1>
 </body>
+<footer>
+    <jsp:include page="sezioni/footer.jsp"/>
+</footer>
 </html>

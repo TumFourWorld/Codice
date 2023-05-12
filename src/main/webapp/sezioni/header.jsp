@@ -9,9 +9,9 @@
 <link href="css/main.css" rel="stylesheet" type="text/css">
 
 <div class="header">
-    <a href="#default" class="logo">TUM4WORLD</a>
+    <h2 class="logo">TUM4WORLD</h2>
     <div class="header-right">
-        <a href="index.jsp" class="">HOME</a>
+        <a href="index.jsp">HOME</a>
         <a href="info.jsp">CHI SIAMO</a>
         <a href="contatti.jsp">CONTATTI</a>
         <a href="attivita.jsp">ATTIVITÀ</a>

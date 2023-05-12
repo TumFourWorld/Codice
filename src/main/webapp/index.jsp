@@ -4,11 +4,16 @@
 <head>
     <title>TUM4WORLD</title>
 </head>
+    <header>
+        <jsp:include page="sezioni/header.jsp"/>
+    </header>
     <body>
-    <jsp:include page="header.jsp"/>
         <h1><%= "HOME" %></h1>
         <br/>
         <a href="hello-servlet">Hello Servlet</a>
         <a href="hello-servlet">Hello Servlet2</a>
     </body>
+    <footer>
+        <jsp:include page="sezioni/footer.jsp"/>
+    </footer>
 </html>
