@@ -15,6 +15,25 @@
     <jsp:include page="sezioni/header.jsp"/>
 </header>
 <body>
+<%
+    String selectedImage = request.getParameter("option");
+    out.println(selectedImage);;
+    String text = "";
+    if ("img1".equals(selectedImage)) {
+        out.println("<p>text1</p>");
+        text = "testo1";
+    } else if ("image2.jpg".equals(selectedImage)) {
+        text = "testo2";
+    } else if ("image3.jpg".equals(selectedImage)) {
+        text = "Testo3";
+    }
+%>
+
+<h2>Selected Image:</h2>
+<img src="<%= selectedImage %>">
+
+<h2>Corresponding Text:</h2>
+<p><%= text %></p>
 
 </body>
 <footer>
