@@ -15,7 +15,13 @@
     <jsp:include page="sezioni/header.jsp"/>
 </header>
 <body>
-    <h1><%= "attività" %></h1>
+    <h1><%= "ATTIVITÀ" %></h1>
+    <a href="pag-attivita/att1.jsp"><img src="img/att1-img1.png" alt="ATTIVITÀ 1" class="img-att1" style="float: left"></a> <%--togliere style e modificare class css --%>
+    <p>ATTIVITA 1 DESCRIZIONE</p>
+    <form>
+
+    </form>
+
 </body>
 <footer>
     <jsp:include page="sezioni/footer.jsp"/>

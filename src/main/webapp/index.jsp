@@ -12,6 +12,9 @@
         <h1><%= "HOME" %></h1>
         <br/>
         <a href="hello-servlet">Hello Servlet</a>
+        <br><br><br>
+        <a href="./file/volantinotum4world.pdf" download>Download Volantino</a>
+
     </body>
 
 

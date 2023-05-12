@@ -8,9 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>TUM4WORLD</title>
+    <link rel="icon" href="logo/Logo.ico"/>
 </head>
+<header>
+    <jsp:include page="sezioni/header.jsp"/>
+</header>
 <body>
 
 </body>
+<footer>
+    <jsp:include page="sezioni/footer.jsp"/>
+</footer>
 </html>
