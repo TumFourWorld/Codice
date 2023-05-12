@@ -22,6 +22,7 @@
     if ("img1".equals(selectedImage)) {
         out.println("<p>text1</p>");
         text = "testo1";
+        selectedImage = "att1-img1.png";
     } else if ("image2.jpg".equals(selectedImage)) {
         text = "testo2";
     } else if ("image3.jpg".equals(selectedImage)) {
@@ -30,7 +31,7 @@
 %>
 
 <h2>Selected Image:</h2>
-<img src="<%= selectedImage %>">
+<img src="img/<%= selectedImage %>">
 
 <h2>Corresponding Text:</h2>
 <p><%= text %></p>
