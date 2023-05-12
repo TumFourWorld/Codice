@@ -10,6 +10,7 @@
 <head>
     <title>TUM4WORLD</title>
     <link rel="icon" href="logo/Logo.ico"/>
+    <script src="script/script.js"></script>
 </head>
 
     <header>
@@ -18,21 +19,21 @@
 
     <body>
         <h1><%= "Registrazione" %></h1>
-        <form action="#" >
-            Nome <input type="text" placeholder="nome" value="nome">
-            Cognome <input type="text" placeholder="cognome">
+        <form name="singUpForm" action="#" >
+            Nome <input name="nome" type="text" placeholder="nome" value="nome">
+            Cognome <input name="cognome" type="text" placeholder="cognome">
             <br>
-            Data di Nascita <input type="date">
-            Email <input type="text" placeholder="indirizzo email">
+            Data di Nascita <input name="dataNascita" type="date">
+            Email <input name="email" type="text" placeholder="indirizzo email">
             <br>
             Telefono <input type="text" placeholder="num telefono">
             <br>
             Simpatizzante <input type="checkbox">
             <br>
-            Username <input type="text" placeholder="username">
-            Password <input type="text" placeholder="password">
+            Username <input name="username" type="text" placeholder="username">
+            Password <input name="password" type="text" placeholder="password">
             <br>
-            <button type="submit">Iscriviti</button>
+            <button name="submit" type="submit" onclick="ValidateEmail(document.singUpForm.email)">Iscriviti</button>
             <button type="reset">Reset</button>
         </form>
     </body>
