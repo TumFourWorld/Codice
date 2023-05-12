@@ -9,12 +9,13 @@
         <jsp:include page="sezioni/header.jsp"/>
     </header>
     <body>
+    <div class="container">
         <h1><%= "HOME" %></h1>
         <br/>
         <a href="hello-servlet">Hello Servlet</a>
         <br><br><br>
-        <a href="./file/volantinotum4world.pdf" download>Download Volantino</a>
-
+        <a href="./file/volantinotum4world.pdf" download class="button">Download Volantino</a>
+    </div>
     </body>
 
 

@@ -16,6 +16,24 @@ body {
     min-height: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
 
 label{
     display: block;
@@ -88,6 +106,23 @@ textarea{
 .header.contatti{
     background-color: red;
 }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
 
 @media screen and (max-width: 500px) {
     .header a {
