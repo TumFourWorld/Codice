@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>TUM4WORLD</title>
+    <link rel="icon" href="logo/Logo.ico"/>
 </head>
 
     <header>
