@@ -13,11 +13,25 @@
 </head>
 <header>
     <jsp:include page="sezioni/header.jsp"/>
+    <script src="functions/script.js"></script>
 </header>
 <body>
+<div class="container">
     <h1><%= "Login" %></h1>
+    <%-- FORM DA ELIMINARE E SOLO PER TESTARE LMAO (vai a ultima riga) --%>
+    <button onclick="showConfirmation()">Conferma</button>
+    <div id="confirmationBox" class="confirmation-box">
+        <div class="confirmation-content">
+            <h2>Sei sicuro?</h2>
+            <p>Questa azione non puó essere cancellata.</p>
+            <button onclick="confirmAction()">Conferma</button>
+            <button onclick="cancelAction()">Annulla</button>
+        </div>
+    </div>
+</div>
 </body>
 <footer>
     <jsp:include page="sezioni/footer.jsp"/>
 </footer>
 </html>
+<%-- haha coglione --%>
