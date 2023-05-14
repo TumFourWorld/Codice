@@ -36,6 +36,8 @@
 <h2>Corresponding Text:</h2>
 <p><%= text %></p>
 
+<button onclick="window.location.href='attivita.jsp'">Back</button>
+
 </body>
 <footer>
     <jsp:include page="sezioni/footer.jsp"/>

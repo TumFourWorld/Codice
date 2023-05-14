@@ -15,6 +15,7 @@ body {
     padding-bottom: 6rem;
     min-height: 100%;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 h1 {
     font-size: 28px;
@@ -33,6 +34,7 @@ p {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
+
 }
 
 label{
@@ -136,7 +138,6 @@ textarea{
     }
 
 }
-
 /*confirmation pop up*/
 .confirmation-box {
     display: none;
@@ -191,3 +192,16 @@ textarea{
     line-height: 25px;
     border-radius: 4px;
 }
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
