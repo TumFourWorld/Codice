@@ -9,8 +9,5 @@
         <module name="progetto" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="TUM4WORLD" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

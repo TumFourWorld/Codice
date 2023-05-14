@@ -29,7 +29,7 @@
             <option value="lamentela">Lamentela</option>
             <option value="rimborso">Rimborso</option>
             <option value="informazioni">Informazioni</option>
-            <option value="altro">Altro</option>
+            <option value="altro">Altro...</option>
         </select>
         <label for="textarea">Dettagli della tua richiesta :</label>
         <textarea id="textarea" maxlength=""></textarea>
