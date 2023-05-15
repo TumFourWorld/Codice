@@ -12,12 +12,8 @@
     <link rel="icon" href="logo/Logo.ico"/>
     <script src="script/script.js"></script>
 </head>
-
-    <header>
-        <jsp:include page="sezioni/header.jsp"/>
-    </header>
-
-    <body>
+<body>
+<jsp:include page="sezioni/header.jsp"/>
         <h1><%= "Registrazione" %></h1>
         <form name="singUpForm" action="#" >
             Nome <input name="nome" type="text" placeholder="nome" value="nome">

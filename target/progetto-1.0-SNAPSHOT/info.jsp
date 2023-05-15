@@ -11,10 +11,10 @@
     <title>TUM4WORLD</title>
     <link rel="icon" href="logo/Logo.ico"/>
 </head>
-<header>
-    <jsp:include page="sezioni/header.jsp"/>
-</header>
+
 <body>
+<jsp:include page="sezioni/header.jsp"/>
+
     <h1><%= "Info" %></h1>
 </body>
 <footer>

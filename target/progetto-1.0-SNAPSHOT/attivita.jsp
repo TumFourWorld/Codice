@@ -18,10 +18,9 @@
         }
     </style>
 </head>
-<header>
-    <jsp:include page="sezioni/header.jsp"/>
-</header>
 <body>
+<jsp:include page="sezioni/header.jsp"/>
+
     <h1><%= "ATTIVITÀ" %></h1>
     <p>ATTIVITA 1 DESCRIZIONE</p>
     <%--<img src="img/att1-img1.png" alt="ATTIVITÀ 1" class="img-att1" style="float: left"></a><br>--%> <%--togliere style e modificare class css --%>
