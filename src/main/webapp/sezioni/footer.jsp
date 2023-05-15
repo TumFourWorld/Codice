@@ -9,6 +9,6 @@
 <link href="css/main.css" rel="stylesheet" type="text/css">
 
 
-<div class="footer">
+<footer>
     <a>Tum4World, 28000, CiagoMerda, Italia</a>
-</div>
+</footer>

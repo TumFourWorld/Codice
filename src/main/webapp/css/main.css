@@ -6,12 +6,20 @@
     padding: 0;
 }
 
+body {
+    background-color: #0e606e;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
     background-color: #24252a;
+}
+
+.container {
+    margin: 20px 15px;
 }
 
 .logo {
@@ -182,19 +190,23 @@ header {
 
 }
 
-.footer {
-    position: absolute;
+footer {
+    font-family: "Monsterrat", sans-serif;
+    font-weight: 250;
+    position: fixed;
     right: 0;
     bottom: 0;
     left:0;
-    padding: 0.5rem;
+    width: 100%;
+    padding: 25px;
+    margin-top: 10px;
     text-align: center;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #24252a;
 }
 
-.footer a {
-    color: black;
+footer a {
+    color: whitesmoke;
     text-align: center;
     text-decoration: none;
     font-size: 12px;
