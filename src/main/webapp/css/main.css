@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-* {
+*:before, *:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,6 +12,10 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-image: url("https://i.pinimg.com/originals/75/ea/8e/75ea8e2a0b694e6d75405becd7483db3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 header {
@@ -22,22 +26,12 @@ header {
     background-color: #24252a;
 
 }
-.wrapper {
-    min-height: 100%;
-    position: relative;
-    padding-bottom: 50px; /* distanzio footer da elementi in pagina */
-}
-
-.content {
-    padding-bottom: 2%; /* Altezza desiderata del footer */
-    padding-top: 20px;
-}
 
 .sectionhome {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     font-family: "Lato";
-    text-align: center;
+    text-align: left;
     background-color: #24252a;
     padding: 40px;
     width: 60%;
@@ -68,7 +62,6 @@ header {
     color: whitesmoke;
     font-size: 15px;
     margin-right: 20px;
-    margin-left: 20px;
     margin-top: 10px;
 
 }
@@ -252,10 +245,9 @@ footer {
     right: 0;
     bottom: 0;
     left:0;
-    width: 100%;
     text-align: center;
     padding: 20px;
-    /*overflow: hidden;*/
+    overflow: hidden;
     background-color: #24252a;
 }
 
@@ -327,3 +319,27 @@ footer a {
 .card button:hover {
     background: #ddd;
 }
+
+.sectionhome button {
+    padding: 20px;
+    display: block;
+    margin: auto;
+    color: black;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    background: white;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.sectionhome button:hover {
+    background: #0e606e;
+    color: whitesmoke;
+    transition: 0.1s;
+}
+
+.sectionhome a {
+    text-decoration: none;
+}
+

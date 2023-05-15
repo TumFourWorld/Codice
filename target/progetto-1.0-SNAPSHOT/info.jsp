@@ -13,11 +13,13 @@
 </head>
 
 <body>
-<jsp:include page="sezioni/header.jsp"/>
+<div class="wrapper">
+    <jsp:include page="sezioni/header.jsp"/>
+    <div class="content">
+        <h1><%= "Info" %></h1>
+    </div>
+<jsp:include page="sezioni/footer.jsp"/>
 
-    <h1><%= "Info" %></h1>
+</div>
 </body>
-<footer>
-    <jsp:include page="sezioni/footer.jsp"/>
-</footer>
 </html>
