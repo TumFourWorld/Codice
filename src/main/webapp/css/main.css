@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 *,
 *:before,
 
@@ -67,59 +68,75 @@ textarea{
 }
 
 .header {
+    background-color: #353935;
     overflow: hidden;
-    background-color:  hsla(0, 0%, 0%, 0);
-    padding: 20px 10px;
+    padding: 20px;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 2%; /*margine per txt sotto*/
 }
 
 .header h2 {
     float: left;
     color: black;
     text-align: center;
-    padding: 12px;
     text-decoration: none;
     font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
-    margin: 0px;
 }
 
 .header a {
     float: left;
-    color: black;
+    color: whitesmoke; /*COLORE SCRITTE HOME CONTATTI ECC*/
     text-align: center;
     padding: 12px;
     text-decoration: none;
     font-size: 15px;
     line-height: 25px;
     border-radius: 4px;
+    margin: 5px;
 }
 
 .header h2.logo {
     font-size: 28px;
     font-weight: bold;
-    color: ghostwhite;
+    color: whitesmoke; /*colore scritta logo*/
+    font-family: "Monsterrat", sans-serif;
+    /*color: ghostwhite;*/ /*STO SCHIFO FA TUTTO HEADER BIANCO NERO STATTE FERMO ALEX TI PICCHIO TI GIURO*/
     padding-left: 2%;
+}
+
+.header h2.logo span{ /*4 smoll*/
+    font-weight: 250;
 }
 
 
 .header a:hover {
-    background-color: #ddd;
-    color: black;
+    border-radius: 12px;
+    background-color: #568F99; /*boh*/
+    color: whitesmoke; /*quando hover su bottone cambio colore scritta*/
+    trasition: .5s;
 }
 
 .header a.active {
-    background-color: lightblue;
-    color: white;
+    background-color: #0e606e; /*boh*/
+    /*color: white;*/
     border-radius: 10px;
 }
 
 .header-right {
-    background-color: ghostwhite;
+    display: block;
+    font-family: "Monsterrato", sans-serif;
+    /*background-color: ghostwhite;*/
     border-radius: 25px;
     float: right;
     padding-right: 2%;
+    padding-left: 2%;
+    text-align: center;
+
 }
+
 
 .header.contatti{
     background-color: red;

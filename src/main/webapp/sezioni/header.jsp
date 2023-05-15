@@ -16,9 +16,8 @@
     String currentPage = url.substring(url.lastIndexOf("/") + 1);
 %>
 
-
 <div class="header">
-    <h2 class="logo">TUM4WORLD</h2>
+    <h2 class="logo">TUM<span>4</span>WORLD</h2>
     <div class="header-right">
         <a href="index.jsp" class="<%= currentPage.equals("index.jsp") ? "active" : "" %>">HOME</a>
         <a href="info.jsp" class="<%= currentPage.equals("info.jsp") ? "active" : "" %>">CHI SIAMO</a>
