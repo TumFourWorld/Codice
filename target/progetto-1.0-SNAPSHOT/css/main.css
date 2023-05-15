@@ -260,51 +260,9 @@ footer a {
     border-radius: 4px;
 }
 
-.card {
-    width: 500px;
-    height: 600px;
-    border-radius: 25px;
-    background: #0e606e;
-    display: flex;
-    flex-direction: column;
-    margin-left: 37%;
-}
 
-.card span {
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    display: block;
-    font-size: 25px;
-}
-
-.card .info {
-    font-weight: 400;
-    color: white;
-    display: block;
-    text-align: left;
-    font-size: 15px;
-    margin: 20px;
-}
-
-.card .img {
-    background-image: url("../img/Logo.png");
-    background-size:contain;
-    width: 250px;
-    height: 250px;
-    border-radius: 15px;
-    margin: auto;
-}
-
-.card a {
-    color: ghostwhite;
-}
-
-.card a:hover {
-    color: lightblue;
-}
-
-.card button {
+.sectionhome button {
+    text-decoration: none;
     padding: 20px;
     display: block;
     margin: auto;
@@ -312,34 +270,16 @@ footer a {
     border-radius: 25px;
     border: none;
     font-weight: bold;
-    background: white;
-    margin-bottom: 25px;
-}
-
-.card button:hover {
-    background: #ddd;
-}
-
-.sectionhome button {
-    padding: 20px;
-    display: block;
-    margin: auto;
-    color: black;
-    border-radius: 25px;
-    border: none;
-    font-weight: bold;
-    background: white;
+    background: whitesmoke;
     margin-bottom: 25px;
     text-transform: uppercase;
 }
 
-.sectionhome button:hover {
-    background: #0e606e;
-    color: whitesmoke;
-    transition: 0.1s;
-}
 
 .sectionhome a {
     text-decoration: none;
+    color:  #0e606e;
+    background: whitesmoke;
 }
+
 

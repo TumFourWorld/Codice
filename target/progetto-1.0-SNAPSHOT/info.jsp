@@ -13,8 +13,7 @@
 </head>
 
 <body>
-<div class="wrapper">
-    <jsp:include page="sezioni/header.jsp"/>
+<jsp:include page="sezioni/header.jsp"/>
     <div class="content">
         <h1><%= "Info" %></h1>
     </div>
