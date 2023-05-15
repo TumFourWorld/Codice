@@ -12,10 +12,10 @@
     <link rel="icon" href="logo/Logo.ico"/>
     <script src="script/script.js"></script>
 </head>
-<header>
-    <jsp:include page="sezioni/header.jsp"/>
-</header>
+
 <body>
+<jsp:include page="sezioni/header.jsp"/>
+
     <h1><%= "contatti" %></h1>
     <form name="contactForm" action="#" >
         Nome <input name="nome" type="text" placeholder="nome">

@@ -10,12 +10,11 @@
 <head>
     <title>TUM4WORLD</title>
     <link rel="icon" href="logo/Logo.ico"/>
-</head>
-<header>
-    <jsp:include page="sezioni/header.jsp"/>
     <script src="functions/script.js"></script>
-</header>
+
+</head>
 <body>
+<jsp:include page="sezioni/header.jsp"/>
 <div class="container">
     <h1><%= "Login" %></h1>
     <%-- FORM DA ELIMINARE E SOLO PER TESTARE LMAO (vai a ultima riga) --%>
