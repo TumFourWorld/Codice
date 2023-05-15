@@ -32,9 +32,6 @@
             <button name="submit" type="submit" onclick="ValidateEmail(document.singUpForm.email)">Iscriviti</button>
             <button type="reset">Reset</button>
         </form>
-    </body>
-
-    <footer>
-        <jsp:include page="sezioni/footer.jsp"/>
-    </footer>
+<jsp:include page="sezioni/footer.jsp"/>
+</body>
 </html>

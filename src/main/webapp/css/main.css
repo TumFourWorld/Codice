@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 * {
     box-sizing: border-box;
@@ -7,7 +8,10 @@
 }
 
 body {
-    background-color: #0e606e;
+    background-color: #818185;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -16,10 +20,61 @@ header {
     align-items: center;
     padding: 30px 10%;
     background-color: #24252a;
+
+}
+.wrapper {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 50px; /* distanzio footer da elementi in pagina */
+}
+
+.content {
+    padding-bottom: 2%; /* Altezza desiderata del footer */
+    padding-top: 20px;
+}
+
+.sectionhome {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Lato";
+    text-align: center;
+    background-color: #24252a;
+    padding: 40px;
+    width: 60%;
+    margin: 20px auto 0 auto;
+    border-radius: 40px;
+    margin-bottom: 15px;
+}
+
+.sectionhome h1 {
+    font-family: "Lato";
+    color: whitesmoke;
+    font-size: 25px;
+    margin: 0;
+    padding-top: 10px;
+    color: #0088a9;
+    font-weight: bold;
+}
+
+.sectionhome img {
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 20px;
+}
+
+.sectionhome p {
+    font-family: "Lato";
+    color: whitesmoke;
+    font-size: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+
 }
 
 .container {
-    margin: 20px 15px;
+    height: 100%;
 }
 
 .logo {
@@ -191,17 +246,16 @@ header {
 }
 
 footer {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Lato";
     font-weight: 250;
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
     left:0;
     width: 100%;
-    padding: 25px;
-    margin-top: 10px;
     text-align: center;
-    overflow: hidden;
+    padding: 20px;
+    /*overflow: hidden;*/
     background-color: #24252a;
 }
 

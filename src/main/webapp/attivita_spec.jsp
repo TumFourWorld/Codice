@@ -35,9 +35,7 @@
 
 <h2>Corresponding Text:</h2>
 <p><%= text %></p>
+<jsp:include page="sezioni/footer.jsp"/>
 
 </body>
-<footer>
-    <jsp:include page="sezioni/footer.jsp"/>
-</footer>
 </html>
