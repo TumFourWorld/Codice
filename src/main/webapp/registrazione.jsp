@@ -10,28 +10,37 @@
 <head>
     <title>TUM4WORLD</title>
     <link rel="icon" href="logo/Logo.ico"/>
+    <link href="css/info.css" rel="stylesheet" type="text/css">
     <script src="script/script.js"></script>
 </head>
 <body>
 <jsp:include page="sezioni/header.jsp"/>
-        <h1><%= "Registrazione" %></h1>
-        <form name="singUpForm" action="#" >
-            Nome <input name="nome" type="text" placeholder="nome" value="nome">
-            Cognome <input name="cognome" type="text" placeholder="cognome">
-            <br>
-            Data di Nascita <input name="dataNascita" type="date">
-            Email <input name="email" type="text" placeholder="indirizzo email">
-            <br>
-            Telefono <input type="text" placeholder="num telefono">
-            <br>
-            Simpatizzante <input type="checkbox">
-            <br>
-            Username <input name="username" type="text" placeholder="username">
-            Password <input name="password" type="text" placeholder="password">
-            <br>
-            <button name="submit" type="submit" onclick="ValidateEmail(document.singUpForm.email)">Iscriviti</button>
-            <button type="reset">Reset</button>
+<div style=" justify-content: center;   align-items: center; display: flex; height: 100%">
+        <form name="singUpForm" action="#" class="form">
+            <p class="title">Registrati </p>
+            <div class="flex">
+                <input name="nome" type="text" placeholder="nome" class="input">
+
+                <input name="cognome" type="text" placeholder="cognome" class="input">
+            </div>
+
+            <input name="dataNascita" type="date" class="input">
+            <input name="email" type="text" placeholder="indirizzo email" class="input">
+
+            <input type="text" placeholder="num telefono" class="input">
+            <div class="flex">
+                Simpatizzante <input name="scelta" type="radio" class="input">
+                Aderente <input name="scelta" type="radio" class="input">
+            </div>
+            <input name="username" type="text" placeholder="username" class="input">
+
+            <input name="password" type="text" placeholder="password" class="input">
+            <div class="flex">
+            <button name="submit" class="submit" type="submit" onclick="ValidateEmail(document.singUpForm.email)">Iscriviti</button>
+            <button type="reset" class="submit" style="background-color: red">Reset</button>
+            </div>
         </form>
+</div>
     </body>
 
     <footer>

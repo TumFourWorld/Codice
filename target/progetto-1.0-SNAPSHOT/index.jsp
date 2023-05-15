@@ -11,8 +11,6 @@
 
     <div class="container">
         <a href="hello-servlet">Hello Servlet</a>
-        <br><br><br>
-        <a href="./file/volantinotum4world.pdf" download class="button">Download Volantino</a>
             <div class="card">
                 <div class="img"></div>
                 <span>Su di noi</span>
