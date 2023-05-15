@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-* {
+*:before, *:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #0e606e;
+    background-color: #818185;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://i.pinimg.com/originals/75/ea/8e/75ea8e2a0b694e6d75405becd7483db3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 header {
@@ -16,10 +24,50 @@ header {
     align-items: center;
     padding: 30px 10%;
     background-color: #24252a;
+
+}
+
+.sectionhome {
+    display: flex;
+    /*justify-content: space-between;*/
+    font-family: "Lato";
+    text-align: left;
+    background-color: #24252a;
+    padding: 40px;
+    width: 60%;
+    margin: 20px auto 0 auto;
+    border-radius: 40px;
+    margin-bottom: 15px;
+}
+
+.sectionhome h1 {
+    font-family: "Lato";
+    color: whitesmoke;
+    font-size: 25px;
+    margin: 0;
+    padding-top: 10px;
+    color: #0088a9;
+    font-weight: bold;
+}
+
+.sectionhome img {
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 20px;
+}
+
+.sectionhome p {
+    font-family: "Lato";
+    color: whitesmoke;
+    font-size: 15px;
+    margin-right: 20px;
+    margin-top: 10px;
+
 }
 
 .container {
-    margin: 20px 15px;
+    height: 100%;
 }
 
 .logo {
@@ -191,16 +239,14 @@ header {
 }
 
 footer {
-    font-family: "Monsterrat", sans-serif;
+    font-family: "Lato";
     font-weight: 250;
-    position: relative;
+    position: absolute;
     right: 0;
     bottom: 0;
     left:0;
-    width: 100%;
-    padding: 25px;
-    margin-top: 10px;
     text-align: center;
+    padding: 20px;
     overflow: hidden;
     background-color: #24252a;
 }
@@ -214,51 +260,9 @@ footer a {
     border-radius: 4px;
 }
 
-.card {
-    width: 500px;
-    height: 600px;
-    border-radius: 25px;
-    background: #0e606e;
-    display: flex;
-    flex-direction: column;
-    margin-left: 37%;
-}
 
-.card span {
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    display: block;
-    font-size: 25px;
-}
-
-.card .info {
-    font-weight: 400;
-    color: white;
-    display: block;
-    text-align: left;
-    font-size: 15px;
-    margin: 20px;
-}
-
-.card .img {
-    background-image: url("../img/Logo.png");
-    background-size:contain;
-    width: 250px;
-    height: 250px;
-    border-radius: 15px;
-    margin: auto;
-}
-
-.card a {
-    color: ghostwhite;
-}
-
-.card a:hover {
-    color: lightblue;
-}
-
-.card button {
+.sectionhome button {
+    text-decoration: none;
     padding: 20px;
     display: block;
     margin: auto;
@@ -266,10 +270,16 @@ footer a {
     border-radius: 25px;
     border: none;
     font-weight: bold;
-    background: white;
+    background: whitesmoke;
     margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
-.card button:hover {
-    background: #ddd;
+
+.sectionhome a {
+    text-decoration: none;
+    color:  #0e606e;
+    background: whitesmoke;
 }
+
+

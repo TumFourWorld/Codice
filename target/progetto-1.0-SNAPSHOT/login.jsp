@@ -28,9 +28,8 @@
         </div>
     </div>
 </div>
+<jsp:include page="sezioni/footer.jsp"/>
 </body>
-<footer>
-    <jsp:include page="sezioni/footer.jsp"/>
-</footer>
+
 </html>
 <%-- haha coglione --%>

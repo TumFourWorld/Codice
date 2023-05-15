@@ -38,8 +38,7 @@
         <button type="submit" name="submit" onclick="ValidateEmail(document.contactForm.email)">Invio Dati</button>
         <button type="reset">Reset</button>
     </form>
+<jsp:include page="sezioni/footer.jsp"/>
+
 </body>
-<footer>
-    <jsp:include page="sezioni/footer.jsp"/>
-</footer>
 </html>

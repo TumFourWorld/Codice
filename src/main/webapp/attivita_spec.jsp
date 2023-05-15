@@ -11,9 +11,8 @@
     <title>TUM4WORLD</title>
     <link rel="icon" href="logo/Logo.ico"/>
 </head>
-<header>
-    <jsp:include page="sezioni/header.jsp"/>
-</header>
+<jsp:include page="sezioni/header.jsp"/>
+
 <body>
 <%
     String selectedImage = request.getParameter("option");
@@ -36,8 +35,7 @@
 <h2>Corresponding Text:</h2>
 <p><%= text %></p>
 
+<jsp:include page="sezioni/footer.jsp"/>
+
 </body>
-<footer>
-    <jsp:include page="sezioni/footer.jsp"/>
-</footer>
 </html>
