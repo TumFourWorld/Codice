@@ -8,10 +8,11 @@
 }
 
 .content h1 {
+    text-transform: uppercase;
     color: whitesmoke;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .content p{
-    font-size: 24px;
+    font-size: 20px;
 }

@@ -16,7 +16,7 @@
 <body>
 <jsp:include page="sezioni/header.jsp"/>
     <div class="content">
-        <h1>FONDAZIONE</h1>
+        <h1>la nostra FONDAZIONE</h1>
         <p>L'Associazione Tum 4 World è stata fondata durante la quarantena da quattro studenti universitari con una passione comune per il mare e un forte desiderio di preservare la sua bellezza e la sua integrità.<br> Questi giovani appassionati hanno deciso di mettere insieme le loro energie e conoscenze per sensibilizzare il pubblico sulle problematiche ambientali che affliggono il nostro ecosistema marino.</p>
     </div>
 <jsp:include page="sezioni/footer.jsp"/>
