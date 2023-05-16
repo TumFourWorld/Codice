@@ -24,7 +24,8 @@
 
         <input name="password" type="password" placeholder="password" class="input">
 
-        <button name="submit" class="submit" type="submit">Loggati</button>
+        <button action="HelloServlet" name="submit" class="submit" type="submit">Loggati</button>
+        <a href="hello-servlet">Hello Servlet</a>
 
     </form>
 </div>
