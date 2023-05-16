@@ -28,6 +28,7 @@
             <input type="hidden" name="option" id="selectedOption">
             <div class="column">
                 <img src="img/att1-img1.png" alt="ATTIVITÀ 1" class="image-button" style="float: left" onclick="selectImage('img1')">
+                <figcaption>IMMAGINE 1</figcaption>
             </div>
             <div class="column">
                 <img src="img/att1-img1.png" alt="ATTIVITÀ 1" class="image-button" style="float: left" onclick="selectImage('img1')">
