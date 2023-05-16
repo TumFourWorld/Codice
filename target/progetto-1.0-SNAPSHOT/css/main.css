@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
+
+html{
+    height: 100%;
+}
+
 *:before, *:after {
     box-sizing: border-box;
     margin: 0;
@@ -12,10 +17,23 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url("https://i.pinimg.com/originals/75/ea/8e/75ea8e2a0b694e6d75405becd7483db3.png");
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+img.background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(3px);
+    background-image: url("../img/home.png");
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 header {
@@ -170,8 +188,7 @@ header {
     transition: color 0.3s ease 0s;
 }
 
-.overlay a:hover,
-.overlay a:focus {
+.overlay a:hover, .overlay a:focus {
     color: #0088a9;
 }
 .overlay .close {
@@ -193,15 +210,6 @@ header {
     }
 }
 
-@media only screen and (max-width: 800px) {
-    .nav__links,
-    .cta {
-        display: none;
-    }
-    .menu {
-        display: initial;
-    }
-}
 
 /*confirmation pop up*/
 .confirmation-box {
@@ -241,7 +249,7 @@ header {
 footer {
     font-family: "Lato";
     font-weight: 250;
-    position: absolute;
+    position: relative;
     right: 0;
     bottom: 0;
     left:0;
@@ -249,6 +257,7 @@ footer {
     padding: 20px;
     overflow: hidden;
     background-color: #24252a;
+    margin-top: auto;
 }
 
 footer a {

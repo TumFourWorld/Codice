@@ -15,8 +15,9 @@
 </head>
 <body>
 <jsp:include page="sezioni/header.jsp"/>
-<div style=" justify-content: center;   align-items: center; display: flex; height: 100%">
-        <form name="singUpForm" action="#" class="form">
+<br>
+<div style=" justify-content: center;   align-items: center; display: flex;">
+        <form name="singUpForm" action="#" class="form" >
             <p class="title">Registrati </p>
             <div class="flex">
                 <input name="nome" type="text" placeholder="nome" class="input">
@@ -29,21 +30,18 @@
 
             <input type="text" placeholder="num telefono" class="input">
             <div class="flex">
-                Simpatizzante <input name="scelta" type="radio" class="input">
-                Aderente <input name="scelta" type="radio" class="input">
+                <a>Simpatizzante</a> <input name="scelta" type="radio" class="input">
+                <a>Aderente</a> <input name="scelta" type="radio" class="input">
             </div>
             <input name="username" type="text" placeholder="username" class="input">
 
-            <input name="password" type="text" placeholder="password" class="input">
+            <input name="password" type="password" placeholder="password" class="input">
             <div class="flex">
             <button name="submit" class="submit" type="submit" onclick="ValidateEmail(document.singUpForm.email)">Iscriviti</button>
             <button type="reset" class="submit" style="background-color: red">Reset</button>
             </div>
         </form>
-</div>
-    </body>
-
-    <footer>
-        <jsp:include page="sezioni/footer.jsp"/>
-    </footer>
+    </div>
+<jsp:include page="sezioni/footer.jsp"/>
+</body>
 </html>

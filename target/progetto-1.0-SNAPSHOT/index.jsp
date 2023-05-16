@@ -6,6 +6,7 @@
     <link rel="icon" href="logo/Logo.ico"/>
 </head>
 <body>
+<img class="background">
 <jsp:include page="sezioni/header.jsp"/>
         <div class="sectionhome">
             <div class="text">

@@ -10,23 +10,23 @@
 <head>
     <title>TUM4WORLD</title>
     <link rel="icon" href="logo/Logo.ico"/>
-    <script src="functions/script.js"></script>
-
+    <script src="script/script.js"></script>
+    <link href="css/info.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <jsp:include page="sezioni/header.jsp"/>
-<div class="container">
-    <h1><%= "Login" %></h1>
-    <%-- FORM DA ELIMINARE E SOLO PER TESTARE LMAO (vai a ultima riga) --%>
-    <button onclick="showConfirmation()">Conferma</button>
-    <div id="confirmationBox" class="confirmation-box">
-        <div class="confirmation-content">
-            <h2>Sei sicuro?</h2>
-            <p>Questa azione non puó essere cancellata.</p>
-            <button onclick="confirmAction()">Conferma</button>
-            <button onclick="cancelAction()">Annulla</button>
-        </div>
-    </div>
+<br>
+<div style=" justify-content: center;   align-items: center; display: flex;">
+    <form name="loginForm" action="#" class="form" style="width: 350px">
+        <p class="title">Login </p>
+
+        <input name="username" type="text" placeholder="username" class="input">
+
+        <input name="password" type="password" placeholder="password" class="input">
+
+        <button name="submit" class="submit" type="submit">Loggati</button>
+
+    </form>
 </div>
 <jsp:include page="sezioni/footer.jsp"/>
 </body>
