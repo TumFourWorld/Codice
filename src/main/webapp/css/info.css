@@ -3,25 +3,28 @@ html{
 }
 
 .form {
+    font-family: Lato;
     display: flex;
     flex-direction: column;
     gap: 10px;
     max-width: 350px;
-    background-color: white;
+    background-color: #24252a;
     padding: 20px;
     border-radius: 20px;
     position: relative;
-    border: 3px solid #0088a9;
+    border: 2px solid whitesmoke;
 }
 
 .title {
+    font-weight: 500;
+    text-transform: uppercase;
     font-size: 28px;
-    color: #0088a9;
+    color: whitesmoke;
     font-weight: 600;
     letter-spacing: -1px;
     position: relative;
-    display: flex;
     align-items: center;
+    text-align: center;
 }
 
 .flex {
@@ -34,14 +37,20 @@ html{
     position: relative;
 }
 
+.form a, label {
+    color: whitesmoke;
+
+}
+
 .form .input {
     width: 100%;
     padding: 10px 10px 20px 10px;
     outline: 0;
     border-radius: 10px;
-    border-color: #0088a9;
-    color: black;
-    background-color: white;
+    border-color: whitesmoke;
+    background-color: #24252a;
+    color: whitesmoke;
+    text-transform: capitalize;
 }
 
 .form .select {
@@ -49,9 +58,9 @@ html{
     padding: 10px 10px 20px 10px;
     outline: 0;
     border-radius: 10px;
-    border-color: #0088a9;
-    color: black;
-    background-color: white;
+    border-color: whitesmoke;
+    color: whitesmoke;
+    background-color: #24252a;
 }
 
 .form .textarea{
@@ -59,9 +68,9 @@ html{
     padding: 10px 10px 20px 10px;
     outline: 0;
     border-radius: 10px;
-    border-color: #0088a9;
-    color: black;
-    background-color: white;
+    border-color: whitesmoke;
+    color: whitesmoke;
+    background-color: #24252a;
     resize: none;
 }
 
@@ -81,7 +90,7 @@ html{
     outline: none;
     background-color: #0088a9;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     color: #fff;
     font-size: 16px;
 }
