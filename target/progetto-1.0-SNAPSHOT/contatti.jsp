@@ -11,33 +11,39 @@
     <title>TUM4WORLD</title>
     <link rel="icon" href="logo/Logo.ico"/>
     <script src="script/script.js"></script>
+    <link href="css/info.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 <jsp:include page="sezioni/header.jsp"/>
+<br>
+<div style=" justify-content: center;   align-items: center; display: flex;">
+    <form name="contactForm" action="#" class="form" >
+        <p class="title">Contattaci </p>
+        <div class="flex">
+            <input name="nome" type="text" placeholder="nome" class="input">
 
-    <h1><%= "contatti" %></h1>
-    <form name="contactForm" action="#" >
-        Nome <input name="nome" type="text" placeholder="nome">
-        Cognome <input name="cognome" type="text" placeholder="cognome">
-        <br>
-        <br>
-        Email <input name="email" type="text" placeholder="email" >
-        <br>
-        <br>
-        Motivo : <select name="motiviContatto" id="motCont" >
+            <input name="cognome" type="text" placeholder="cognome" class="input">
+        </div>
+
+        <input name="email" type="text" placeholder="indirizzo email" class="input">
+
+        Motivo : <select name="motiviContatto" id="motCont" class="select">
             <option value="lamentela">Lamentela</option>
             <option value="rimborso">Rimborso</option>
             <option value="informazioni">Informazioni</option>
             <option value="altro">Altro...</option>
         </select>
+
         <label for="textarea">Dettagli della tua richiesta :</label>
-        <textarea id="textarea" maxlength=""></textarea>
-        <br>
-        <br>
-        <button type="submit" name="submit" onclick="ValidateEmail(document.contactForm.email)">Invio Dati</button>
-        <button type="reset">Reset</button>
+        <textarea id="textarea" maxlength="" class="textarea"></textarea>
+
+        <div class="flex">
+            <button name="submit" class="submit" type="submit" onclick="ValidateEmail(document.singUpForm.email)">Iscriviti</button>
+            <button type="reset" class="submit" style="background-color: red">Reset</button>
+        </div>
     </form>
+</div>
 <jsp:include page="sezioni/footer.jsp"/>
 
 </body>

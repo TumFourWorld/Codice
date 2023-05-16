@@ -8,6 +8,12 @@
 <body>
 <img class="background">
 <jsp:include page="sezioni/header.jsp"/>
+
+
+
+
+
+
         <div class="sectionhome">
             <div class="text">
                 <h1>DI COSA CI OCCUPIAMO?</h1>
@@ -17,14 +23,6 @@
             <img src="https://i.imgur.com/PeHQeTp.png">
             </p> <!-- GIUSTO QUA GIU LE ZAMPE -->
         </div>
-        <!--
-        <div class="card">
-            <div class="img"></div>
-            <span>Su di noi</span>
-            <p class="info">L'associazione Tum 4 World si impegna a sensibilizzare la comunità sulla salvaguardia dell'ambiente marino, combattere l'inquinamento marino attraverso la pulizia dei luoghi interessati e promuovere pratiche sostenibili per la gestione e la tutela delle risorse marine. <br><br> L'obiettivo principale dell'associazione è quello di salvaguardare l'ambiente marino, preservando l'ecosistema marino e promuovendo la sostenibilità ambientale.
-            </p>
-        </div>
-        -->
     </div>
 
 </div>
