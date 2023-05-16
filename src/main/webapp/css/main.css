@@ -1,25 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 
 html{
-    height: 100%;
+    min-height: 100%;
 }
 
 *:before, *:after {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #818185;
-    height: 100%;
+    background-color: #363945;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family:Copperplate;
 }
 
 img.background {
@@ -51,7 +50,7 @@ header {
     text-align: left;
     background-color: #24252a;
     padding: 40px;
-    width: 60%;
+    width: 50%;
     margin: 20px auto 0 auto;
     border-radius: 40px;
     margin-bottom: 15px;
@@ -59,6 +58,7 @@ header {
 
 .sectionhome h1 {
     font-family: "Lato";
+    font-weight: 500;
     color: whitesmoke;
     font-size: 25px;
     margin: 0;
@@ -77,7 +77,7 @@ header {
 .sectionhome p {
     font-family: "Lato";
     color: whitesmoke;
-    font-size: 15px;
+    font-size: 18px;
     margin-right: 20px;
     margin-top: 10px;
 
@@ -205,17 +205,15 @@ header {
         top: 15px;
         right: 35px;
     }
-}
 
-@media only screen and (max-width: 800px) {
-    .nav__links,
-    .cta {
-        display: none;
-    }
-    .menu {
-        display: initial;
+    .img{
+        width:100%;
+        height: auto;
     }
 }
+ @media screen and (max-height: 236px){
+
+ }
 
 /*confirmation pop up*/
 .confirmation-box {
@@ -261,7 +259,6 @@ footer {
     left:0;
     text-align: center;
     padding: 20px;
-    overflow: hidden;
     background-color: #24252a;
     margin-top: auto;
 }
@@ -296,5 +293,6 @@ footer a {
     color:  #0e606e;
     background: whitesmoke;
 }
+
 
 
