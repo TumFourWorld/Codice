@@ -1,0 +1,11 @@
+.content{
+    color: whitesmoke;
+    width: 60%;
+    padding-left: 5%;
+    text-align: left;
+
+}
+
+.content p{
+    font-size: 35px;
+}
