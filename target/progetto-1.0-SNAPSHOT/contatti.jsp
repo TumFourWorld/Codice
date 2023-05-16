@@ -28,7 +28,7 @@
 
         <input name="email" type="text" placeholder="indirizzo email" class="input">
 
-        Motivo : <select name="motiviContatto" id="motCont" class="select">
+        <a>Motivo: </a> <select name="motiviContatto" id="motCont" class="select">
             <option value="lamentela">Lamentela</option>
             <option value="rimborso">Rimborso</option>
             <option value="informazioni">Informazioni</option>
