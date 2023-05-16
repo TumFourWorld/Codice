@@ -12,9 +12,40 @@
     text-transform: uppercase;
     color: whitesmoke;
     font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .content p{
     font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content img {
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    border-color: whitesmoke;
+    max-width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagecontainer {
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+.content figcaption {
+    font-family: Lato;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.content span {
+    color: #0088a9;
+    font-weight: 500;
 }
 
