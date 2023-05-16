@@ -1,0 +1,21 @@
+.content{
+    font-family: Lato;
+    color: whitesmoke;
+    width: 60%;
+    padding-left: 5%;
+    text-align: left;
+
+}
+
+.content h1 {
+    color: whitesmoke;
+    font-size: 35px;
+}
+
+.content p{
+    font-size: 24px;
+}
+
+.content img {
+    max-width: 320px;
+}

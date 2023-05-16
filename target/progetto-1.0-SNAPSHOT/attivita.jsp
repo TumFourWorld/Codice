@@ -17,10 +17,11 @@
             cursor: pointer;
         }
     </style>
+    <link href="css/attivita-main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <jsp:include page="sezioni/header.jsp"/>
-
+<div class="content">
     <h1><%= "ATTIVITÀ" %></h1>
     <p>ATTIVITA 1 DESCRIZIONE</p>
     <%--<img src="img/att1-img1.png" alt="ATTIVITÀ 1" class="img-att1" style="float: left"></a><br>--%> <%--togliere style e modificare class css --%>
@@ -30,7 +31,7 @@
         <img src="image2.jpg" alt="Image 2" class="image-button" onclick="selectImage('image2.jpg')">
         <img src="image3.jpg" alt="Image 3" class="image-button" onclick="selectImage('image3.jpg')">
     </form>
-
+</div>
 
 <jsp:include page="sezioni/footer.jsp"/>
 
