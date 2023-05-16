@@ -42,7 +42,6 @@ header {
     align-items: center;
     padding: 30px 10%;
     background-color: #24252a;
-
 }
 
 .sectionhome {
@@ -102,9 +101,7 @@ header {
     font-weight: 200;
 }
 
-.nav__links a,
-.cta,
-.overlay__content a {
+.nav__links a, .cta, .overlay__content a {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     color: #edf0f1;
@@ -210,6 +207,15 @@ header {
     }
 }
 
+@media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+        display: none;
+    }
+    .menu {
+        display: initial;
+    }
+}
 
 /*confirmation pop up*/
 .confirmation-box {
