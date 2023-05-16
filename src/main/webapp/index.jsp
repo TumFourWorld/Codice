@@ -5,14 +5,9 @@
     <title>TUM4WORLD</title>
     <link rel="icon" href="logo/Logo.ico"/>
 </head>
+<jsp:include page="sezioni/header.jsp"/>
 <body>
 <img class="background">
-<jsp:include page="sezioni/header.jsp"/>
-
-
-
-
-
 
         <div class="sectionhome">
             <div class="text">
