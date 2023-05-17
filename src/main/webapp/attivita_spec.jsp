@@ -10,11 +10,14 @@
 <head>
     <title>TUM4WORLD</title>
     <link rel="icon" href="logo/Logo.ico"/>
+    <link href="css/attivita-spec.css" rel="stylesheet" type="text/css">
 </head>
 <jsp:include page="sezioni/header.jsp"/>
 
 <body>
+
 <%
+    /*
     String selectedImage = request.getParameter("option");
     out.println(selectedImage);
     String text = "";
@@ -28,13 +31,19 @@
     } else if ("image3.jpg".equals(selectedImage)) {
         text = "Testo3";
     }
+    */
+
 %>
 
-<h2>Selected Image:</h2>
-<img src="img/<%= selectedImage %>">
+<div class="wrapper">
+    <img src="img/att1-img1.png">
+    <div class="text-box">
+        <h2>Sensibilizzazione della comunità riguardo l'importanza della salvaguardia dell'ambiente marino</h2>
+        <p>L'associazione si impegna a sensibilizzare la comunità locale e nazionale sull'importanza di preservare l'ambiente marino. Ciò viene fatto attraverso la creazione di campagne di comunicazione, la partecipazione a eventi pubblici e la collaborazione con le istituzioni e le organizzazioni locali. L'obiettivo principale di questa attività è quello di educare la popolazione sulla necessità di agire con responsabilità nei confronti dell'ambiente marino, sottolineando l'importanza del mare come risorsa fondamentale per l'umanità.</p>
+    </div>
+</div>
 
-<h2>Corresponding Text:</h2>
-<p><%= text %></p>
+
 
 <jsp:include page="sezioni/footer.jsp"/>
 
