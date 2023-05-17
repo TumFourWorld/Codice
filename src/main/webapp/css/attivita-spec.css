@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+}
+body {
+    height: 100%;
+    background: #363945;
+}
+
+img {
+    max-width: 320px;
+    float: left;
+    border: 2px solid whitesmoke;
+    border-radius: 18px;
+}
+
+.wrapper{
+    margin-top: 40px;
+    padding-left: 40px;
+    font-family: Lato;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.text-box {
+    margin-left: 10px;
+    color: whitesmoke;
+    padding-left: 15px;
+}
+
+.text-box h2 {
+    font-weight: 600;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+
+.text-box p {
+    padding-top: 15px;
+    font-weight: 200;
+    font-size: 18px;
+    color: whitesmoke;
+}
