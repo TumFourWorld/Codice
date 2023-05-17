@@ -30,9 +30,9 @@
         <p>Ogni sede locale di T4W ha la sua autonomia e il suo team di volontari che si occupano di organizzare eventi e attività per sensibilizzare la comunità locale sulle problematiche ambientali che affliggono il mare. Queste attività includono pulizie delle spiagge e delle coste, incontri pubblici, conferenze, proiezioni di documentari, attività educative per le scuole e molto altro ancora.</p>
 
         <div class="imagecontainer">
-            <img src="https://i.imgur.com/huQmwfb.png">
+            <img src="https://i.imgur.com/JQW6cKW.png">
             <!--<img src="https://images.pexels.com/photos/2559749/pexels-photo-2559749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">-->
-            <figcaption>Manifestazione <span>TUM4WORLD</span> -  24 Maggio 2019</figcaption>
+            <figcaption>Vett e il <span>SALSISON</span> -  24 Maggio 2019</figcaption>
         </div>
 
 
