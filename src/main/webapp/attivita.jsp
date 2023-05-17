@@ -10,13 +10,6 @@
 <head>
     <title>TUM4WORLD</title>
     <link rel="icon" href="logo/Logo.ico"/>
-    <style>
-        .image-button {
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
-    </style>
     <link href="css/attivita-main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -27,16 +20,16 @@
         <form id="imageForm" style="margin: 0px" action="attivita_spec.jsp" method="post">
             <input type="hidden" name="option" id="selectedOption">
             <div class="column">
-                <img src="img/att1-img1.png" alt="ATTIVITÀ 1" class="image-button" onclick="selectImage('img1')">
-                <div class="centered">Sensibilizzazione della comunità riguardo l'importanza della salvaguardia dell'ambiente marino:</div>
+                <img src="https://images.unsplash.com/photo-1572279696557-51fb559f67dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="ATTIVITÀ 1" class="image-button">
+                <button value="img1"><div class="centered">SENSIBILIZZAZIONE COMUNITà</div></button>
             </div>
             <div class="column">
-                <img src="img/att1-img1.png"  alt="ATTIVITÀ 2" class="image-button" onclick="selectImage('img2')">
-                <div class="centered">La pulizia degli ambienti marini lottando contro l'inquinamento marino:</div>
+                <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"  alt="ATTIVITÀ 2" class="image-button" onclick="selectImage('img2')">
+                <button><div class="centered">PULIZIA AMBIENTI MARINI</div></button>
             </div>
             <div class="column">
-                <img src="img/att1-img1.png"  alt="ATTIVITÀ 3" class="image-button" onclick="selectImage('img3')">
-                <div class="centered">Promozione di pratiche sostenibili per la gestione e la tutela delle risorse marine: </div>
+                <img src="https://images.unsplash.com/photo-1657563495714-348f7d3d400c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"  alt="ATTIVITÀ 3" class="image-button" onclick="selectImage('img3')">
+                <button><div class="centered">PRATICHE SOSTENIBILI</div></button>
             </div>
          </form>
     </div>

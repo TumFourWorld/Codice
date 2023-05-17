@@ -16,12 +16,13 @@
 <body>
 <%
     String selectedImage = request.getParameter("option");
-    out.println(selectedImage);;
+    out.println(selectedImage);
     String text = "";
+    out.println(selectedImage);
     if ("img1".equals(selectedImage)) {
         out.println("<p>text1</p>");
         text = "testo1";
-        selectedImage = "att1-img1.png";
+        selectedImage = "img/att1-img1.png";
     } else if ("image2.jpg".equals(selectedImage)) {
         text = "testo2";
     } else if ("image3.jpg".equals(selectedImage)) {
