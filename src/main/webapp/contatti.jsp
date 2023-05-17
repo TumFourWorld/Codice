@@ -39,8 +39,8 @@
         <textarea id="textarea" maxlength="" class="textarea"></textarea>
 
         <div class="flex">
-            <button name="submit" class="submit" type="submit" onclick="ValidateEmail(document.singUpForm.email)">Iscriviti</button>
-            <button type="reset" class="submit" style="background-color: red">Reset</button>
+            <button name="submit" class="submit" style="width: 50%;"type="submit" onclick="ValidateEmail(document.singUpForm.email)">Iscriviti</button>
+            <button type="reset" class="submit" style="width: 50%; background-color: red">Reset</button>
         </div>
     </form>
 </div>

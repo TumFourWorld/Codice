@@ -3,11 +3,15 @@
 }
 
 .column {
+    position: relative;
     display: flex;
     float: left;
     width: 33.3%;
+    height: 100vh;
     justify-content: center;
-    height: auto;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .row:after {
@@ -27,7 +31,7 @@
     color: whitesmoke;
     width: 100%;
     text-align: left;
-
+    border-top: 0px;
 }
 
 .content h1 {
@@ -40,13 +44,12 @@
 }
 
 .content img {
+    position: relative;
     border: 2px solid whitesmoke;
-    border-radius: 20px;
-    border-color: whitesmoke;
-    max-width: 300px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    object-fit: fill;
+    width: 100%;
+    height: 100%
 }
 
 .content figcaption {
@@ -54,4 +57,11 @@
     margin-top: 5px;
     text-align: center;
     font-size: 12px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

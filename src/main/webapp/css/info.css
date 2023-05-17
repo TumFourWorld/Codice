@@ -85,7 +85,7 @@ html{
 }
 
 
-.submit {
+.form .submit {
     border: none;
     outline: none;
     background-color: #0088a9;
@@ -95,6 +95,6 @@ html{
     font-size: 16px;
 }
 
-.submit:hover {
+.form .submit:hover {
     background-color:rgba(0,136,169,1.1);
 }
