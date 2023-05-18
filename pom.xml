@@ -7,7 +7,7 @@
     <groupId>suzu.tum4world</groupId>
     <artifactId>progetto</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>progetto</name>
+    <name>progetto</name>s
     <packaging>war</packaging>
 
     <properties>
