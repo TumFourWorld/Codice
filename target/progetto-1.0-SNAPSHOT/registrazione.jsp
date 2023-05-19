@@ -37,6 +37,7 @@
             <input name="username" type="text" placeholder="username" class="input" id="uname">
 
             <input name="password" type="password" placeholder="password" class="input" id="psw" >
+            <input name="password" type="password" placeholder="ripeti password" class="input" id="pswcheck" >
             <div class="flex">
                 <button name="submit" class="submit" style="width: 50%;" type="submit" >Iscriviti</button>  <!-- onclick="ValidateData(document.getElementById('dataNascita').value)" -->
                 <button type="reset" class="submit" style="width: 50%; background-color: red">Reset</button>
@@ -67,18 +68,29 @@
         */
 
         let psw = document.getElementById("psw");
+        let pswcheck = document.getElementById("pswcheck");
+        Boolean passwordComplete = false;
 
         if(psw.value.length <= 8) {
             alert("Password troppo corta")
             return false;
         } else if(!((psw.value.includes("d") || psw.value.includes("D")) && (psw.value.includes("A") || psw.value.includes("a")) && (psw.value.includes("M") || psw.value.includes("m")))) {
-            alert("La password deve contenere almeno uno dei seguenti caratteri: D-d , A-a, M-m");
+            alert("La password deve contenere almeno uno dei seguenti caratteri: D-A-M maiuscola o minuscola");
         } else if(!(psw.value.includes("!") || psw.value.includes("$") || psw.value.includes("?"))) {
             alert("La pasword deve contenere almeno uno dei seguenti caratteri: ? - ! - $");
         } else if(!containsUppercase(psw.value)) {
             alert("La password deve contenere almeno una lettera maiuscola!");
         } else if(!containsNumbers(psw.value)) {
             alert("La password deve contenere almeno un numero!");
+        } else if(!(pswcheck == psw)) {
+            alert("Le due password non coincidono!")
+        } else {
+            passwordComplete = true;
+        }
+
+        if(passwordComplete) {
+            alert("Registrazione eseguita correttamente???");
+            return true;
         }
 
     }
