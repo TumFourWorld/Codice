@@ -17,7 +17,7 @@
 <jsp:include page="sezioni/header.jsp"/>
 <br>
 <div style=" justify-content: center;   align-items: center; display: flex;">
-    <form name="loginForm" action="#" class="form" style="width: 350px">
+    <form method="POST" name="loginForm" action="loginServlet" class="form" style="width: 350px">
         <p class="title">Login </p>
 
         <input name="username" type="text" placeholder="username" class="input">
@@ -26,9 +26,19 @@
 
         <button action="HelloServlet" name="submit" class="submit" type="submit">Loggati</button>
         <a href="hello-servlet">Hello Servlet</a>
+    </form>
 
+</div>
+
+<div style=" justify-content: center;   align-items: center; display: flex;">
+    <form method="GET" name="loginForm" action="logoutServlet" class="form" style="width: 350px">
+        <p class="title"> Logout </p>
+        <button action="HelloServlet" name="submit" class="submit" type="submit">Effettua il logout</button>
     </form>
 </div>
+
+
+
 <jsp:include page="sezioni/footer.jsp"/>
 </body>
 

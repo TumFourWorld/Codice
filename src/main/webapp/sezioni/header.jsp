@@ -26,6 +26,7 @@
 <a href="login.jsp" class="<%= currentPage.equals("login.jsp") ? "active" : "" %>">LOGIN</a>
 --%>
 <link href="../css/main.css" rel="stylesheet" type="text/css">
+<%@ page import="javax.servlet.http.HttpSession" %>
 
 
 <header>
@@ -39,16 +40,28 @@
             <li><a href="registrazione.jsp">Sign Up</a></li>
         </ul>
     </nav>
-    <a class="cta" href="login.jsp">Login</a>
-<%-- <p class="menu cta">Menu</p> X VERSIONE MOBILE (AGGIUNGERE SCRIPT)--%>
+    <%
+        HttpSession user = request.getSession(false);
+        out.print(request.getAttribute("username"));
+
+        if (user != null) {
+            // A session already exists
+
+            out.print("<a class='cta' href='login.jsp'>Logout</a>");
+
+        } else {
+            // No session exists
+            out.print("<a class='cta' href='login.jsp'>Login</a>");
+        }
+    %>
+    <c:choose>
+        <c:when test="${sessionScope.loggedIn}">
+            <input type="submit" value="Logout">
+        </c:when>
+        <c:otherwise>
+            <input type="submit" value="Login">
+        </c:otherwise>
+    </c:choose>
+    <a class='cta' href='login.jsp'>Login</a>
+
 </header>
-<%-- X VERSIONE MOBILE
-<div class="overlay">
- <a class="close">&times;</a>
- <div class="overlay__content">
-     <a href="#">Services</a>
-     <a href="#">Projects</a>
-     <a href="#">About</a>
- </div>
-</div>
---%>
