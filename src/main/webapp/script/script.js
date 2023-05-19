@@ -31,3 +31,41 @@ function ValidateData(inputText){
     }
 
 }
+
+function containsUppercase(str) { /* controlla se contiene almeno una lettera maiuscola. se si ritrona true*/
+    return /[A-Z]/.test(str);
+}
+
+function containsNumbers(str) { /* controlla se stringa contiene un numero. se si ritorna true else false*/
+    return /\d/.test(str);
+}
+
+
+function validateRegistration() {
+    /*
+    let nome = document.getElementById("nome");
+    let cognome = document.getElementById("cognome");
+    let datanascita = document.getElementById("datanascita");
+    let email = document.getElementById("email");
+    let numtel = document.getElementById("numtel");
+    let uname = document.getElementById("uname");
+    */
+
+    let psw = document.getElementById("psw");
+    let pswcheck = document.getElementById("pswcheck");
+
+    if(psw.value.length <= 8) {
+        alert("Password troppo corta")
+        return false;
+    } else if(!((psw.value.includes("d") || psw.value.includes("D")) && (psw.value.includes("A") || psw.value.includes("a")) && (psw.value.includes("M") || psw.value.includes("m")))) {
+        alert("La password deve contenere almeno uno dei seguenti caratteri: D-A-M maiuscola o minuscola");
+    } else if(!(psw.value.includes("!") || psw.value.includes("$") || psw.value.includes("?"))) {
+        alert("La pasword deve contenere almeno uno dei seguenti caratteri: ? - ! - $");
+    } else if(!containsUppercase(psw.value)) {
+        alert("La password deve contenere almeno una lettera maiuscola!");
+    } else if(!containsNumbers(psw.value)) {
+        alert("La password deve contenere almeno un numero!");
+    } else if(!(pswcheck == psw)) {
+        alert("Le due password non coincidono!")
+    }
+}
