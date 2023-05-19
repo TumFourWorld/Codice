@@ -18,83 +18,32 @@
 <jsp:include page="sezioni/header.jsp"/>
 <br>
 <div style=" justify-content: center;   align-items: center; display: flex;">
-        <form name="singUpForm" method="post"  class="form" onsubmit="return validate()" > <!-- action="singInServlet" -->
+        <form name="singUpForm" method="post"  class="form" onsubmit="return validateRegistration()" > <!-- action="singInServlet" -->
             <p class="title">Registrati </p>
             <div class="flex">
-                <input name="nome" type="text" placeholder="nome" class="input" id="nome" >
+                <input name="nome" type="text" placeholder="nome" class="input" id="nome" required>
 
-                <input name="cognome" type="text" placeholder="cognome" class="input" id="cognome" >
+                <input name="cognome" type="text" placeholder="cognome" class="input" id="cognome" required>
             </div>
 
-            <input name="dataNascita" type="date" class="input" id="dataNascita" id="datanascita" >
-            <input name="email" type="text" placeholder="indirizzo email" class="input" id="email" >
+            <input name="dataNascita" type="date" class="input" id="dataNascita" id="datanascita" required>
+            <input name="email" type="text" placeholder="indirizzo email" class="input" id="email" required>
 
-            <input type="text" placeholder="num-tel" class="input" name="num-tel" id="numtel" >
+            <input type="text" placeholder="num-tel" class="input" name="num-tel" id="numtel" required>
             <div class="flex">
                 <a>Simpatizzante</a> <input name="scelta" type="radio" class="input" value="simp">
                 <a>Aderente</a> <input name="scelta" type="radio" class="input" value="aderente">
             </div>
-            <input name="username" type="text" placeholder="username" class="input" id="uname">
+            <input name="username" type="text" placeholder="username" class="input" id="uname" required>
 
-            <input name="password" type="password" placeholder="password" class="input" id="psw" >
-            <input name="password" type="password" placeholder="ripeti password" class="input" id="pswcheck" >
+            <input name="password" type="password" placeholder="password" class="input" id="psw" required>
+            <input name="password" type="password" placeholder="ripeti password" class="input" id="pswcheck" required>
             <div class="flex">
-                <button name="submit" class="submit" style="width: 50%;" type="submit" >Iscriviti</button>  <!-- onclick="ValidateData(document.getElementById('dataNascita').value)" -->
-                <button type="reset" class="submit" style="width: 50%; background-color: red">Reset</button>
+                <button name="submit" class="submit iscriviti" type="submit" >Iscriviti</button>  <!-- onclick="ValidateData(document.getElementById('dataNascita').value)" -->
+                <button type="reset" class="submit reset">Reset</button>
             </div>
         </form>
     </div>
 <jsp:include page="sezioni/footer.jsp"/>
 </body>
-
-<script>
-    function containsUppercase(str) { /* controlla se contiene almeno una lettera maiuscola. se si ritrona true*/
-        return /[A-Z]/.test(str);
-    }
-
-    function containsNumbers(str) { /* controlla se stringa contiene un numero. se si ritorna true else false*/
-        return /\d/.test(str);
-    }
-
-
-    function validate() {
-        /*
-        let nome = document.getElementById("nome");
-        let cognome = document.getElementById("cognome");
-        let datanascita = document.getElementById("datanascita");
-        let email = document.getElementById("email");
-        let numtel = document.getElementById("numtel");
-        let uname = document.getElementById("uname");
-        */
-
-        let psw = document.getElementById("psw");
-        let pswcheck = document.getElementById("pswcheck");
-        Boolean passwordComplete = false;
-
-        if(psw.value.length <= 8) {
-            alert("Password troppo corta")
-            return false;
-        } else if(!((psw.value.includes("d") || psw.value.includes("D")) && (psw.value.includes("A") || psw.value.includes("a")) && (psw.value.includes("M") || psw.value.includes("m")))) {
-            alert("La password deve contenere almeno uno dei seguenti caratteri: D-A-M maiuscola o minuscola");
-        } else if(!(psw.value.includes("!") || psw.value.includes("$") || psw.value.includes("?"))) {
-            alert("La pasword deve contenere almeno uno dei seguenti caratteri: ? - ! - $");
-        } else if(!containsUppercase(psw.value)) {
-            alert("La password deve contenere almeno una lettera maiuscola!");
-        } else if(!containsNumbers(psw.value)) {
-            alert("La password deve contenere almeno un numero!");
-        } else if(!(pswcheck == psw)) {
-            alert("Le due password non coincidono!")
-        } else {
-            passwordComplete = true;
-        }
-
-        if(passwordComplete) {
-            alert("Registrazione eseguita correttamente???");
-            return true;
-        }
-
-    }
-
-</script>
-
 </html>
