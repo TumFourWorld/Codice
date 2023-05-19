@@ -6,6 +6,7 @@ function ValidateEmail(inputText)
         document.contactForm.email.focus();
         return false;
     }
+    return true;
 }
 
 function ValidateData(inputText){
@@ -50,11 +51,14 @@ function validateRegistration() {
     let numtel = document.getElementById("numtel");
     let uname = document.getElementById("uname");
     */
-
+    let email = document.getElementById("email");
+    if(!ValidateEmail(email)){
+        return false;
+    }
     let psw = document.getElementById("psw");
     let pswcheck = document.getElementById("pswcheck");
 
-    if(psw.value.length <= 8) {
+    if(psw.value.length <8) {
         alert("Password troppo corta")
         return false;
     } else if(!((psw.value.includes("d") || psw.value.includes("D")) && (psw.value.includes("A") || psw.value.includes("a")) && (psw.value.includes("M") || psw.value.includes("m")))) {
@@ -65,7 +69,9 @@ function validateRegistration() {
         alert("La password deve contenere almeno una lettera maiuscola!");
     } else if(!containsNumbers(psw.value)) {
         alert("La password deve contenere almeno un numero!");
-    } else if(!(pswcheck == psw)) {
+    } else if(!(pswcheck.value == psw.value)) {
+        console.log(pswcheck.value);
+        console.log(psw.value);
         alert("Le due password non coincidono!")
     }
 }

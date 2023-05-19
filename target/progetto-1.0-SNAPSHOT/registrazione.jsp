@@ -18,7 +18,7 @@
 <jsp:include page="sezioni/header.jsp"/>
 <br>
 <div style=" justify-content: center;   align-items: center; display: flex;">
-        <form name="singUpForm" method="post"  class="form" onsubmit="return validateRegistration()" > <!-- action="singInServlet" -->
+        <form name="singUpForm" method="post" class="form" action="singInServlet" onsubmit="return validateRegistration()" > <!-- action="singInServlet" -->
             <p class="title">Registrati </p>
             <div class="flex">
                 <input name="nome" type="text" placeholder="nome" class="input" id="nome" required>
@@ -31,8 +31,8 @@
 
             <input type="text" placeholder="num-tel" class="input" name="num-tel" id="numtel" required>
             <div class="flex">
-                <a>Simpatizzante</a> <input name="scelta" type="radio" class="input" value="simp">
-                <a>Aderente</a> <input name="scelta" type="radio" class="input" value="aderente">
+                <a>Simpatizzante</a> <input name="scelta" type="radio" class="input" value="simp" required>
+                <a>Aderente</a> <input name="scelta" type="radio" class="input" value="aderente" required>
             </div>
             <input name="username" type="text" placeholder="username" class="input" id="uname" required>
 
