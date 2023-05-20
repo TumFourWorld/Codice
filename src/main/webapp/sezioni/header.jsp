@@ -45,8 +45,11 @@ out.print(ses);
 if(ses == null){
     out.print("<a class='cta' href='login.jsp'>Login</a>");
 }else{
-    out.print("<a class='cta' href='login.jsp'>Logout</a>");
+    out.print("<form method=\"GET\" action=\"logoutServlet\" >\n" +
+            "        <button class=\"cta\" type=\"submit\">Logout</button>\n" +
+            "    </form>");
 }%>
+
 
 
 </header>
