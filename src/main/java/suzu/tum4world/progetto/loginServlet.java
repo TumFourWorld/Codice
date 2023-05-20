@@ -37,8 +37,21 @@ public class loginServlet extends HttpServlet {
                     HttpSession session = request.getSession(true);
                     session.setAttribute("username", usr);
 
+                    /* prendo valori da DB */
+                    String nome = esiste.getString("NOME");
+                    String cognome = esiste.getString("COGNOME");
+                    String dob = esiste.getString("dataNascita");
+                    String email = esiste.getString("EMAIL");
+                    String tel = esiste.getString("NUM_TEL");
                     Boolean simp = esiste.getBoolean("SIMP");
                     Boolean amm = esiste.getBoolean("ADMIN");
+
+                    /* metto valori in session */
+                    session.setAttribute("nome", nome);
+                    session.setAttribute("cognome", cognome);
+                    session.setAttribute("dob", dob);
+                    session.setAttribute("email", email);
+                    session.setAttribute("tel", tel);
 
                     session.setAttribute("simp", simp);
                     session.setAttribute("admin", amm);
