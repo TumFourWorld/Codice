@@ -40,28 +40,13 @@
             <li><a href="registrazione.jsp">Sign Up</a></li>
         </ul>
     </nav>
-    <%
-        HttpSession user = request.getSession(false);
-        out.print(request.getAttribute("username"));
+<% String ses = (String) session.getAttribute("username");
+out.print(ses);
+if(ses == null){
+    out.print("<a class='cta' href='login.jsp'>Login</a>");
+}else{
+    out.print("<a class='cta' href='login.jsp'>Logout</a>");
+}%>
 
-        if (user != null) {
-            // A session already exists
-
-            out.print("<a class='cta' href='login.jsp'>Logout</a>");
-
-        } else {
-            // No session exists
-            out.print("<a class='cta' href='login.jsp'>Login</a>");
-        }
-    %>
-    <c:choose>
-        <c:when test="${sessionScope.loggedIn}">
-            <input type="submit" value="Logout">
-        </c:when>
-        <c:otherwise>
-            <input type="submit" value="Login">
-        </c:otherwise>
-    </c:choose>
-    <a class='cta' href='login.jsp'>Login</a>
 
 </header>
