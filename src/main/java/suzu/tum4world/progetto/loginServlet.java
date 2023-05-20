@@ -32,9 +32,10 @@ public class loginServlet extends HttpServlet {
             if(esiste!=null){
                 esiste.next();
                 if(esiste.getString("PASSWORD").equals(psw)){
+                    String usr= esiste.getString("USERNAME");
                     System.out.println("LOGGATO");
                     HttpSession session = request.getSession(true);
-                    session.setAttribute("username", username);
+                    session.setAttribute("username", usr);
                     response.sendRedirect("index.jsp");
                 }
                 else{
