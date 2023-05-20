@@ -38,7 +38,7 @@ public class singInServlet extends HttpServlet {
             Connection connection = DriverManager.getConnection(dbUrl, username, password);
             System.out.println("Connected to the database.");
             Statement stmt = connection.createStatement();
-            stmt.executeUpdate( "INSERT INTO PROVA.UTENTE (NOME, COGNOME, DATA_NASCITA, EMAIL, NUM_TEL, SIMP, USERNAME, PASSWORD) VALUES ('"+nome+"','"+cognome+"','"+data+"','"+email+"','"+num_tel+"','"+simpBool+"','"+username+"','"+password+"')");
+            stmt.executeUpdate( "INSERT INTO PROVA.UTENTE (NOME, COGNOME, dataNascita, EMAIL, NUM_TEL, SIMP, USERNAME, PASSWORD) VALUES ('"+nome+"','"+cognome+"','"+data+"','"+email+"','"+num_tel+"','"+simpBool+"','"+username+"','"+password+"')");
             response.sendRedirect("index.jsp");
             System.out.println("Inserimento in tabella utente");
             connection.close();
