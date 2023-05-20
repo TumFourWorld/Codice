@@ -1,0 +1,96 @@
+.content{
+    font-family: Lato;
+    color: whitesmoke;
+    width: 90%;
+    padding-left: 5%;
+    text-align: left;
+    margin-top: 20px;
+
+}
+
+.content h1 {
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+
+
+
+.content h1:hover {
+    color: #0088a9;
+    transition: 0.1s;
+}
+
+.content p{
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content img {
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    border-color: whitesmoke;
+    max-width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagecontainer {
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+.content figcaption {
+    font-family: Lato;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.content span {
+    font-weight: bold;
+}
+
+.content label {
+    text-transform: uppercase;
+}
+
+.form .submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    max-width: 250px;
+}
+
+.delete {
+    background-color: rgba(210, 43, 43, 1);
+}
+
+.delete:hover {
+    background-color: rgba(210, 43, 43, 0.8);
+    transition: background-color 0.3s ease 0s;
+}
+
+.att {
+    background-color: rgba(0, 136, 169, 1);
+}
+
+.att:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+    transition: background-color 0.3s ease 0s;
+}
+
+
+
+

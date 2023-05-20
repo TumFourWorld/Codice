@@ -1,12 +1,17 @@
 function ValidateEmail(inputText)
 {
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if(!inputText.value.match(mailformat)) {
         alert("Email non valida , riprova!");
         document.contactForm.email.focus();
         return false;
     }
     return true;
+}
+
+function wrongPage() {
+    alert("Non hai i permessi di accedere a questa pagina");
+    window.history.back();
 }
 
 function ValidateData(inputText){
@@ -74,4 +79,8 @@ function validateRegistration() {
         console.log(psw.value);
         alert("Le due password non coincidono!")
     }
+}
+
+function confermaAtt() { /* finta conferma di selezione attivita*/
+    alert("ti sei iscritto con successo alle attività!");
 }

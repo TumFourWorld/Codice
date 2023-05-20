@@ -9,9 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="script e registrazione">
+    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="css">
+      <change afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/deleteUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/private.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/contatti.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contatti.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/loginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/loginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/script/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/script/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/contatti.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/contatti.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Jsp File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -30,19 +37,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="5e4135a1-2a68-42ee-b7c3-bf019825417f" />
-        <option name="url" value="https://github.com/TumFourWorld/Codice.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -55,33 +49,41 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Pz5iwacyWO9cD17A0euYS71T2U" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/manuv/db-derby-10.16.1.1-bin/lib/derbytools.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.20574713&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/manuv/db-derby-10.16.1.1-bin/lib/derbytools.jar",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.20574713",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;derby&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "derby"
     ]
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="suzu.tum4world.progetto" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false">
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
@@ -100,6 +102,24 @@
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="65072" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -133,8 +153,6 @@
       <updated>1684447201471</updated>
       <workItem from="1684447202495" duration="1071000" />
       <workItem from="1684488572666" duration="7224000" />
-      <workItem from="1684522991440" duration="47000" />
-      <workItem from="1684579658276" duration="112000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -157,21 +175,28 @@
       <option name="project" value="LOCAL" />
       <updated>1684511527510</updated>
     </task>
-    <task id="LOCAL-00004" summary="commit">
-      <created>1684513843902</created>
+    <task id="LOCAL-00004" summary="registrazione">
+      <created>1684512789261</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1684513843902</updated>
+      <updated>1684512789261</updated>
     </task>
-    <task id="LOCAL-00005" summary="script e registrazione">
-      <created>1684523014020</created>
+    <task id="LOCAL-00005" summary="pagine logged (servlet/session) + css">
+      <created>1684579405308</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1684523014020</updated>
+      <updated>1684579405308</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="css">
+      <created>1684579548191</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684579548191</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,8 +216,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pom" />
     <MESSAGE value="registrazione" />
-    <MESSAGE value="commit" />
-    <MESSAGE value="script e registrazione" />
-    <option name="LAST_COMMIT_MESSAGE" value="script e registrazione" />
+    <MESSAGE value="pagine logged (servlet/session) + css" />
+    <MESSAGE value="css" />
+    <option name="LAST_COMMIT_MESSAGE" value="css" />
   </component>
 </project>

@@ -16,19 +16,20 @@
 <body>
 <jsp:include page="sezioni/header.jsp"/>
 <br>
+
 <div style=" justify-content: center;   align-items: center; display: flex;">
-    <form name="loginForm" action="#" class="form" style="width: 350px">
+    <form method="POST" name="loginForm" action="loginServlet" class="form" style="width: 350px">
         <p class="title">Login </p>
 
         <input name="username" type="text" placeholder="username" class="input">
 
         <input name="password" type="password" placeholder="password" class="input">
 
-        <button action="HelloServlet" name="submit" class="submit" type="submit">Loggati</button>
-        <a href="hello-servlet">Hello Servlet</a>
-
+        <button action="HelloServlet" name="submit" class="submit login" type="submit">Loggati</button>
     </form>
+
 </div>
+
 <jsp:include page="sezioni/footer.jsp"/>
 </body>
 
