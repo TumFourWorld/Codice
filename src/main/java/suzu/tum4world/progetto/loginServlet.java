@@ -29,13 +29,19 @@ public class loginServlet extends HttpServlet {
             Statement stmt = connection.createStatement();
 
             ResultSet esiste = stmt.executeQuery( "select * from UTENTE where USERNAME = '"+user+"' ");
-            if(esiste!=null){
-                esiste.next();
+
+            if(esiste.next()) {
                 if(esiste.getString("PASSWORD").equals(psw)){
                     String usr= esiste.getString("USERNAME");
                     System.out.println("LOGGATO");
                     HttpSession session = request.getSession(true);
                     session.setAttribute("username", usr);
+
+                    Boolean simp = esiste.getBoolean("SIMP");
+                    Boolean amm = esiste.getBoolean("ADMIN");
+
+                    session.setAttribute("simp", simp);
+                    session.setAttribute("admin", amm);
                     response.sendRedirect("index.jsp");
                 }
                 else{

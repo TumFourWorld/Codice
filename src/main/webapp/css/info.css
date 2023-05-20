@@ -49,7 +49,6 @@ html{
     outline: 0;
     border-radius: 10px;
     border-color: whitesmoke;
-    background-color: #24252a;
     color: whitesmoke;
     color: grey;
 }
@@ -98,18 +97,38 @@ html{
     border-radius: 20px;
     color: #fff;
     font-size: 16px;
-    width: 50%;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
 }
 
 
 .reset {
-    background-color: #D22B2B;
+    background-color: rgba(210, 43, 43, 1);
+}
+
+.reset:hover {
+    background-color: rgba(210, 43, 43, 0.8);
+    transition: background-color 0.3s ease 0s;
 }
 
 .iscriviti {
-    background-color: #0088a9;
+    background-color: rgba(0, 136, 169, 1);
+
 }
 
-.form .submit:hover {
-    background-color:rgba(0,136,169,1.1);
+.iscriviti:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+    transition: background-color 0.3s ease 0s;
+}
+
+
+
+.login {
+    background-color: rgba(0, 136, 169, 1);
+}
+
+.login:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+    transition: background-color 0.3s ease 0s;
 }

@@ -27,7 +27,7 @@
 --%>
 <link href="../css/main.css" rel="stylesheet" type="text/css">
 <%@ page import="javax.servlet.http.HttpSession" %>
-
+<% String ses = (String) session.getAttribute("username"); %>
 
 <header>
     <h1 class="textlogo">TUM<span>4</span>WORLD</h1>
@@ -38,10 +38,23 @@
             <li><a href="contatti.jsp">Contatti</a></li>
             <li><a href="attivita.jsp">Attivitá</a></li>
             <li><a href="registrazione.jsp">Sign Up</a></li>
+            <%
+                if(ses != null) {
+                    Boolean simp = (Boolean) session.getAttribute("simp");
+                    Boolean amm = (Boolean) session.getAttribute("admin");
+                    if(simp && !amm) {
+                        out.print("<li><a href='simpatizzante.jsp'>Simpatizzante</a></li>");
+                    } else if(!amm) {
+                        out.print("<li><a href='aderente.jsp'>Aderente</a></li>");
+                    }
+                    if(amm) {
+                        out.print("<li><a href='amministratore.jsp'>Amministratore</a></li>");
+                    }
+                }
+            %>
         </ul>
     </nav>
-<% String ses = (String) session.getAttribute("username");
-out.print(ses);
+<%
 if(ses == null){
     out.print("<a class='cta' href='login.jsp'>Login</a>");
 }else{

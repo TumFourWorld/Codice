@@ -10,11 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="registrazione">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/loginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/loginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/info.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/info.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/registrazione.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registrazione.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/script/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/script/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/registrazione.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/registrazione.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sezioni/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sezioni/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Pz5iwacyWO9cD17A0euYS71T2U" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
