@@ -20,6 +20,7 @@ public class utentiServlet extends HttpServlet {
 
         String user = request.getParameter("username");
         String psw = request.getParameter("password");
+        String parameter = request.getParameter("ruolo");
 
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
@@ -32,7 +33,19 @@ public class utentiServlet extends HttpServlet {
 
             PrintWriter out = response.getWriter();
             while(esiste.next()) {
-                out.write("<p>"+esiste.getString("USERNAME")+"</p>");
+                if(parameter.equals("utente")) {
+                    //tutti gli utenti
+                    out.write("<p>" + esiste.getString("USERNAME") + "</p>");
+                } else if (parameter.equals("simp")) {
+                    //tutti i simp
+                    if(esiste.getBoolean("SIMP")){
+                        out.write("<p>" + esiste.getString("USERNAME") + "</p>");
+                    }
+                }else if(parameter.equals("aderenti")){
+                    if(!esiste.getBoolean("SIMP")){
+                        out.write("<p>" + esiste.getString("USERNAME") + "</p>");
+                    }
+                }
             }
 
             connection.close();

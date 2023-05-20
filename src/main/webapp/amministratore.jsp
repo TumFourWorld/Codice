@@ -21,9 +21,22 @@
 
 <div class="content">
   <h2>Visualizza Utenti</h2>
-  <input class="cta" type="button" value="Utenti Registrati" id="buttonClickMe">
+  <input class="cta" type="button" onclick="utenti('registrati')" value="Utenti Registrati" >
+  <input class="cta" type="button" onclick="reset('registrati')" value="Reset" >
   <br>
-  <span id="registrati"></span>
+  <div id="registrati"></div>
+
+  <br>
+
+  <input class="cta" type="button" onclick="simp()" ondblclick="reset(simp)" value="Utenti Simp" >
+  <br>
+  <div id="simp"></div>
+
+  <br>
+
+  <input class="cta" type="button" onclick="aderenti()" ondblclick="reset(aderenti)" value="Utenti Aderenti">
+  <br>
+  <div id="aderenti"></div>
 
 
   <br>
@@ -37,19 +50,35 @@
 <jsp:include page="sezioni/footer.jsp"/>
 </body>
 </html>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() {
+  function reset(id){
+    document.getElementById(id).style.display="none";
+  }
+  function utenti(id){
+    document.getElementById(id).style.display="block";
+    const xhttp= new XMLHttpRequest();
+    xhttp.onload=function (){
+      document.getElementById("registrati").innerHTML=this.responseText;
+    }
+    xhttp.open("GET","utentiServlet?ruolo=utente");
+    xhttp.send();
+  }
 
-    $('#buttonClickMe').click(function() {
-      $.ajax({
-        type : 'GET',
-        url : 'utentiServlet',
-        success : function(result) {
-          $('#registrati').html(result);
-        }
-      });
-    });
+  function simp(){
+    const xhttp= new XMLHttpRequest();
+    xhttp.onload=function (){
+      document.getElementById("simp").innerHTML=this.responseText;
+    }
+    xhttp.open("GET","utentiServlet?ruolo=simp");
+    xhttp.send();
+  }
 
-  });
+  function aderenti(){
+    const xhttp= new XMLHttpRequest();
+    xhttp.onload=function (){
+      document.getElementById("aderenti").innerHTML=this.responseText;
+    }
+    xhttp.open("GET","utentiServlet?ruolo=aderenti");
+    xhttp.send();
+  }
 </script>
