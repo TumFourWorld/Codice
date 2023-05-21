@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="visualizza utenti registrati in amministratore">
+    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="ajax amministratore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/utentiServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/utentiServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +162,7 @@
       <updated>1684447201471</updated>
       <workItem from="1684447202495" duration="1071000" />
       <workItem from="1684488572666" duration="7224000" />
+      <workItem from="1684697272898" duration="2307000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -221,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684594393778</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ajax amministratore">
+      <created>1684598249107</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684598249107</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +251,7 @@
     <MESSAGE value="css" />
     <MESSAGE value="pagina amministratore" />
     <MESSAGE value="visualizza utenti registrati in amministratore" />
-    <option name="LAST_COMMIT_MESSAGE" value="visualizza utenti registrati in amministratore" />
+    <MESSAGE value="ajax amministratore" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajax amministratore" />
   </component>
 </project>
