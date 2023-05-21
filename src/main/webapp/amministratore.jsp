@@ -29,12 +29,14 @@
   <br>
 
   <input class="cta" type="button" onclick="simp()" ondblclick="reset(simp)" value="Utenti Simp" >
+  <input class="cta" type="button" onclick="reset('simp')" value="Reset" >
   <br>
   <div id="simp"></div>
 
   <br>
 
   <input class="cta" type="button" onclick="aderenti()" ondblclick="reset(aderenti)" value="Utenti Aderenti">
+  <input class="cta" type="button" onclick="reset('aderenti')" value="Reset" >
   <br>
   <div id="aderenti"></div>
 
