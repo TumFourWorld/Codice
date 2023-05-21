@@ -45,3 +45,28 @@ img {
     font-size: 18px;
     color: whitesmoke;
 }
+
+.form .submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    max-width: 250px;
+}
+
+.att {
+    background-color: rgba(0, 136, 169, 1);
+}
+
+.att:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+    transition: background-color 0.3s ease 0s;
+}
+
+
+
