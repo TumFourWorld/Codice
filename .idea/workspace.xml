@@ -9,12 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="fix admin">
-      <change afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/iscrizioneAtt.java" afterDir="false" />
+    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="merda">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/iscrizioneAtt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/iscrizioneAtt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/attivita_spec.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/attivita_spec.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/attivita-spec.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/attivita-spec.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +167,8 @@
       <workItem from="1684598727514" duration="159000" />
       <workItem from="1684609203954" duration="4880000" />
       <workItem from="1684694623315" duration="1364000" />
+      <workItem from="1684696002101" duration="26000" />
+      <workItem from="1684697509461" duration="981000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -240,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684598872063</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="merda">
+      <created>1684696022511</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684696022511</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +273,7 @@
     <MESSAGE value="visualizza utenti registrati in amministratore" />
     <MESSAGE value="fix admin2" />
     <MESSAGE value="fix admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix admin" />
+    <MESSAGE value="merda" />
+    <option name="LAST_COMMIT_MESSAGE" value="merda" />
   </component>
 </project>

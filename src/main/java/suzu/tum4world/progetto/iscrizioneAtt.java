@@ -29,19 +29,23 @@ public class iscrizioneAtt extends HttpServlet {
             Statement stmt = connection.createStatement();
 
             HttpSession session = request.getSession(true);
-            String user = (String) session.getAttribute("user");
+            String user = (String) session.getAttribute("username");
 
             String updateQuery = null;
 
             String img = request.getParameter("img-att");
             System.out.println(img);
+            System.out.println(user);
             if(img==null) {
                 System.out.println("ERRORE - NULLL");
             }
             switch(img) {
-                case "img-att1":
-                    updateQuery = "update UTENTE set ATT1 =  true where USERNAME = '"+user+"' ";
+                case "img1":
+                    updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT1 = true WHERE t.USERNAME LIKE '"+user+"' ";
                     break;
+                case "img2":
+                    updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT2 = true WHERE t.USERNAME LIKE '"+user+"' ";
+
                 default:
                     System.out.println("ERRORE IN GET");
                     break;

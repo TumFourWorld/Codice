@@ -31,7 +31,8 @@
 <body>
 <div class="wrapper">
     <form action="iscrizioneAtt" method="POST" class="form">
-    <img src="<%=immagine%>"  id="img-att">
+        <img src="<%=immagine%>">
+        <input type="hidden" name="img-att" value="<%=selectedImage%>">
         <div class="text-box">
         <%=printText%>
         <br><br><hr><br><br>
@@ -39,7 +40,6 @@
         if(ses != null) {
             out.print("<button type='submit' class='submit att' value='Submit'>ISCRIVITI</button>");
         }
-        //out.print("</form>");
     %>
         </div>
     </form>
