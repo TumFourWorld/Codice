@@ -7,10 +7,10 @@
 
   <%
     String ses = (String) session.getAttribute("username");
-    Boolean simp = (Boolean) session.getAttribute("simp");
+    Boolean admin = (Boolean) session.getAttribute("admin");
     if(ses == null) {
       out.println("<script>wrongPage()</script>");
-    } else if(!simp) {
+    } else if(!admin) {
       out.println("<script>wrongPage()</script>");
     }
   %>
