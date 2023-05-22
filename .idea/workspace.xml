@@ -9,10 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="merda">
+    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="teamwork is dreamwork">
+      <change afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/getQuote.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/iscrizioneAtt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/iscrizioneAtt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/attivita_spec.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/attivita_spec.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +169,8 @@
       <workItem from="1684609203954" duration="4880000" />
       <workItem from="1684694623315" duration="1364000" />
       <workItem from="1684696002101" duration="26000" />
-      <workItem from="1684697509461" duration="981000" />
+      <workItem from="1684697509461" duration="1070000" />
+      <workItem from="1684749924349" duration="7214000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -247,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684696022511</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="teamwork is dreamwork">
+      <created>1684698573457</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684698573457</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +283,7 @@
     <MESSAGE value="fix admin2" />
     <MESSAGE value="fix admin" />
     <MESSAGE value="merda" />
-    <option name="LAST_COMMIT_MESSAGE" value="merda" />
+    <MESSAGE value="teamwork is dreamwork" />
+    <option name="LAST_COMMIT_MESSAGE" value="teamwork is dreamwork" />
   </component>
 </project>
