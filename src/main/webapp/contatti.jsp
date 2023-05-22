@@ -44,6 +44,9 @@
         </div>
     </form>
 </div>
+<div>
+    <jsp:include page="sezioni/frase.jsp"/>
+</div>
 <jsp:include page="sezioni/footer.jsp"/>
 
 </body>

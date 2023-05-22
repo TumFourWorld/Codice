@@ -34,8 +34,6 @@
             <!--<img src="https://images.pexels.com/photos/2559749/pexels-photo-2559749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">-->
             <figcaption>Vett e il <span>SALSISON</span> -  24 Maggio 2019</figcaption>
         </div>
-
-
     </div>
 <jsp:include page="sezioni/footer.jsp"/>
 

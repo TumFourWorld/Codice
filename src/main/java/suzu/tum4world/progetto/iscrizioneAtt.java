@@ -62,6 +62,8 @@ public class iscrizioneAtt extends HttpServlet {
                 response.sendRedirect("login.jsp");
             }
 
+            connection.close();
+            System.out.println("Connection closed.");
 
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
