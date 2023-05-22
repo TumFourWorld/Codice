@@ -26,7 +26,9 @@
 <a href="login.jsp" class="<%= currentPage.equals("login.jsp") ? "active" : "" %>">LOGIN</a>
 --%>
 <link href="../css/main.css" rel="stylesheet" type="text/css">
-<%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="javax.servlet.http.HttpSession"
+
+%>
 
 
 <header>
@@ -38,10 +40,13 @@
             <li><a href="contatti.jsp">Contatti</a></li>
             <li><a href="attivita.jsp">Attivitá</a></li>
             <li><a href="registrazione.jsp">Sign Up</a></li>
+                <% String ses = (String) session.getAttribute("username");
+                if(ses == null){
+                    out.print("<li><a href=\"registrazione.jsp\">Sign Up</a></li>");
+                }%>
         </ul>
     </nav>
-<% String ses = (String) session.getAttribute("username");
-out.print(ses);
+<%
 if(ses == null){
     out.print("<a class='cta' href='login.jsp'>Login</a>");
 }else{
