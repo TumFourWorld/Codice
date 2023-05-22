@@ -9,8 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="teamwork is dreamwork (QUOTES FUNZIONANTI, PER ORA)">
+    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="modifica reset button">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/iscrizioneAtt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/iscrizioneAtt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/attivita_spec.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/attivita_spec.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/attivita-spec.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/attivita-spec.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/WEB-INF/classes/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/WEB-INF/classes/META-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/contatti.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/contatti.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/info.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +40,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -56,9 +66,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Updates&quot;,
-    &quot;import_schema_mapping&quot;: &quot;&lt;schema-mapping&gt;\n  &lt;databases&gt;\n    &lt;list&gt;\n      &lt;schema-mapping-item&gt;\n        &lt;source-data-source-id&gt;9195c28e-4ef5-4954-a9bd-a1c2aa4c7ae3&lt;/source-data-source-id&gt;\n        &lt;source-path&gt;schema/&amp;quot;PROVA&amp;quot;&lt;/source-path&gt;\n        &lt;target-data-source-id&gt;9195c28e-4ef5-4954-a9bd-a1c2aa4c7ae3&lt;/target-data-source-id&gt;\n        &lt;target-path&gt;schema/&amp;quot;PROVA&amp;quot;&lt;/target-path&gt;\n      &lt;/schema-mapping-item&gt;\n    &lt;/list&gt;\n  &lt;/databases&gt;\n&lt;/schema-mapping&gt;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/david/Desktop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/manuv/db-derby-10.16.1.1-bin/lib/derbytools.jar&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -168,10 +176,7 @@
       <workItem from="1684609203954" duration="4880000" />
       <workItem from="1684694623315" duration="1364000" />
       <workItem from="1684696002101" duration="26000" />
-      <workItem from="1684697509461" duration="1070000" />
-      <workItem from="1684749924349" duration="9860000" />
-      <workItem from="1684765769736" duration="860000" />
-      <workItem from="1684769064208" duration="329000" />
+      <workItem from="1684697509461" duration="981000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -250,26 +255,26 @@
       <option name="project" value="LOCAL" />
       <updated>1684696022511</updated>
     </task>
-    <task id="LOCAL-00012" summary="teamwork is dreamwork">
-      <created>1684698573457</created>
+    <task id="LOCAL-00012" summary="modifica reset button">
+      <created>1684701357470</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1684698573457</updated>
+      <updated>1684701357470</updated>
     </task>
-    <task id="LOCAL-00013" summary="teamwork is dreamwork (QUOTES FUNZIONANTI, PER ORA)">
-      <created>1684761109804</created>
+    <task id="LOCAL-00013" summary="modifica reset button">
+      <created>1684701892810</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1684761109804</updated>
+      <updated>1684701892810</updated>
     </task>
-    <task id="LOCAL-00014" summary="teamwork is dreamwork (QUOTES FUNZIONANTI, PER ORA)">
-      <created>1684762229595</created>
+    <task id="LOCAL-00014" summary="modifica reset button">
+      <created>1684702537800</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1684762229595</updated>
+      <updated>1684702537800</updated>
     </task>
     <option name="localTasksCounter" value="15" />
     <servers />
@@ -282,19 +287,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -310,8 +303,7 @@
     <MESSAGE value="fix admin2" />
     <MESSAGE value="fix admin" />
     <MESSAGE value="merda" />
-    <MESSAGE value="teamwork is dreamwork" />
-    <MESSAGE value="teamwork is dreamwork (QUOTES FUNZIONANTI, PER ORA)" />
-    <option name="LAST_COMMIT_MESSAGE" value="teamwork is dreamwork (QUOTES FUNZIONANTI, PER ORA)" />
+    <MESSAGE value="modifica reset button" />
+    <option name="LAST_COMMIT_MESSAGE" value="modifica reset button" />
   </component>
 </project>

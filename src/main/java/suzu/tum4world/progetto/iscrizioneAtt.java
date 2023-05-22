@@ -37,7 +37,7 @@ public class iscrizioneAtt extends HttpServlet {
             System.out.println(img);
             System.out.println(user);
             if(img==null) {
-                System.out.println("ERRORE - NULLL");
+                System.out.println("ERRORE - NULL");
             }
             switch(img) {
                 case "img1":
@@ -45,7 +45,10 @@ public class iscrizioneAtt extends HttpServlet {
                     break;
                 case "img2":
                     updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT2 = true WHERE t.USERNAME LIKE '"+user+"' ";
-
+                    break;
+                case "img3":
+                    updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT3 = true WHERE t.USERNAME LIKE '"+user+"' ";
+                    break;
                 default:
                     System.out.println("ERRORE IN GET");
                     break;

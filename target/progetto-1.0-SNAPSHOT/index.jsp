@@ -1,20 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 
-<script type="text/javascript">
-  function quotes(){
-        const xhttp= new XMLHttpRequest();
-        xhttp.onload=function (){
-            document.getElementById("quotes-container").innerHTML=this.responseText;
-        }
-        xhttp.open("GET","getQuote");
-        xhttp.send();
-    }
-
-  quotes();
-  setInterval(quotes, 20000);
-
-</script>
 <html>
 <head>
     <title>TUM4WORLD</title>
@@ -32,7 +18,9 @@
         <img src="https://i.imgur.com/PeHQeTp.png">
         </p> <!-- GIUSTO QUA GIU LE ZAMPE -->
     </div>
-        <div id="quotes-container"></div>
+<div class="sectionhome">
+    <div class="text">
+        <jsp:include page="sezioni/frase.jsp"/>
     </div>
 </div>
 <jsp:include page="sezioni/footer.jsp"/>

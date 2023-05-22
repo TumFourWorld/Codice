@@ -28,13 +28,15 @@
 
   <br>
 
-  <input class="cta" type="button" onclick="simp()" ondblclick="reset(simp)" value="Utenti Simp" >
+  <input class="cta" type="button" onclick="simp('simp')" value="Utenti Simp" >
+  <input class="cta" type="button" onclick="reset('simp')" value="Reset" >
   <br>
   <div id="simp"></div>
 
   <br>
 
-  <input class="cta" type="button" onclick="aderenti()" ondblclick="reset(aderenti)" value="Utenti Aderenti">
+  <input class="cta" type="button" onclick="aderenti('aderenti')" value="Utenti Aderenti">
+  <input class="cta" type="button" onclick="reset('aderenti')" value="Reset" >
   <br>
   <div id="aderenti"></div>
 
@@ -64,18 +66,20 @@
     xhttp.send();
   }
 
-  function simp(){
+  function simp(id){
     const xhttp= new XMLHttpRequest();
     xhttp.onload=function (){
+      document.getElementById(id).style.display="block";
       document.getElementById("simp").innerHTML=this.responseText;
     }
     xhttp.open("GET","utentiServlet?ruolo=simp");
     xhttp.send();
   }
 
-  function aderenti(){
+  function aderenti(id){
     const xhttp= new XMLHttpRequest();
     xhttp.onload=function (){
+      document.getElementById(id).style.display="block";
       document.getElementById("aderenti").innerHTML=this.responseText;
     }
     xhttp.open("GET","utentiServlet?ruolo=aderenti");
