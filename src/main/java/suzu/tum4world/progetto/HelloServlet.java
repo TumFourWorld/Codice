@@ -35,7 +35,6 @@ public class HelloServlet extends HttpServlet {
                 Boolean simp = rs.getBoolean("SIMP");
                 String username = rs.getString("USERNAME");
                 String password = rs.getString("PASSWORD");
-
                 out.println("<h1>" + username + "</h1>");
                 out.println("<p>" + nome + "</p>");
                 out.println("<p>" + cognome + "</p>");
@@ -46,6 +45,7 @@ public class HelloServlet extends HttpServlet {
                 out.println("<p>" + password + "</p>");
                 out.println("<br>");
             }
+
             out.println("</body></html>");
             connection.close();
             System.out.println("Connection closed.");

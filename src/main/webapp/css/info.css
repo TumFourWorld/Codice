@@ -3,6 +3,7 @@ html{
 }
 
 .form {
+    text-transform: uppercase;
     font-family: Lato;
     display: flex;
     flex-direction: column;
@@ -44,13 +45,18 @@ html{
 
 .form .input {
     width: 100%;
-    padding: 10px 10px 20px 10px;
+    padding: 10px 10px 10px 10px;
     outline: 0;
     border-radius: 10px;
     border-color: whitesmoke;
-    background-color: #24252a;
     color: whitesmoke;
+    color: grey;
 }
+
+.form .input::placeholder {
+    text-transform: capitalize;
+}
+
 
 .form .select {
     width: 100%;
@@ -87,13 +93,42 @@ html{
 .form .submit {
     border: none;
     outline: none;
-    background-color: #0088a9;
     padding: 10px;
     border-radius: 20px;
     color: #fff;
     font-size: 16px;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
 }
 
-.form .submit:hover {
-    background-color:rgba(0,136,169,1.1);
+
+.reset {
+    background-color: rgba(210, 43, 43, 1);
+}
+
+.reset:hover {
+    background-color: rgba(210, 43, 43, 0.8);
+    transition: background-color 0.3s ease 0s;
+}
+
+.iscriviti {
+    background-color: rgba(0, 136, 169, 1);
+
+}
+
+.iscriviti:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+    transition: background-color 0.3s ease 0s;
+}
+
+
+
+.login {
+    background-color: rgba(0, 136, 169, 1);
+}
+
+.login:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+    transition: background-color 0.3s ease 0s;
 }
