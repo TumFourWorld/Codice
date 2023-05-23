@@ -33,16 +33,18 @@ public class utentiServlet extends HttpServlet {
 
             PrintWriter out = response.getWriter();
             while(esiste.next()) {
-                if(parameter.equals("utente")) {
+                if(parameter.equals("registrati")) {
                     //tutti gli utenti
                     out.write("<p>" + esiste.getString("USERNAME") + "</p>");
                 } else if (parameter.equals("simp")) {
                     //tutti i simp
                     if(esiste.getBoolean("SIMP")){
+                        //quelli simp
                         out.write("<p>" + esiste.getString("USERNAME") + "</p>");
                     }
                 }else if(parameter.equals("aderenti")){
                     if(!esiste.getBoolean("SIMP")){
+                        //solo aderenti
                         out.write("<p>" + esiste.getString("USERNAME") + "</p>");
                     }
                 }

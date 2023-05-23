@@ -9,17 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="modifica reset button">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="attivita e modifiche database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/iscrizioneAtt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/iscrizioneAtt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/attivita_spec.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/attivita_spec.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/attivita-spec.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/attivita-spec.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/utentiServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/utentiServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/beans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/WEB-INF/classes/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/WEB-INF/classes/META-INF/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/contatti.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/contatti.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/info.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +172,7 @@
       <workItem from="1684694623315" duration="1364000" />
       <workItem from="1684696002101" duration="26000" />
       <workItem from="1684697509461" duration="981000" />
+      <workItem from="1684848643934" duration="985000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -276,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684702537800</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="attivita e modifiche database">
+      <created>1684775556471</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1684775556471</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +307,7 @@
     <MESSAGE value="fix admin" />
     <MESSAGE value="merda" />
     <MESSAGE value="modifica reset button" />
-    <option name="LAST_COMMIT_MESSAGE" value="modifica reset button" />
+    <MESSAGE value="attivita e modifiche database" />
+    <option name="LAST_COMMIT_MESSAGE" value="attivita e modifiche database" />
   </component>
 </project>
