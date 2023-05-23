@@ -18,7 +18,7 @@
 <jsp:include page="sezioni/header.jsp"/>
 <br>
 <div style=" justify-content: center;   align-items: center; display: flex;">
-        <form name="singUpForm" method="post" class="form" action="singInServlet" onsubmit="return validateRegistration()" > <!-- action="singInServlet" -->
+        <form id="formRegistrazione" name="singUpForm" method="post" class="form" action="singInServlet"> <!-- action="singInServlet" -->
             <p class="title">Registrati </p>
             <div class="flex">
                 <input name="nome" type="text" placeholder="nome" class="input" id="nome" required>
@@ -45,5 +45,63 @@
         </form>
     </div>
 <jsp:include page="sezioni/footer.jsp"/>
+
+
+<script>
+    document.getElementById("formRegistrazione").addEventListener("submit", function(event) {
+         // Prevent the default form submission
+        /*
+        let nome = document.getElementById("nome");
+        let cognome = document.getElementById("cognome");
+        let datanascita = document.getElementById("datanascita");
+        let email = document.getElementById("email");
+        let numtel = document.getElementById("numtel");
+        let uname = document.getElementById("uname");
+        */
+
+        let email = document.getElementById("email");
+        if(!ValidateEmail(email)){
+            event.preventDefault(); //in questo modo non fa submit dopo aver dato errore. deve cliccare bottono di nuovo lmao
+        }
+        let psw = document.getElementById("psw");
+        let pswcheck = document.getElementById("pswcheck");
+
+
+        if(psw.value.length <8) {
+            alert("Password troppo corta")
+            event.preventDefault();
+        } else if(!((psw.value.includes("d") || psw.value.includes("D")) && (psw.value.includes("A") || psw.value.includes("a")) && (psw.value.includes("M") || psw.value.includes("m")))) {
+            alert("La password deve contenere almeno uno dei seguenti caratteri: D-A-M maiuscola o minuscola");
+            event.preventDefault();
+        } else if(!(psw.value.includes("!") || psw.value.includes("$") || psw.value.includes("?"))) {
+            alert("La pasword deve contenere almeno uno dei seguenti caratteri: ? - ! - $");
+            event.preventDefault();
+        } else if(!containsUppercase(psw.value)) {
+            alert("La password deve contenere almeno una lettera maiuscola!");
+            event.preventDefault();
+        } else if(!containsNumbers(psw.value)) {
+            alert("La password deve contenere almeno un numero!");
+            event.preventDefault();
+        } else if(!(pswcheck.value == psw.value)) {
+            //console.log(pswcheck.value);
+            //console.log(psw.value);
+            alert("Le due password non coincidono!")
+            event.preventDefault();
+        }
+
+
+
+
+
+
+
+        //alert("Registrazione effettuata con sucecsso!");
+        //document.getElementById("formRegistrazione").reset(); //cleara form x essere fico
+
+    });
+
+
+
+</script>
 </body>
 </html>
