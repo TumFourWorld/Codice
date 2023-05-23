@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>TUM4WORLD</title>
-    <link rel="icon" href="logo/Logo.ico"/>
+    <link rel="icon" href="img/Logo.ico"/>
     <link href="css/attivita-spec.css" rel="stylesheet" type="text/css">
     <%
         String ses = (String) session.getAttribute("username");

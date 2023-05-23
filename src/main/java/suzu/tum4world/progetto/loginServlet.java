@@ -40,7 +40,7 @@ public class loginServlet extends HttpServlet {
                     /* prendo valori da DB */
                     String nome = esiste.getString("NOME");
                     String cognome = esiste.getString("COGNOME");
-                    String dob = esiste.getString("dataNascita");
+                    String dob = esiste.getString("DATA_NASCITA");
                     String email = esiste.getString("EMAIL");
                     String tel = esiste.getString("NUM_TEL");
                     Boolean simp = esiste.getBoolean("SIMP");

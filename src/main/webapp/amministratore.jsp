@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
   <title>TUM4WORLD</title>
-  <link rel="icon" href="logo/Logo.ico"/>
+  <link rel="icon" href="img/Logo.ico"/>
   <link rel="stylesheet" href="css/private.css">
   <script src="script/script.js"></script>
 
