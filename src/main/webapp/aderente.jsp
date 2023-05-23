@@ -47,6 +47,7 @@
   <br><br><hr><br><br>
 
   <h2>FAI UNA DONAZIONE PER SUPPORTARCI</h2>
+  <div id="importoTot"></div>
   Importo della donazione -> <input type="number" step="0.01" name="importo" id="importo">
   <button type="submit" class="submit att" onclick="dona(document.getElementById('importo').value)" value="Submit">Invia donazione </button>
   <br>
@@ -61,6 +62,15 @@
 </div>
 
 <script type="text/javascript">
+  window.onload = function() {
+    const xhttp= new XMLHttpRequest();
+    xhttp.onload=function (){
+      document.getElementById('importoTot').innerHTML=this.responseText;
+    }
+    xhttp.open("GET","donazione");
+    xhttp.send();
+  };
+
   function dona(importo){
     const xhttp= new XMLHttpRequest();
     xhttp.onload=function (){
@@ -70,10 +80,6 @@
     xhttp.send();
   }
 </script>
-
-
-
-
 
 </div>
 <jsp:include page="sezioni/footer.jsp"/>

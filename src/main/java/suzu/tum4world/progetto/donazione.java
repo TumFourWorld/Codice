@@ -44,6 +44,24 @@ public class donazione extends HttpServlet {
         }
     }
 
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        //campi dalla sessione
+        String username = (String) request.getSession().getAttribute("username");
+
+        try {
+            PrintWriter out = response.getWriter();
+            Statement stmt = connection.createStatement();
+            ResultSet donazione = stmt.executeQuery( "SELECT  SUM(IMPORTO) AS sommaDonazioni FROM PROVA.DONAZIONI WHERE DONAZIONI.USERNAME='"+username+"'GROUP BY DONAZIONI.USERNAME ");
+            while(donazione.next()) {
+                out.write("In totale hai donato : "+donazione.getDouble("sommaDonazioni"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+
     public void destroy() {
         try {
             connection.close();
