@@ -21,21 +21,21 @@
 
 <div class="content">
   <h2>Visualizza Utenti</h2>
-  <input class="cta" type="button" onclick="utenti('registrati')" value="Utenti Registrati" >
+  <input class="cta" type="button" onclick="stampa('registrati')" value="Utenti Registrati" >
   <input class="cta" type="button" onclick="reset('registrati')" value="Reset" >
   <br>
   <div id="registrati"></div>
 
   <br>
 
-  <input class="cta" type="button" onclick="simp('simp')" value="Utenti Simp" >
+  <input class="cta" type="button" onclick="stampa('simp')" value="Utenti Simp" >
   <input class="cta" type="button" onclick="reset('simp')" value="Reset" >
   <br>
   <div id="simp"></div>
 
   <br>
 
-  <input class="cta" type="button" onclick="aderenti('aderenti')" value="Utenti Aderenti">
+  <input class="cta" type="button" onclick="stampa('aderenti')" value="Utenti Aderenti">
   <input class="cta" type="button" onclick="reset('aderenti')" value="Reset" >
   <br>
   <div id="aderenti"></div>
@@ -56,33 +56,13 @@
   function reset(id){
     document.getElementById(id).style.display="none";
   }
-  function utenti(id){
-    document.getElementById(id).style.display="block";
-    const xhttp= new XMLHttpRequest();
-    xhttp.onload=function (){
-      document.getElementById("registrati").innerHTML=this.responseText;
-    }
-    xhttp.open("GET","utentiServlet?ruolo=utente");
-    xhttp.send();
-  }
-
-  function simp(id){
+  function stampa(id){
     const xhttp= new XMLHttpRequest();
     xhttp.onload=function (){
       document.getElementById(id).style.display="block";
-      document.getElementById("simp").innerHTML=this.responseText;
+      document.getElementById(id).innerHTML=this.responseText;
     }
-    xhttp.open("GET","utentiServlet?ruolo=simp");
-    xhttp.send();
-  }
-
-  function aderenti(id){
-    const xhttp= new XMLHttpRequest();
-    xhttp.onload=function (){
-      document.getElementById(id).style.display="block";
-      document.getElementById("aderenti").innerHTML=this.responseText;
-    }
-    xhttp.open("GET","utentiServlet?ruolo=aderenti");
+    xhttp.open("GET","utentiServlet?ruolo="+id);
     xhttp.send();
   }
 </script>

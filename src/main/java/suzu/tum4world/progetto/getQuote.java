@@ -14,25 +14,28 @@ import java.sql.*;
 public class getQuote extends HttpServlet {
 
     private String message;
-
+    Connection connection;
     public void init() {
-        message = "Hello World!";
-    }
-    String dbUrl = "jdbc:derby://localhost:1527/MyDerbydb";
-    String username = "prova";
-    String password = "prova";
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
+        String dbUrl = "jdbc:derby://localhost:1527/MyDerbydb";
+        String username = "prova";
+        String password = "prova";
         try {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             System.out.println("Driver loaded successfully.");
-            Connection connection = DriverManager.getConnection(dbUrl, username, password);
+            connection = DriverManager.getConnection(dbUrl, username, password);
             System.out.println("Connected to the database.");
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        try {
+            //output
             Statement stmt = connection.createStatement();
-
-            //x out
             PrintWriter out = response.getWriter();
-
 
             //prendo numerod di quotes in DB e setto come limite per random
             int rowCount = 0;
@@ -64,11 +67,6 @@ public class getQuote extends HttpServlet {
                 System.out.println("QUOTE NON TROVATA!");
                 response.sendRedirect("login.jsp"); //REDIRECT DA MANDARE IN BASE A PROVENIENZA PAGINA
             }
-
-            connection.close();
-            System.out.println("Connection closed.");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -77,5 +75,11 @@ public class getQuote extends HttpServlet {
     }
 
     public void destroy() {
+        try {
+            connection.close();
+            System.out.println("Connection closed.");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
