@@ -27,6 +27,7 @@ public class loginServlet extends HttpServlet {
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
+
         String user = request.getParameter("username");
         String psw = request.getParameter("password");
 

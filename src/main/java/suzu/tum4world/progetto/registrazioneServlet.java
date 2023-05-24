@@ -51,6 +51,10 @@ public class registrazioneServlet extends HttpServlet {
         }
     }
 
+    protected void processrequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+    }
+
     public void destroy() {
         try {
             connection.close();
