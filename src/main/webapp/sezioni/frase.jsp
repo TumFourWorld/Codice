@@ -14,20 +14,25 @@
     xhttp.open("GET","getQuote", true);
     xhttp.responseType="json";
 
-      xhttp.onreadystatechange = function() {
-          let done = 4, ok=200;
-
+      xhttp.onload = function() {
           //se ok prendo risposta
-          if(xhttp.readyState === done && xhttp.status === ok) {
+          if(this.status=200) {
             let my_JSON_array = this.response;
-            let my_JSON_array_length = my_JSON_array.length
             if (my_JSON_array === null) {
                 document.getElementById("quotes-container").innerHTML = "No data avaiable - No quotes 404";
-            } else if (my_JSON_array_length > 0) {
-                console.log("qui");
-                let randomIndex = Math.floor(Math.random() * (my_JSON_array_length + 1)); //da 0 a array length
-                let current_JSON_object = JSON.parse(my_JSON_array[randomIndex]);
-                document.getElementById("quotes-container").innerHTML = current_JSON_object;
+            } else if (my_JSON_array.length > 0) {
+                //let randomIndex = Math.floor(Math.random() * (my_JSON_array.length + 1)); //da 0 a array length
+                //let current_JSON_object = JSON.parse(my_JSON_array[randomIndex]);
+
+                for(let i=0; i<my_JSON_array.length; i++) {
+                    let current_JSON_object = JSON.parse(my_JSON_array[i]);
+                    for(let key in current_JSON_object) {
+                        document.getElementById("quotes-container").innerHTML = current_JSON_object[key];
+                    }
+                }
+
+                document.getElementById("quotes-container").style.color = "white";
+
             }
         } else {
             document.getElementById("quotes-container").innerHTML = "Connection error";

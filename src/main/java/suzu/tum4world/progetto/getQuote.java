@@ -44,18 +44,15 @@ public class getQuote extends HttpServlet {
 
         try {
 
-            QUOTES retrieved_quotes = new QUOTES();
 
             Statement stmt = connection.createStatement();
             ResultSet esiste = stmt.executeQuery("select FRASE from QUOTES");
 
             while(esiste.next()) {
-                retrieved_quotes.setFrase(esiste.getString("USERNAME"));
+                QUOTES retrieved_quotes = new QUOTES();
+                retrieved_quotes.setFrase(esiste.getString("FRASE"));
+                output.add(retrieved_quotes); //metto dentro array di QUOTES x mandare in output
             }
-
-            output.add(retrieved_quotes); //metto dentro array di QUOTES x mandare in output
-
-
 
 
         }catch (SQLException e) {
@@ -124,7 +121,7 @@ public class getQuote extends HttpServlet {
 
 
 
-        public void destroy() {
+    public void destroy() {
         try {
             connection.close();
             System.out.println("Connection closed.");
