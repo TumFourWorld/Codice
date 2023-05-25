@@ -11,8 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="donazioni fixate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/grafo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/grafo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +177,7 @@
       <workItem from="1684848643934" duration="11388000" />
       <workItem from="1684935474201" duration="12450000" />
       <workItem from="1684960422267" duration="5860000" />
-      <workItem from="1685008261363" duration="813000" />
+      <workItem from="1685008261363" duration="5020000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -328,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684863511251</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="donazioni fixate">
+      <created>1685009131197</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1685009131197</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,6 +367,7 @@
     <MESSAGE value="cambio servlet init e destroy" />
     <MESSAGE value="donazioni" />
     <MESSAGE value="totale donazioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="totale donazioni" />
+    <MESSAGE value="donazioni fixate" />
+    <option name="LAST_COMMIT_MESSAGE" value="donazioni fixate" />
   </component>
 </project>
