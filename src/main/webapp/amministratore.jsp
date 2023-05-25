@@ -47,7 +47,8 @@
   <br><br><hr><br><br>
 
   <input class="cta" type="button" onclick="grafo()" value="Grafo">
-  <div id="container" style="width:100%; height:400px;"></div>
+  <br><br>
+  <div id="container" style="width:100%; height:600px;"></div>
 
 </div>
 
@@ -73,6 +74,7 @@
 
   function grafo(){
     const xhttp= new XMLHttpRequest();
+    let anno = new Date().getFullYear();
 
     xhttp.open("GET","grafo");
     xhttp.send();
@@ -98,7 +100,7 @@
             text: 'Donazioni Tum4World'
           },
           subtitle: {
-            text: 'Le donazioni degli aderenti nel corso dei mesi dell anno scorso'
+            text: 'Le donazioni degli aderenti nel corso dei mesi del '+anno,
           },
           xAxis: {
             categories: arrayMesi,

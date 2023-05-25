@@ -39,7 +39,6 @@ public class grafo extends HttpServlet {
             Statement stmt = connection.createStatement();
             LocalDate currentDate = LocalDate.now();
             int year = currentDate.getYear();
-            System.out.println(year);
             ResultSet donazione = stmt.executeQuery( "SELECT MONTH(DATA_DONAZIONE) as mese, SUM(IMPORTO) as importo FROM DONAZIONI WHERE YEAR(DATA_DONAZIONE)>="+year+" group by MONTH(DATA_DONAZIONE)");
             JsonObject jsonObject = new JsonObject();
             while (donazione.next()) {
