@@ -4,6 +4,7 @@
     <title>TUM4WORLD</title>
     <link rel="icon" href="img/Logo.ico"/>
     <link href="css/info.css" rel="stylesheet" type="text/css">
+    <script src="script/script.js"></script>
 
 </head>
 <body>

@@ -1,9 +1,7 @@
 function ValidateEmail(inputText)
 {
     let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(!inputText.value.match(mailformat)) {
-        alert("Email non valida , riprova!");
-        document.contactForm.email.focus();
+    if(!inputText.match(mailformat)) {
         return false;
     }
     return true;
