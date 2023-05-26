@@ -27,6 +27,7 @@
 
 <div class="content">
   <h1>Dati Personali</h1>
+  <div id="display-user"></div>
   <%
     String nome = (String) session.getAttribute("nome");
     String cognome = (String) session.getAttribute("cognome");
@@ -59,15 +60,38 @@
   </form>
 </div>
 
-<%
-
-
-
-
-%>
-
 
 </div>
 <jsp:include page="sezioni/footer.jsp"/>
 </body>
 </html>
+
+<script>
+  const xhttp= new XMLHttpRequest();
+  xhttp.open("GET","retrieveUserData", true);
+  xhttp.responseType="json";
+
+  xhttp.onload = function() {
+    //se ok prendo risposta
+    if(this.status=200) {
+      let my_JSON_array = this.response;
+      if (my_JSON_array === null) {
+        document.getElementById("display-user").innerHTML = "No data avaiable - No USER 404";
+      } else if (my_JSON_array.length > 0) {
+        let randomIndex = Math.floor(Math.random() * (my_JSON_array.length + 1)); //da 0 a array length
+        //let current_JSON_object = JSON.parse(my_JSON_array[randomIndex]);
+
+
+        let current_JSON_object = JSON.parse(my_JSON_array[randomIndex]);
+        for(let key in current_JSON_object) {
+          document.getElementById("display-").innerHTML = current_JSON_object[key];
+        }
+      }
+    } else {
+      document.getElementById("display-").innerHTML = "Connection error";
+    }
+
+  }
+
+  xhttp.send();
+</script>

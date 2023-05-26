@@ -57,7 +57,6 @@ public class loginServlet extends HttpServlet {
                     session.setAttribute("dob", dob);
                     session.setAttribute("email", email);
                     session.setAttribute("tel", tel);
-
                     session.setAttribute("simp", simp);
                     session.setAttribute("admin", amm);
                     response.sendRedirect("index.jsp");
