@@ -12,24 +12,32 @@ import java.sql.*;
 public class deleteUser extends HttpServlet {
 
     private String message;
+    Connection connection;
 
     public void init() {
-        message = "Hello World!";
+        String dbUrl = "jdbc:derby://localhost:1527/MyDerbydb";
+        String username = "prova";
+        String password = "prova";
+        try {
+            Class.forName("org.apache.derby.jdbc.ClientDriver");
+            System.out.println("Driver loaded successfully.");
+            connection = DriverManager.getConnection(dbUrl, username, password);
+            System.out.println("Connected to the database.");
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
-    String dbUrl = "jdbc:derby://localhost:1527/MyDerbydb";
-    String username = "prova";
-    String password = "prova";
+
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         //prendo username da session
         HttpSession session = request.getSession(true);
         String user = (String) session.getAttribute("username");
 
+        //sql delete user
         try {
-            Class.forName("org.apache.derby.jdbc.ClientDriver");
-            System.out.println("Driver loaded successfully.");
-            Connection connection = DriverManager.getConnection(dbUrl, username, password);
-            System.out.println("Connected to the database.");
             Statement stmt = connection.createStatement();
 
             String deleteQuery = "DELETE FROM UTENTE WHERE USERNAME = '"+user+"' ";
@@ -43,18 +51,17 @@ public class deleteUser extends HttpServlet {
                 System.out.println("UTENTE NON TROVATO");
                 response.sendRedirect("login.jsp");
             }
-
-            connection.close();
-            System.out.println("Connection closed.");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        // Hello
-
     }
 
     public void destroy() {
+        try {
+            connection.close();
+            System.out.println("Connection closed.");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

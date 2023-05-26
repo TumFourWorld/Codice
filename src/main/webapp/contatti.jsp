@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>TUM4WORLD</title>
-    <link rel="icon" href="logo/Logo.ico"/>
+    <link rel="icon" href="img/Logo.ico"/>
     <script src="script/script.js"></script>
     <link href="css/info.css" rel="stylesheet" type="text/css">
 </head>
