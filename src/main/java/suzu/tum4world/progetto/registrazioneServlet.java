@@ -45,7 +45,7 @@ public class registrazioneServlet extends HttpServlet {
         u.setNum_tel(request.getParameter("num_tel"));
         Boolean scelta = false;
         if(request.getParameter("scelta").equals("simp")) {
-             scelta = true;
+            scelta = true;
         }
         u.setSimp(scelta);
         u.setUsername(request.getParameter("uname"));
@@ -53,9 +53,16 @@ public class registrazioneServlet extends HttpServlet {
 
         try {
             Statement stmt = connection.createStatement();
-            stmt.executeUpdate( "INSERT INTO PROVA.UTENTE (NOME, COGNOME, DATA_NASCITA, EMAIL, NUM_TEL, SIMP, USERNAME, PASSWORD) VALUES ('"+u.getNome()+"','"+u.getCognome()+"','"+u.getData_nascita()+"','"+ u.getEmail()+"','"+u.getNum_tel()+"','"+u.getSimp()+"','"+u.getUsername()+"','"+u.getPassword()+"')");
-            System.out.println("Inserito user con successo");
-            response.getWriter().write("success");
+            ResultSet resultSet = stmt.executeQuery("SELECT *FROM UTENTE WHERE USERNAME='"+u.getUsername()+"'");
+            if(!resultSet.next()) {
+                stmt.executeUpdate("INSERT INTO PROVA.UTENTE (NOME, COGNOME, DATA_NASCITA, EMAIL, NUM_TEL, SIMP, USERNAME, PASSWORD) VALUES ('" + u.getNome() + "','" + u.getCognome() + "','" + u.getData_nascita() + "','" + u.getEmail() + "','" + u.getNum_tel() + "','" + u.getSimp() + "','" + u.getUsername() + "','" + u.getPassword() + "')");
+                System.out.println("Inserito user con successo");
+                response.getWriter().write("success");
+            }
+            else {
+                System.out.println("Username già presente");
+                response.getWriter().write("user_existing");
+            }
 
         } catch (SQLException e) {
             System.out.println("registrazione non effettuata");

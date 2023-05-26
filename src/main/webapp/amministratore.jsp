@@ -4,38 +4,9 @@
   <link rel="icon" href="img/Logo.ico"/>
   <link rel="stylesheet" href="css/private.css">
   <script src="script/script.js"></script>
-  <style>
-    table {
-      margin-top: 15px;
-      font-family: Lato;
-      font-weight: 200;
-    }
-
-    table th {
-      font-weight: bold;
-      text-transform: uppercase;
-      padding-top: 12px;
-      padding-bottom: 12px;
-      text-align: left;
-      background-color: #04AA6D;
-      color: white;
-    }
-
-    table td{
-      border: 1px solid #ddd;
-      padding: 8px;
-      color: white;
-    }
+  <script src="https://code.highcharts.com/highcharts.js"></script>
 
 
-    table th:nth-child(even){
-      background-color: #f2f2f2;
-    }
-
-
-
-
-  </style>
 
   <%
     String ses = (String) session.getAttribute("username");
@@ -80,6 +51,14 @@
   <form method="POST" name="deleteUser" action="deleteUser" class="form">
     <button action="deleteUser" name="submit" class="submit delete" type="submit">CANCELLA ISCRIZIONE</button>
   </form>
+
+
+  <br><br><hr><br><br>
+
+  <input class="cta" type="button" onclick="grafo()" value="Grafo">
+  <br><br>
+  <div id="container" style="width:100%; height:600px;"></div>
+
 </div>
 
 
@@ -158,17 +137,80 @@
             }
           }
         } else {
-            document.getElementById(tablename).innerHTML = "no data avaiable 2 lmao";
+          document.getElementById(tablename).innerHTML = "no data avaiable 2 lmao";
         }
-
-
       }
-
-
-
     }
-
     //sending request
     xhttp.send();
   }
+
+
+  function grafo(){
+    const xhttp= new XMLHttpRequest();
+    let anno = new Date().getFullYear();
+
+    xhttp.open("GET","grafo");
+    xhttp.send();
+    xhttp.responseType="json";
+
+    xhttp.onload=function (){
+      if(xhttp.readyState=== 4 && xhttp.status===200){
+        var data = this.response;
+        var arrayMesi=[];
+        var arrayDonazioni=[];
+        console.log(data);
+        for(let i=0;i<data.length;i++){
+          var data2=JSON.parse(data[i]);
+          arrayMesi.push(data2.mese);
+          arrayDonazioni.push(data2.importo);
+        }
+
+        Highcharts.chart('container', {
+          chart: {
+            type: 'column'
+          },
+          title: {
+            text: 'Donazioni Tum4World'
+          },
+          subtitle: {
+            text: 'Le donazioni degli aderenti nel corso dei mesi del '+anno,
+          },
+          xAxis: {
+            categories: arrayMesi,
+            crosshair: true
+          },
+          yAxis: {
+            min: 0,
+            title: {
+              text: 'Importo(in €)'
+            }
+          },
+
+          tooltip: {
+            headerFormat: '<span style="font-size:15px;padding: 50px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:.1f} €</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+          },
+          plotOptions: {
+            column: {
+              pointPadding: 0.3,
+              borderWidth: 0
+            }
+          },
+          series: [{
+            name : 'Donazioni',
+            data: arrayDonazioni
+          }]
+        });
+      }
+    }
+  }
+
+
+
+
 </script>
