@@ -45,14 +45,24 @@ public class retrieveUserData extends HttpServlet {
 
         try {
             Statement stmt = connection.createStatement();
-            ResultSet esiste = stmt.executeQuery("select * from UTENTE WHERE USERNAME="+user);
-            if(!esiste.next()) {
+            ResultSet esiste = stmt.executeQuery("select * from UTENTE WHERE USERNAME='"+user+"'");
+            if(esiste.next()) {
+                USER retrieved_user = new USER();
+                retrieved_user.setNome(esiste.getString("NOME"));
+                retrieved_user.setCognome(esiste.getString("COGNOME"));
+                retrieved_user.setData_nascita(esiste.getString("DATA_NASCITA"));
+                retrieved_user.setEmail(esiste.getString("EMAIL"));
+                retrieved_user.setNum_tel(esiste.getString("NUM_TEL"));
+                retrieved_user.setSimp(esiste.getBoolean("SIMP"));
+                retrieved_user.setUsername(esiste.getString("USERNAME"));
+                retrieved_user.setAtt1(esiste.getBoolean("ATT1"));
+                retrieved_user.setAtt2(esiste.getBoolean("ATT2"));
+                retrieved_user.setAtt3(esiste.getBoolean("ATT3"));
 
-            }
-            while(esiste.next()) {
-                QUOTES retrieved_quotes = new QUOTES();
-                retrieved_quotes.setFrase(esiste.getString("FRASE"));
-                output.add(retrieved_quotes); //metto dentro array di QUOTES x mandare in output
+                System.out.println(retrieved_user.getNome());
+
+
+                output.add(retrieved_user); //metto dentro array di user x mandare in output
             }
 
 
@@ -66,9 +76,9 @@ public class retrieveUserData extends HttpServlet {
 
         try (PrintWriter out = response.getWriter()) {
             JsonArray array = new JsonArray();
-            for(QUOTES q : output) {
+            for(USER u : output) {
                 Gson gson = new Gson();
-                array.add(gson.toJson(q));
+                array.add(gson.toJson(u));
             }
             out.println(array);
             out.flush();
@@ -77,50 +87,6 @@ public class retrieveUserData extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
-
-
-        /* VECCHIA VERSIONE
-        try {
-            Statement stmt = connection.createStatement();
-            PrintWriter out = response.getWriter();
-
-            //prendo numerod di quotes in DB e setto come limite per random
-            int rowCount = 0;
-
-            String maxQuery = "SELECT COUNT(*) as row_count FROM QUOTES";
-            ResultSet rs = stmt.executeQuery(maxQuery);
-            if (rs.next()) {
-                rowCount = rs.getInt("row_count");
-                System.out.println("Numero di frasi presenti in DB " + rowCount);
-            }
-
-
-            //genero numero random per scegliere quote
-            Random random = new Random();
-            int min=1; //include 0
-            int max = rowCount; //include max(+1)
-            int randomNumber = random.nextInt(max - min  +1)+min;
-
-            //la spiego xche dimentico: con offset scelgo a che posizione prendere. con fetch scelgo quante righe prendere (una)
-            //SELECT * FROM quotes ORDER BY FRASE OFFSET " + (randomNumber) + " ROWS FETCH NEXT 1 ROW ONLY
-            String quoteQuery = "SELECT frase FROM quotes WHERE id="+(randomNumber)+ "";
-            System.out.println(quoteQuery);
-            ResultSet quote = stmt.executeQuery(quoteQuery);
-            if (quote.next()) {
-                // acceddo a valore colonna di riga presa
-                out.write("<p>" + quote.getString("FRASE") + "</p>");
-                System.out.println("QUOTE PRESA");
-            } else {
-                System.out.println("QUOTE NON TROVATA!");
-                response.sendRedirect("login.jsp"); //REDIRECT DA MANDARE IN BASE A PROVENIENZA PAGINA
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
-         */
-
-
 
     public void destroy() {
         try {
