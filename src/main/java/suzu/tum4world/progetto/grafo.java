@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonPrimitive;
 
 @WebServlet(name = "grafo", value = "/grafo")
 public class grafo extends HttpServlet {
@@ -63,7 +62,7 @@ public class grafo extends HttpServlet {
             }
 
             response.setContentType("application/json");
-            response.setCharacterEncoding("uft-8");
+            response.setCharacterEncoding("utf-8");
             JsonArray array= new JsonArray();
             for(DonazioneGrafo don : output){
                 Gson gson = new Gson();
