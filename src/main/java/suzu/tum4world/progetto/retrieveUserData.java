@@ -1,19 +1,23 @@
 package suzu.tum4world.progetto;
 
-import java.io.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
-import java.sql.*;
-import java.util.ArrayList;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 
-@WebServlet(name = "utentiServlet", value = "/utentiServlet")
-public class utentiServlet extends HttpServlet {
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.*;
+import java.util.ArrayList;
+
+@WebServlet(name = "retrieveUserData", value = "/retrieveUserData")
+public class retrieveUserData extends HttpServlet {
 
     private String message;
     Connection connection;
-
     public void init() {
         String dbUrl = "jdbc:derby://localhost:1527/MyDerbydb";
         String username = "prova";
@@ -29,7 +33,6 @@ public class utentiServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
-
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         processrequest(request, response);
     }
@@ -37,39 +40,33 @@ public class utentiServlet extends HttpServlet {
     protected void processrequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         ArrayList<USER> output = new ArrayList<USER>();
+        HttpSession session = request.getSession(true);
+        String user =(String) session.getAttribute("username");
 
         try {
-            String parameter = request.getParameter("ruolo");
-
             Statement stmt = connection.createStatement();
-            ResultSet esiste = stmt.executeQuery("select USERNAME, SIMP from UTENTE");
-
-            //PrintWriter out = response.getWriter();
-            while (esiste.next()) {
+            ResultSet esiste = stmt.executeQuery("select * from UTENTE WHERE USERNAME='"+user+"'");
+            if(esiste.next()) {
                 USER retrieved_user = new USER();
-                if (parameter.equals("registrati")) {
-                    //TUTTI GLI UTENTI
-                    //out.write("<p>" + esiste.getString("USERNAME") + "</p>");
-                    retrieved_user.setUsername(esiste.getString("USERNAME"));
-                } else if (parameter.equals("simp")) {
-                    //tutti i simp
-                    if (esiste.getBoolean("SIMP")) {
-                        //SE SONO SIMP PRENDO TUTTI I SIMP
-                        //out.write("<p>" + esiste.getString("USERNAME") + "</p>");
-                        retrieved_user.setUsername(esiste.getString("USERNAME"));
-                    }
-                } else if (parameter.equals("aderenti")) {
-                    if (!esiste.getBoolean("SIMP")) {
-                        //SE SONO ADERENTI PRENDO TUTTI ADERENTI
-                        //out.write("<p>" + esiste.getString("USERNAME") + "</p>");
-                        retrieved_user.setUsername(esiste.getString("USERNAME"));
-                    }
-                }
-                output.add(retrieved_user); //metto dentro array di USER
+                retrieved_user.setNome(esiste.getString("NOME"));
+                retrieved_user.setCognome(esiste.getString("COGNOME"));
+                retrieved_user.setData_nascita(esiste.getString("DATA_NASCITA"));
+                retrieved_user.setEmail(esiste.getString("EMAIL"));
+                retrieved_user.setNum_tel(esiste.getString("NUM_TEL"));
+                retrieved_user.setSimp(esiste.getBoolean("SIMP"));
+                retrieved_user.setUsername(esiste.getString("USERNAME"));
+                retrieved_user.setAtt1(esiste.getBoolean("ATT1"));
+                retrieved_user.setAtt2(esiste.getBoolean("ATT2"));
+                retrieved_user.setAtt3(esiste.getBoolean("ATT3"));
+
+                System.out.println(retrieved_user.getNome());
+
+
+                output.add(retrieved_user); //metto dentro array di user x mandare in output
             }
 
 
-        } catch (SQLException e) {
+        }catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
@@ -86,13 +83,9 @@ public class utentiServlet extends HttpServlet {
             out.println(array);
             out.flush();
         } catch (IOException e) {
-            System.out.println("ERRORE BOH");
+            System.out.println("ERRORE IN OUTPUT JSON QUOTES");
             throw new RuntimeException(e);
         }
-
-
-
-
     }
 
     public void destroy() {

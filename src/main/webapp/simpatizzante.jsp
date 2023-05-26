@@ -27,7 +27,10 @@
 
 <div class="content">
   <h1>Dati Personali</h1>
+  <input class="cta" type="button" onclick="getUserData()">
+  <div id="display-user"></div>
   <%
+    /*
     String nome = (String) session.getAttribute("nome");
     String cognome = (String) session.getAttribute("cognome");
     String dob = (String) session.getAttribute("dob");
@@ -39,6 +42,7 @@
     out.print("<p><span>Email: </span>" + email+"</p>");
     out.print("<p><span>Telefono: </span>" + tel+"</p>");
     out.print("<p><span>Username: </span>" + ses+"</p>");
+     */
   %>
   <br><br><hr><br><br>
   <form action="" onsubmit="confermaAtt()" method="POST" class="form">
@@ -59,15 +63,36 @@
   </form>
 </div>
 
-<%
-
-
-
-
-%>
-
 
 </div>
 <jsp:include page="sezioni/footer.jsp"/>
 </body>
 </html>
+
+<script>
+  function getUserData() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "retrieveUserData", true);
+    xhttp.responseType = "json";
+
+    xhttp.onload = function () {
+      //se ok prendo risposta
+      if (this.status = 200) {
+        let my_JSON_array = this.response;
+        if (my_JSON_array === null) {
+          document.getElementById("display-user").innerHTML = "No data avaiable - No USER 404";
+        } else if (my_JSON_array.length > 0) {
+          let current_JSON_object = JSON.parse(my_JSON_array[0]);
+          for (let key in current_JSON_object) {
+            document.getElementById("display-user").innerHTML = current_JSON_object[key]; //stampo valore
+          }
+        }
+      } else {
+        document.getElementById("display-user").innerHTML = "Connection error";
+      }
+
+    }
+
+    xhttp.send();
+  }
+</script>
