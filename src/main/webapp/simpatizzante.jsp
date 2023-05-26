@@ -27,7 +27,8 @@
 
 <div class="content">
   <h1>Dati Personali</h1>
-  <input class="cta" type="button" onclick="getUserData()">
+  <input class="cta" type="button" onclick="getUserData()" value="Dati Personali">
+  <input class="cta" type="button" onclick="reset()" value="Reset">
   <div id="display-user">
     <p id="nome"></p>
     <p id="cognome"></p>
@@ -83,8 +84,9 @@
         } else if (my_JSON_array.length > 0) {
 
           let current_JSON_object = JSON.parse(my_JSON_array[0]);
+          document.getElementById("display-user").style.display="block";
           for (let key in current_JSON_object) {
-            document.getElementById(key).innerHTML = current_JSON_object[key];
+            document.getElementById(key).innerHTML = key.toLocaleUpperCase()+":"+current_JSON_object[key];
 
           }
         }
@@ -95,5 +97,9 @@
     }
 
     xhttp.send();
+  }
+
+  function reset(){
+    document.getElementById("display-user").style.display="none";
   }
 </script>

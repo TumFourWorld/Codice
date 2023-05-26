@@ -9,11 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="commit">
+    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="simp stampa">
+      <change afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/emailServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/retrieveUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/retrieveUserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sezioni/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sezioni/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +183,8 @@
       <workItem from="1684935474201" duration="12450000" />
       <workItem from="1684960422267" duration="5860000" />
       <workItem from="1685008261363" duration="5020000" />
-      <workItem from="1685126213120" duration="2911000" />
+      <workItem from="1685126213120" duration="2971000" />
+      <workItem from="1685140457980" duration="3892000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -373,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685127188930</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="simp stampa">
+      <created>1685129269620</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1685129269620</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,6 +461,7 @@
     <MESSAGE value="fix" />
     <MESSAGE value="registrazione fix" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="simp stampa" />
+    <option name="LAST_COMMIT_MESSAGE" value="simp stampa" />
   </component>
 </project>
