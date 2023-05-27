@@ -47,15 +47,31 @@ function checkCognome(cognome){
         return true;
     }
 }
+
+function check18(data){
+    var currentDate = new Date();
+    var inputDate = new Date(data);
+    var age = currentDate.getFullYear() - inputDate.getFullYear();
+    var monthDiff = currentDate.getMonth() - inputDate.getMonth();
+    var dayDiff = currentDate.getDate() - inputDate.getDate();
+
+    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+        age--;
+    }
+
+    return age >= 18;
+}
 function checkData(data){
     if(data===""){
         alert("Il campo data è vuoto");
         return false
     }
-    else
-    {
-        return true;
+    if(!check18(data)){
+        alert("Sei minorenne , non puoi iscriverti al sito");
+        return false;
     }
+    return true;
+
 }
 function checkEmail(email){
     if(email===""){
@@ -161,8 +177,7 @@ function makeRegistration(nome,cognome,data_nascita,email,num_tel,simp,username,
         if (this.status === 200 && this.readyState === 4) {
             let new_risposta = this.responseText;
             if (new_risposta === "success") {
-                alert("Registrazione effettuata con successo!");
-                window.location.href = 'index.jsp';
+                window.location.href = 'regConfermata.jsp';
             } else if (new_risposta === "user_existing") {
                 alert("Utente già registrato")
                 window.location.href = 'registrazione.jsp';

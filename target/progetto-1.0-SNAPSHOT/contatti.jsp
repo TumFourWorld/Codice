@@ -21,7 +21,7 @@
                 Subject : "Motivo : "+motivo+"",
                 Body : "Nome : "+nome+" -- Cognome : "+cognome+" -- Messaggio : "+text+""
             }).then(
-                message => alert(message)
+                window.location.href = 'mailInviata.jsp'
             );
         }
     </script>
