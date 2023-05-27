@@ -61,7 +61,7 @@ public class retrieveUserData extends HttpServlet {
                 */
 
 
-                System.out.println(retrieved_user.getNome());
+                //System.out.println(retrieved_user.getNome());
 
 
                 output.add(retrieved_user); //metto dentro array di user x mandare in output

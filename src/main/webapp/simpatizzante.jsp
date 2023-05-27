@@ -58,31 +58,9 @@
   <input class="cta" type="button" onclick="reset()" value="Reset">
   <div id="display-user">
     <table id="table-output"></table>
-    <p id="nome"></p>
-    <p id="cognome"></p>
-    <p id="data_nascita"></p>
-    <p id="email"></p>
-    <p id="num_tel"></p>
-    <p id="username"></p>
-    <p id="att1"></p>
-    <p id="att2"></p>
-    <p id="att3"></p>
+
   </div>
-  <%
-    /*
-    String nome = (String) session.getAttribute("nome");
-    String cognome = (String) session.getAttribute("cognome");
-    String dob = (String) session.getAttribute("dob");
-    String email = (String) session.getAttribute("email");
-    String tel = (String) session.getAttribute("tel");
-    out.print("<p><span>Nome: </span>" + nome+"</p>");
-    out.print("<p><span>Cognome: </span>" + cognome+"</p>");
-    out.print("<p><span>Data di nascita: </span>" + dob+"</p>");
-    out.print("<p><span>Email: </span>" + email+"</p>");
-    out.print("<p><span>Telefono: </span>" + tel+"</p>");
-    out.print("<p><span>Username: </span>" + ses+"</p>");
-     */
-  %>
+
   <br><br><hr><br><br>
 
 

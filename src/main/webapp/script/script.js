@@ -197,3 +197,6 @@ function makeRegistration(nome,cognome,data_nascita,email,num_tel,simp,username,
     xhttp.send();
 
 }
+
+
+
