@@ -60,7 +60,7 @@ public class iscrizioneAtt extends HttpServlet {
 
             if (rowsAffected > 0) {
                 System.out.println("ISCRITTO AD ATTIVITA CON SUCCESSO");
-                response.sendRedirect("login.jsp");
+                response.sendRedirect("attivita.jsp");
             } else {
                 System.out.println("UTENTE NON TROVATO - NON ISCRITTO AD ATTIVITA");
                 response.sendRedirect("login.jsp");

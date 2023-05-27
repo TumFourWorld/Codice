@@ -25,7 +25,7 @@ public class loginServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 
         String user = request.getParameter("username");
@@ -59,15 +59,16 @@ public class loginServlet extends HttpServlet {
                     session.setAttribute("tel", tel);
                     session.setAttribute("simp", simp);
                     session.setAttribute("admin", amm);
-                    response.sendRedirect("index.jsp");
+
+                    response.getWriter().write("success");
                 }
                 else{
                     System.out.println("ESISTE MA HAI SBAGLIATO LA PSW");
-                    response.sendRedirect("login.jsp");
+                    response.getWriter().write("psw_err");
                 }
             }else{
                 System.out.println("NON ESISTE L'USER");
-                response.sendRedirect("login.jsp");
+                response.getWriter().write("user_not_existing");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

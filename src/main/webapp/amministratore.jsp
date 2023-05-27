@@ -72,7 +72,7 @@
   <input class="cta" type="button" onclick="stampa('aderenti')" value="Utenti Aderenti">
   <input class="cta" type="button" onclick="reset('aderenti')" value="Reset" >
   <br>
-  <div id="aderenti">
+  <div id="aderenti" style="width: 30%">
     <table id="aderenti-output"></table>
   </div>
 
