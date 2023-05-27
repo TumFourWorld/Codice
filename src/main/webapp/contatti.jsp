@@ -11,6 +11,20 @@
     <title>TUM4WORLD</title>
     <link rel="icon" href="img/Logo.ico"/>
     <script src="script/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        function sendMail(nome,cognome,email,motivo,text) {
+            Email.send({
+                SecureToken : "90f62c4e-3fd6-46c7-9d46-31a32fd61556",
+                To : 'tum4world@nessunonoluogonoesiste.com',
+                From : ''+email+'',
+                Subject : "Motivo : "+motivo+"",
+                Body : "Nome : "+nome+" -- Cognome : "+cognome+" -- Messaggio : "+text+""
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
     <link href="css/info.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -18,17 +32,18 @@
 <jsp:include page="sezioni/header.jsp"/>
 <br>
 <div style=" justify-content: center;   align-items: center; display: flex;">
-    <form name="contactForm" action="#" class="form" >
+    <form name="contactForm" class="form" >
         <p class="title">Contattaci </p>
         <div class="flex">
-            <input name="nome" type="text" placeholder="nome" class="input">
+            <input id="nome" name="nome" type="text" placeholder="nome" class="input">
 
-            <input name="cognome" type="text" placeholder="cognome" class="input">
+            <input id="cognome" name="cognome" type="text" placeholder="cognome" class="input">
         </div>
 
-        <input name="email" type="text" placeholder="indirizzo email" class="input">
+        <input id="email" name="email" type="text" placeholder="indirizzo email" class="input">
 
-        <a>Motivo: </a> <select name="motiviContatto" id="motCont" class="select">
+        <a>Motivo: </a>
+        <select name="motiviContatto" id="motCont" class="select">
             <option value="lamentela">Lamentela</option>
             <option value="rimborso">Rimborso</option>
             <option value="informazioni">Informazioni</option>
@@ -39,8 +54,8 @@
         <textarea id="textarea" maxlength="" class="textarea"></textarea>
 
         <div class="flex">
-            <button name="submit" class="submit iscriviti" type="submit" onclick="ValidateEmail(document.contactForm.email)">Contattaci</button>
-            <button type="reset" class="submit reset">Reset</button>
+            <input name="submit" class="submit iscriviti" type="button" onclick="validateContact()" value="Contattaci">
+            <input type="reset" class="submit reset" value="Reset">
         </div>
     </form>
 </div>
