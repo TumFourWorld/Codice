@@ -18,14 +18,14 @@
 <br>
 
 <div style=" justify-content: center;   align-items: center; display: flex;">
-    <form method="POST" name="loginForm" action="loginServlet" class="form" style="width: 350px">
+    <form name="loginForm" class="form" style="width: 350px">
         <p class="title">Login </p>
 
-        <input name="username" type="text" placeholder="username" class="input">
+        <input name="username" type="text" placeholder="username" class="input" id="username">
 
-        <input name="password" type="password" placeholder="password" class="input">
+        <input name="password" type="password" placeholder="password" class="input" id="password">
 
-        <button action="HelloServlet" name="submit" class="submit login" type="submit">Loggati</button>
+        <input name="submit" class="submit login" type="button" onclick="login()" value="Loggati">
     </form>
 
 </div>
