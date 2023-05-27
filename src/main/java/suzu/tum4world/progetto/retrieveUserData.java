@@ -54,11 +54,14 @@ public class retrieveUserData extends HttpServlet {
                 retrieved_user.setEmail(esiste.getString("EMAIL"));
                 retrieved_user.setNum_tel(esiste.getString("NUM_TEL"));
                 retrieved_user.setUsername(esiste.getString("USERNAME"));
+                /*
                 retrieved_user.setAtt1(esiste.getBoolean("ATT1"));
                 retrieved_user.setAtt2(esiste.getBoolean("ATT2"));
                 retrieved_user.setAtt3(esiste.getBoolean("ATT3"));
+                */
 
-                System.out.println(retrieved_user.getNome());
+
+                //System.out.println(retrieved_user.getNome());
 
 
                 output.add(retrieved_user); //metto dentro array di user x mandare in output

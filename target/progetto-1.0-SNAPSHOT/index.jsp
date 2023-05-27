@@ -19,10 +19,8 @@
         <img src="https://i.imgur.com/PeHQeTp.png">
         </p> <!-- GIUSTO QUA GIU LE ZAMPE -->
     </div>
-<div class="sectionhome">
-    <div class="text">
         <jsp:include page="sezioni/frase.jsp"/>
-    </div>
+
 </div>
 <jsp:include page="sezioni/footer.jsp"/>
 </body>

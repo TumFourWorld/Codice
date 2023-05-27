@@ -12,6 +12,29 @@ function wrongPage() {
     window.history.back();
 }
 
+function ValidateData(inputText){
+    alert(inputText);
+    // it will accept two types of format yyyy-mm-dd and yyyy/mm/dd
+    let optimizedBirthday = inputText.replace(/-/g, "/");
+
+    //set date based on birthday at 01:00:00 hours GMT+0100 (CET)
+    let myBirthday = new Date(optimizedBirthday);
+
+    // set current day on 01:00:00 hours GMT+0100 (CET)
+    let currentDate = new Date().toJSON().slice(0,10)+' 01:00:00';
+
+    // calculate age comparing current date and borthday
+    let myAge = ~~((Date.now(currentDate) - myBirthday) / (31557600000));
+
+    if(myAge < 18) {
+        alert("Sei minorenne");
+        return false;
+    }else{
+        return true;
+    }
+
+}
+
 function containsUppercase(str) { /* controlla se contiene almeno una lettera maiuscola. se si ritrona true*/
     return /[A-Z]/.test(str);
 }
@@ -47,31 +70,15 @@ function checkCognome(cognome){
         return true;
     }
 }
-
-function check18(data){
-    var currentDate = new Date();
-    var inputDate = new Date(data);
-    var age = currentDate.getFullYear() - inputDate.getFullYear();
-    var monthDiff = currentDate.getMonth() - inputDate.getMonth();
-    var dayDiff = currentDate.getDate() - inputDate.getDate();
-
-    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-        age--;
-    }
-
-    return age >= 18;
-}
 function checkData(data){
     if(data===""){
         alert("Il campo data è vuoto");
-        return false;
+        return false
     }
-    if(!check18(data)){
-        alert("Sei minorenne , non puoi accedere al sito");
-        return false;
+    else
+    {
+        return true;
     }
-    return true;
-
 }
 function checkEmail(email){
     if(email===""){
@@ -109,24 +116,6 @@ function checkUser(user){
     }
 
     return true;
-}
-
-function checkMot(motivo){
-    if (motivo===""){
-        alert("Il campo motivo è vuoto");
-        return false;
-    }else {
-        return true;
-    }
-}
-
-function checkText(text){
-    if(text===""){
-        alert("Il campo dettagli è vuoto");
-        return false;
-    }else {
-        return true;
-    }
 }
 
 function checkPass(pass,psw){
@@ -195,10 +184,10 @@ function makeRegistration(nome,cognome,data_nascita,email,num_tel,simp,username,
         if (this.status === 200 && this.readyState === 4) {
             let new_risposta = this.responseText;
             if (new_risposta === "success") {
-                alert("28: Registrazione effettuata con successo!");
+                alert("Registrazione effettuata con successo!");
                 window.location.href = 'index.jsp';
             } else if (new_risposta === "user_existing") {
-                alert("28: Questo username è gia presente all'interno del database")
+                alert("Utente già registrato")
                 window.location.href = 'registrazione.jsp';
             }
         }
@@ -207,16 +196,4 @@ function makeRegistration(nome,cognome,data_nascita,email,num_tel,simp,username,
     xhttp.open("POST", url,false);
     xhttp.send();
 
-}
-
-function validateContact(){
-    let nome = document.getElementById("nome").value;
-    let cognome = document.getElementById("cognome").value;
-    let email = document.getElementById("email").value;
-    let motivo = document.getElementById("motCont").value;
-    let text = document.getElementById("textarea").value;
-
-    if(checkNome(nome) && checkCognome(cognome) && checkEmail(email) && checkMot(motivo) && checkText(text)){
-        sendMail(nome,cognome,email,motivo,text);
-    }
 }
