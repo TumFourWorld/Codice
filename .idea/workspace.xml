@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="mail fittizia">
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/WEB-INF/classes/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/WEB-INF/classes/META-INF/beans.xml" afterDir="false" />
+    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/script/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/script/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +182,7 @@
       <workItem from="1685008261363" duration="5020000" />
       <workItem from="1685126213120" duration="2971000" />
       <workItem from="1685140457980" duration="4050000" />
-      <workItem from="1685185383846" duration="6636000" />
+      <workItem from="1685185383846" duration="6840000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -394,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685193312528</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="commit">
+      <created>1685193501964</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1685193501964</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,10 +479,10 @@
     <MESSAGE value="boh" />
     <MESSAGE value="fix" />
     <MESSAGE value="registrazione fix" />
-    <MESSAGE value="commit" />
     <MESSAGE value="simp stampa" />
     <MESSAGE value="cambio amministratore simp ed header" />
     <MESSAGE value="mail fittizia" />
-    <option name="LAST_COMMIT_MESSAGE" value="mail fittizia" />
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>
