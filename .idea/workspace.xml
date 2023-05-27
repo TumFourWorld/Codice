@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="cambio tutto e grafo">
+    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="simpattizzante ajax getuser lmao">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/retrieveUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/retrieveUserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +191,8 @@
       <workItem from="1685008738388" duration="6313000" />
       <workItem from="1685029414176" duration="7873000" />
       <workItem from="1685099015027" duration="52000" />
-      <workItem from="1685108489938" duration="7147000" />
+      <workItem from="1685108489938" duration="8794000" />
+      <workItem from="1685129849581" duration="456000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -342,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685119028533</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="simpattizzante ajax getuser lmao">
+      <created>1685127111037</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1685127111037</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,7 +381,8 @@
     <MESSAGE value="ajax async rotto lmao" />
     <MESSAGE value="parse problem ig?" />
     <MESSAGE value="cambio tutto e grafo" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambio tutto e grafo" />
+    <MESSAGE value="simpattizzante ajax getuser lmao" />
+    <option name="LAST_COMMIT_MESSAGE" value="simpattizzante ajax getuser lmao" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
