@@ -27,8 +27,19 @@
 
 <div class="content">
   <h1>Dati Personali</h1>
-  <input class="cta" type="button" onclick="getUserData()">
-  <div id="display-user"></div>
+  <input class="cta" type="button" onclick="getUserData()" value="Dati Personali">
+  <input class="cta" type="button" onclick="reset()" value="Reset">
+  <div id="display-user">
+    <p id="nome"></p>
+    <p id="cognome"></p>
+    <p id="data_nascita"></p>
+    <p id="email"></p>
+    <p id="num_tel"></p>
+    <p id="username"></p>
+    <p id="att1"></p>
+    <p id="att2"></p>
+    <p id="att3"></p>
+  </div>
   <%
     /*
     String nome = (String) session.getAttribute("nome");
@@ -44,17 +55,6 @@
     out.print("<p><span>Username: </span>" + ses+"</p>");
      */
   %>
-  <br><br><hr><br><br>
-  <form action="" onsubmit="confermaAtt()" method="POST" class="form">
-    <input type="checkbox" id="att1" name="att1" value="att1">
-    <label for="att1">SENSIBILIZZAZIONE COMUNITÀ</label><br>
-    <input type="checkbox" id="att2" name="att2" value="att2">
-    <label for="att2">PULIZIA AMBIENTI MARINI</label><br>
-    <input type="checkbox" id="att3" name="att3" value="att3" checked>
-    <label for="att3">PRATICHE SOSTENIBILI</label><br><br>
-    <button type="submit" class="submit att" value="Submit">CONFERMA ATTIVITÀ</button>
-  </form>
-
   <br><br><hr><br><br>
 
 
@@ -82,9 +82,12 @@
         if (my_JSON_array === null) {
           document.getElementById("display-user").innerHTML = "No data avaiable - No USER 404";
         } else if (my_JSON_array.length > 0) {
+
           let current_JSON_object = JSON.parse(my_JSON_array[0]);
+          document.getElementById("display-user").style.display="block";
           for (let key in current_JSON_object) {
-            document.getElementById("display-user").innerHTML = current_JSON_object[key]; //stampo valore
+            document.getElementById(key).innerHTML = key.toLocaleUpperCase()+":"+current_JSON_object[key];
+
           }
         }
       } else {
@@ -94,5 +97,9 @@
     }
 
     xhttp.send();
+  }
+
+  function reset(){
+    document.getElementById("display-user").style.display="none";
   }
 </script>

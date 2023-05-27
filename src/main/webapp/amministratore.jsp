@@ -27,24 +27,27 @@
   <input class="cta" type="button" onclick="stampa('registrati')" value="Utenti Registrati" >
   <input class="cta" type="button" onclick="reset('registrati')" value="Reset" >
   <br>
-  <div id="registrati"></div>
-  <table id="registrati-output"></table>
+  <div id="registrati">
+    <table id="registrati-output"></table>
+  </div>
 
   <br>
 
   <input class="cta" type="button" onclick="stampa('simp')" value="Utenti Simp" >
   <input class="cta" type="button" onclick="reset('simp')" value="Reset" >
   <br>
-  <div id="simp"></div>
-  <table id="simp-output"></table>
+  <div id="simp">
+    <table id="simp-output"></table>
+  </div>
 
   <br>
 
   <input class="cta" type="button" onclick="stampa('aderenti')" value="Utenti Aderenti">
   <input class="cta" type="button" onclick="reset('aderenti')" value="Reset" >
   <br>
-  <div id="aderenti"></div>
-  <table id="aderenti-output"></table>
+  <div id="aderenti">
+    <table id="aderenti-output"></table>
+  </div>
 
 
   <br>
@@ -168,7 +171,10 @@
 
         Highcharts.chart('container', {
           chart: {
-            type: 'column'
+            type: 'column',
+            backgroundColor: "whitesmoke",
+            borderColor: "black",
+            borderWidth: 3
           },
           title: {
             text: 'Donazioni Tum4World'

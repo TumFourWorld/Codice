@@ -53,7 +53,6 @@ public class retrieveUserData extends HttpServlet {
                 retrieved_user.setData_nascita(esiste.getString("DATA_NASCITA"));
                 retrieved_user.setEmail(esiste.getString("EMAIL"));
                 retrieved_user.setNum_tel(esiste.getString("NUM_TEL"));
-                retrieved_user.setSimp(esiste.getBoolean("SIMP"));
                 retrieved_user.setUsername(esiste.getString("USERNAME"));
                 retrieved_user.setAtt1(esiste.getBoolean("ATT1"));
                 retrieved_user.setAtt2(esiste.getBoolean("ATT2"));
