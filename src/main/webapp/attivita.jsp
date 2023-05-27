@@ -20,15 +20,15 @@
         <form id="imageForm" style="margin: 0px" action="attivita_spec.jsp" method="post">
             <input type="hidden" name="option" id="selectedOption">
             <div class="column">
-                <img src="https://images.unsplash.com/photo-1572279696557-51fb559f67dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="ATTIVITÀ 1" class="image-button">
+                <img src="img/img-att1.png" alt="ATTIVITÀ 1" class="image-button">
                 <a href="#" onclick="selectImage('img1')"><div class="centered">SENSIBILIZZAZIONE COMUNITà</div></a>
             </div>
             <div class="column">
-                <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"  alt="ATTIVITÀ 2" class="image-button">
+                <img src="img/img-att2.png"  alt="ATTIVITÀ 2" class="image-button">
                 <a href="#" onclick="selectImage('img2')"><div class="centered">PULIZIA AMBIENTI MARINI</div></a>
             </div>
             <div class="column">
-                <img src="https://images.unsplash.com/photo-1657563495714-348f7d3d400c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"  alt="ATTIVITÀ 3" class="image-button">
+                <img src="img/img-att3.png"  alt="ATTIVITÀ 3" class="image-button">
                 <a href="#" onclick="selectImage('img3')"><div class="centered">PRATICHE SOSTENIBILI</div></a>
             </div>
          </form>

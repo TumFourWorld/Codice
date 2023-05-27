@@ -19,25 +19,25 @@
   %>
 
   <style>
-    table{
+    .output {
       margin-top: 30px  ;
       font-family: Lato;
       border-collapse: collapse;
       width: 100%;
     }
 
-    td,th {
+    .output td,.output th {
       border: 1px solid #ddd;
       padding: 8px;
       background-color: #24252a;
       color: whitesmoke;
     }
 
-    tr:nth-child(even){background-color: #f2f2f2;}
+    /*tr:nth-child(even){background-color: #f2f2f2;} */
 
-    tr:hover {background-color: #ddd;}
+    /* tr:hover {background-color: #ddd;} */
 
-    th {
+    .output th {
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
@@ -55,7 +55,7 @@
   <input class="cta" type="button" onclick="reset('registrati')" value="Reset" >
   <br>
   <div id="registrati">
-    <table id="registrati-output"></table>
+    <table id="registrati-output" class="output"></table>
   </div>
 
   <br>
@@ -64,7 +64,7 @@
   <input class="cta" type="button" onclick="reset('simp')" value="Reset" >
   <br>
   <div id="simp">
-    <table id="simp-output"></table>
+    <table id="simp-output" class="output"></table>
   </div>
 
   <br>
@@ -73,7 +73,7 @@
   <input class="cta" type="button" onclick="reset('aderenti')" value="Reset" >
   <br>
   <div id="aderenti" style="width: 30%">
-    <table id="aderenti-output"></table>
+    <table id="aderenti-output" class="output"></table>
   </div>
 
 

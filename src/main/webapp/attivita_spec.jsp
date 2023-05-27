@@ -11,19 +11,21 @@
     <title>TUM4WORLD</title>
     <link rel="icon" href="img/Logo.ico"/>
     <link href="css/attivita-spec.css" rel="stylesheet" type="text/css">
+    <script src="script/script.js"></script>
+
     <%
         String ses = (String) session.getAttribute("username");
         String selectedImage = request.getParameter("option");
         String immagine = "";
         String printText = "";
         if("img1".equals(selectedImage)) {
-            immagine = "img/att1-img1.png";
+            immagine = "img/img-att1.png";
             printText = "<h2>Sensibilizzazione della comunità riguardo l'importanza della salvaguardia dell'ambiente marino</h2><p>L'associazione si impegna a sensibilizzare la comunità locale e nazionale sull'importanza di preservare l'ambiente marino. Ciò viene fatto attraverso la creazione di campagne di comunicazione, la partecipazione a eventi pubblici e la collaborazione con le istituzioni e le organizzazioni locali. L'obiettivo principale di questa attività è quello di educare la popolazione sulla necessità di agire con responsabilità nei confronti dell'ambiente marino, sottolineando l'importanza del mare come risorsa fondamentale per l'umanità.</p>";
         } else if("img2".equals(selectedImage)) {
-            immagine = "img/att1-img1.png";
+            immagine = "img/img-att2.png";
             printText = "<h2>La pulizia degli ambienti marini lottando contro l'inquinamento marino</h2><p>L'associazione organizza regolarmente pulizie delle spiagge, delle coste e dei fondali marini per combattere l'inquinamento marino. Ciò avviene attraverso l'organizzazione di eventi pubblici, in cui i volontari dell'associazione, insieme alla comunità locale, si impegnano nella pulizia dei luoghi interessati. L'obiettivo principale di questa attività è quello di ridurre l'impatto dell'inquinamento marino sulla fauna e sulla flora marina, salvaguardando l'ecosistema marino e promuovendo la sostenibilità ambientale</p>";
         } else if("img3".equals(selectedImage)) {
-            immagine = "img/att1-img1.png";
+            immagine = "img/img-att3.png";
             printText = "<h2>Promozione di pratiche sostenibili per la gestione e la tutela delle risorse marine</h2><p>L'associazione promuove la sostenibilità ambientale attraverso la promozione di pratiche sostenibili per la gestione e la tutela delle risorse marine. Ciò viene fatto attraverso la partecipazione a iniziative locali e internazionali, la promozione di buone pratiche, la collaborazione con enti pubblici e organizzazioni locali e l'organizzazione di campagne di sensibilizzazione. L'obiettivo principale di questa attività è quello di promuovere un uso sostenibile delle risorse marine, prevenendo il loro sfruttamento eccessivo e riducendo l'impatto negativo dell'attività umana sull'ambiente marino.</p>";
         }
     %>
@@ -38,6 +40,7 @@
         <div class="text-box">
         <%=printText%>
         <br><br><hr><br><br>
+            <input type="button" class='submit att' value="Torna Indietro" onclick="gobackAtt()">
     <%
         if(ses != null) {
             out.print("<button type='submit' class='submit att' value='Submit'>ISCRIVITI</button>");

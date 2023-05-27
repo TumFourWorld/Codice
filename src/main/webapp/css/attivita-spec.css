@@ -11,6 +11,9 @@ body {
 
 img {
     max-width: 320px;
+    max-height: 800px;
+    min-height: 600px;
+    object-fit: cover;
     float: left;
     border: 2px solid whitesmoke;
     border-radius: 18px;

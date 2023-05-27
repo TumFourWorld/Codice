@@ -232,3 +232,7 @@ function login(){
         makeLogin(username,password);
     }
 }
+
+function gobackAtt() {
+    window.location.href = 'attivita.jsp'
+}
