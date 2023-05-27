@@ -48,11 +48,23 @@
 #quotes-container {
    font-family: Lato;
     font-weight: 200;
+    margin: 20px auto 20px auto;
     color:whitesmoke;
+    display: flex;
+    /* justify-content: space-between; */
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: #24252a;
+    padding: 30px;
+    width: 50%;
+    border-radius: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
+
 
 
 </style>
