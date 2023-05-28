@@ -62,6 +62,17 @@
   </div>
 
   <br><br><hr><br><br>
+  <input class="cta" type="button" onclick="getAttivita()" value="Dati Personali" >
+  <form name="attivita" method="post" id="formAttivita" style="display: none;">
+    Sensibilizzazione Comunità<input type="checkbox" id="att1" name="att1" value="att1" <% /*if (att1.equals("true")) {out.print("checked");}*/  %>>
+    <br>
+    Pulizia Ambienti Marini<input type="checkbox" id="att2" name="att2" value="att2">
+    <br>
+    Pratiche Sostenibili<input type="checkbox" id="att3" name="att3" value="att3">
+    <br><br>
+    <input type="button"  class="simpAmm" value="Registrati" onclick="registraAttivita()">
+  </form>
+  <br><br><hr><br><br>
 
 
   <form method="POST" name="deleteUser" action="deleteUser" class="form">
@@ -76,6 +87,34 @@
 </html>
 
 <script>
+
+  function setAttivita(value) {
+
+  }
+
+
+  function getAttivita() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "retrieveAttivita", true);
+    xhttp.responseType = "json";
+
+    xhttp.onload = function () {
+      if (this.status = 200) {
+        let my_JSON_array = this.response;
+        document.getElementById("formAttivita").style.display="block";
+
+        if(my_JSON_array.length > 0) {
+          for(let i=0; i<my_JSON_array.length; i++) {
+            let current_JSON_object = JSON.parse(my_JSON_array[i]);
+            console.log(current_JSON_object);
+            console.log(current_JSON_object.get("att1"));
+          }
+        }
+      }
+    }
+    xhttp.send();
+  }
+
   function getUserData() {
     const xhttp = new XMLHttpRequest();
     xhttp.open("GET", "retrieveUserData", true);
