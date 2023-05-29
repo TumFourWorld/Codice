@@ -3,8 +3,7 @@
   <title>TUM4WORLD</title>
   <link rel="icon" href="img/Logo.ico"/>
   <link rel="stylesheet" href="css/private.css">
-  <script src="script/script.js"></script>
-  <%
+  <script src="script/script-private.js"></script>  <%
     String ses = (String) session.getAttribute("username");
     Boolean simp = (Boolean) session.getAttribute("simp");
     if(ses == null) {
@@ -20,30 +19,24 @@
 
 <div class="content">
   <h1>Dati Personali</h1>
-  <%
-    String nome = (String) session.getAttribute("nome");
-    String cognome = (String) session.getAttribute("cognome");
-    String dob = (String) session.getAttribute("dob");
-    String email = (String) session.getAttribute("email");
-    String tel = (String) session.getAttribute("tel");
-    out.print("<p><span>Nome: </span>" + nome+"</p>");
-    out.print("<p><span>Cognome: </span>" + cognome+"</p>");
-    out.print("<p><span>Data di nascita: </span>" + dob+"</p>");
-    out.print("<p><span>Email: </span>" + email+"</p>");
-    out.print("<p><span>Telefono: </span>" + tel+"</p>");
-    out.print("<p><span>Username: </span>" + ses+"</p>");
-  %>
-  <br><br><hr><br><br>
-  <form action="" onsubmit="confermaAtt()" method="POST" class="form">
-    <input type="checkbox" id="att1" name="att1" value="att1">
-    <label for="att1">SENSIBILIZZAZIONE COMUNITÀ</label><br>
-    <input type="checkbox" id="att2" name="att2" value="att2">
-    <label for="att2">PULIZIA AMBIENTI MARINI</label><br>
-    <input type="checkbox" id="att3" name="att3" value="att3" checked>
-    <label for="att3">PRATICHE SOSTENIBILI</label><br><br>
-    <button type="submit" class="submit att" value="Submit">CONFERMA ATTIVITÀ</button>
-  </form>
+  <input class="cta" type="button" onclick="getUserData()" value="Dati Personali">
+  <input class="cta" type="button" onclick="reset()" value="Reset">
+  <div id="display-user">
+    <table id="table-output"></table>
 
+  </div>
+
+  <br><br><hr><br><br>
+  <input class="cta" type="button" onclick="getAttivita()" value="Visualizza Iscrizioni" >
+  <form name="attivita" method="post" id="formAttivita" style="display: none;">
+    Sensibilizzazione Comunità<input type="checkbox" id="att1" name="att1">
+    <br>
+    Pulizia Ambienti Marini<input type="checkbox" id="att2" name="att2" >
+    <br>
+    Pratiche Sostenibili<input type="checkbox" id="att3" name="att3">
+    <br><br>
+    <input type="button"  class="simpAmm" value="Registrati" onclick="registraAttivita()">
+  </form>
   <br><br><hr><br><br>
 
   <h2>FAI UNA DONAZIONE PER SUPPORTARCI</h2>
@@ -56,9 +49,8 @@
   <br><br><hr><br><br>
 
 
-  <form method="POST" name="deleteUser" action="deleteUser" class="form">
-    <button action="deleteUser" name="submit" class="submit delete" type="submit">CANCELLA ISCRIZIONE</button>
-  </form>
+  <input type="button" class="submit delete" onclick="deleteUser()">CANCELLA ISCRIZIONE</input>
+
 </div>
 
 <script type="text/javascript">

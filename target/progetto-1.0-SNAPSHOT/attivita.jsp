@@ -11,8 +11,12 @@
     <title>TUM4WORLD</title>
     <link rel="icon" href="img/Logo.ico"/>
     <link href="css/attivita-main.css" rel="stylesheet" type="text/css">
+    <script src="script/script.js"></script>
 </head>
 <body>
+<script>
+    incrementa("attivita");
+</script>
 <jsp:include page="sezioni/header.jsp"/>
 <div class="content">
     <!--<h1><%= "ATTIVITÀ" %></h1>-->
