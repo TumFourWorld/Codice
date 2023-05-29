@@ -5,10 +5,13 @@
 <head>
     <title>TUM4WORLD</title>
     <link rel="icon" href="img/Logo.ico"/>
-
+    <script src="script/script.js"></script>
 </head>
 <jsp:include page="sezioni/header.jsp"/>
 <body>
+<script>
+    incrementa("home");
+</script>
 <img class="background">
     <div class="sectionhome">
         <div class="text">

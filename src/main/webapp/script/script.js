@@ -236,3 +236,29 @@ function login(){
 function gobackAtt() {
     window.location.href = 'attivita.jsp'
 }
+
+function incrementa(pagina){
+    let url = "visualServlet?pagina="+pagina;
+
+    //make request
+    const xhttp = new XMLHttpRequest();
+
+
+    /*xhttp.onload=function() {
+        if (this.status === 200 && this.readyState === 4) {
+            let risposta = this.responseText;
+            if (risposta === "success") {
+                window.location.href = 'index.jsp';
+            } else if (risposta === "psw_err") {
+                alert("Hai sbagliato la password");
+                window.location.href = 'login.jsp';
+            } else if(risposta === "user_not_existing"){
+                alert("Non esiste l'utente con questo username");
+                window.location.href = 'login.jsp';
+            }
+        }
+    }*/
+
+    xhttp.open("POST", url,false);
+    xhttp.send();
+}
