@@ -86,6 +86,7 @@
   <br><br><hr><br><br>
 
   <input class="cta" type="button" onclick="grafo()" value="Grafo">
+  <input class="cta" type="button" onclick="grafoVisual()" value="Grafo">
   <br><br>
   <div id="container" style="width:100%; height:600px;"></div>
 
@@ -232,6 +233,70 @@
           series: [{
             name : 'Donazioni',
             data: arrayDonazioni
+          }]
+        });
+      }
+    }
+  }
+
+  function grafoVisual(){
+    const xhttp= new XMLHttpRequest();
+
+    xhttp.open("GET","visualServlet");
+    xhttp.send();
+    xhttp.responseType="json";
+
+    xhttp.onload=function (){
+      if(xhttp.readyState=== 4 && xhttp.status===200){
+        var data = this.response;
+        var arrayVisual=[];
+        console.log(data);
+        for(let i=0;i<data.length;i++){
+          var data2=JSON.parse(data[i]);
+          arrayVisual.push(data2.visual);
+        }
+
+        Highcharts.chart('container', {
+          chart: {
+            type: 'column',
+            backgroundColor: "whitesmoke",
+            borderColor: "black",
+            borderWidth: 3
+          },
+          title: {
+            text: 'Visualizzazioni Tum4World'
+          },
+          subtitle: {
+            text: 'Visualizzazioni per pagina',
+          },
+          xAxis: {
+            categories: ["attivita", "att1", "att2", "att3", "contatti", "home", "info", "login", "registrazione", "simpatizzanmte", "aderente", "amministratore"],
+            crosshair: true
+          },
+          yAxis: {
+            min: 0,
+            title: {
+              text: 'Numero'
+            }
+          },
+
+          tooltip: {
+            headerFormat: '<span style="font-size:15px;padding: 50px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y}</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+          },
+          plotOptions: {
+            column: {
+              pointPadding: 0.3,
+              borderWidth: 0
+            }
+          },
+          series: [{
+            name : 'Visual',
+            data: arrayVisual
           }]
         });
       }

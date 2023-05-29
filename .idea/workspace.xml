@@ -10,8 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/VISUAL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/visualServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/attivita.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/attivita.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/script/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/script/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -191,6 +196,7 @@
       <workItem from="1684769089430" duration="359000" />
       <workItem from="1685129917329" duration="512000" />
       <workItem from="1685148833918" duration="17000" />
+      <workItem from="1685372523194" duration="7347000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -297,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685130101831</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="quotes spammabili in ogni paginaZZZ2">
+      <created>1685372545532</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685372545532</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +341,7 @@
     <MESSAGE value="teamwork is dreamwork (QUOTES FUNZIONANTI, PER ORA)" />
     <MESSAGE value="quotes spammabili in ogni pagina" />
     <MESSAGE value="quotes spammabili in ogni paginaZZZ" />
-    <option name="LAST_COMMIT_MESSAGE" value="quotes spammabili in ogni paginaZZZ" />
+    <MESSAGE value="quotes spammabili in ogni paginaZZZ2" />
+    <option name="LAST_COMMIT_MESSAGE" value="quotes spammabili in ogni paginaZZZ2" />
   </component>
 </project>
