@@ -92,7 +92,7 @@
     const xhttp = new XMLHttpRequest();
 
     let att1 = document.getElementById("att1").checked ? true : false;
-    let att2 = document.getElementById("att3").checked ? true : false;
+    let att2 = document.getElementById("att2").checked ? true : false;
     let att3 = document.getElementById("att3").checked ? true : false;
 
     let url = "processoAttivita?att1="+att1+"&att2="+att2+"&att3="+att3;
