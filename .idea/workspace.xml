@@ -10,10 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/singInServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/singInServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/contatti.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/contatti.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,6 +189,8 @@
       <workItem from="1684749924349" duration="8172000" />
       <workItem from="1684766319022" duration="739000" />
       <workItem from="1684769089430" duration="359000" />
+      <workItem from="1685129917329" duration="512000" />
+      <workItem from="1685148833918" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -289,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684763320775</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="quotes spammabili in ogni paginaZZZ">
+      <created>1685130101830</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685130101831</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +327,7 @@
     <MESSAGE value="teamwork is dreamwork" />
     <MESSAGE value="teamwork is dreamwork (QUOTES FUNZIONANTI, PER ORA)" />
     <MESSAGE value="quotes spammabili in ogni pagina" />
-    <option name="LAST_COMMIT_MESSAGE" value="quotes spammabili in ogni pagina" />
+    <MESSAGE value="quotes spammabili in ogni paginaZZZ" />
+    <option name="LAST_COMMIT_MESSAGE" value="quotes spammabili in ogni paginaZZZ" />
   </component>
 </project>
