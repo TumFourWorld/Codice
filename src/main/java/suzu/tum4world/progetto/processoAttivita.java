@@ -13,8 +13,8 @@ import java.io.PrintWriter;
 import java.sql.*;
 import java.util.ArrayList;
 
-@WebServlet(name = "retrieveUserData", value = "/retrieveUserData")
-public class retrieveUserData extends HttpServlet {
+@WebServlet(name = "processoAttivita", value = "/processoAttivita")
+public class processoAttivita extends HttpServlet {
 
     private String message;
     Connection connection;
@@ -45,24 +45,12 @@ public class retrieveUserData extends HttpServlet {
 
         try {
             Statement stmt = connection.createStatement();
-            ResultSet esiste = stmt.executeQuery("select * from UTENTE WHERE USERNAME='"+user+"'");
+            ResultSet esiste = stmt.executeQuery("select ATT1, ATT2, ATT3 from UTENTE WHERE USERNAME='"+user+"'");
             if(esiste.next()) {
                 USER retrieved_user = new USER();
-                retrieved_user.setNome(esiste.getString("NOME"));
-                retrieved_user.setCognome(esiste.getString("COGNOME"));
-                retrieved_user.setData_nascita(esiste.getString("DATA_NASCITA"));
-                retrieved_user.setEmail(esiste.getString("EMAIL"));
-                retrieved_user.setNum_tel(esiste.getString("NUM_TEL"));
-                retrieved_user.setUsername(esiste.getString("USERNAME"));
-                /*
                 retrieved_user.setAtt1(esiste.getBoolean("ATT1"));
                 retrieved_user.setAtt2(esiste.getBoolean("ATT2"));
                 retrieved_user.setAtt3(esiste.getBoolean("ATT3"));
-                */
-
-
-                //System.out.println(retrieved_user.getNome());
-
 
                 output.add(retrieved_user); //metto dentro array di user x mandare in output
             }
@@ -90,7 +78,36 @@ public class retrieveUserData extends HttpServlet {
         }
     }
 
-    public void destroy() {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        HttpSession session = request.getSession(true);
+        String user =(String) session.getAttribute("username");
+
+
+        Boolean att1 = (request.getParameter("att1") != null && request.getParameter("att1").equals("true")) ? true : false;
+        Boolean att2 = (request.getParameter("att2") != null && request.getParameter("att2").equals("true")) ? true : false;
+        Boolean att3 = (request.getParameter("att3") != null && request.getParameter("att3").equals("true")) ? true : false;
+
+        try {
+            String preparedQuery = "UPDATE UTENTE SET ATT1 = " + att1+ ", ATT2 = "+att2+", ATT3 = "+att3+"  WHERE USERNAME='"+user+"'";
+            PreparedStatement query = connection.prepareStatement(preparedQuery);
+
+            int rowsAffected = query.executeUpdate();
+            if(rowsAffected > 0) {
+                response.getWriter().write("success");
+            } else {
+                response.getWriter().write("failure");
+            }
+
+
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+
+        public void destroy() {
         try {
             connection.close();
             System.out.println("Connection closed.");

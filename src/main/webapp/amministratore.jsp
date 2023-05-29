@@ -18,6 +18,33 @@
     }
   %>
 
+  <style>
+    .output {
+      margin-top: 30px  ;
+      font-family: Lato;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .output td,.output th {
+      border: 1px solid #ddd;
+      padding: 8px;
+      background-color: #24252a;
+      color: whitesmoke;
+    }
+
+    /*tr:nth-child(even){background-color: #f2f2f2;} */
+
+    /* tr:hover {background-color: #ddd;} */
+
+    .output th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #00b1dc;
+    }
+  </style>
+
 </head>
 <jsp:include page="sezioni/header.jsp"/>
 <body>
@@ -27,24 +54,27 @@
   <input class="cta" type="button" onclick="stampa('registrati')" value="Utenti Registrati" >
   <input class="cta" type="button" onclick="reset('registrati')" value="Reset" >
   <br>
-  <div id="registrati"></div>
-  <table id="registrati-output"></table>
+  <div id="registrati">
+    <table id="registrati-output" class="output"></table>
+  </div>
 
   <br>
 
-  <input class="cta" type="button" onclick="stampa('simp')" value="Utenti Simp" >
+  <input class="cta" type="button" onclick="stampa('simp')" value="Utenti Simpatizzanti" >
   <input class="cta" type="button" onclick="reset('simp')" value="Reset" >
   <br>
-  <div id="simp"></div>
-  <table id="simp-output"></table>
+  <div id="simp">
+    <table id="simp-output" class="output"></table>
+  </div>
 
   <br>
 
   <input class="cta" type="button" onclick="stampa('aderenti')" value="Utenti Aderenti">
   <input class="cta" type="button" onclick="reset('aderenti')" value="Reset" >
   <br>
-  <div id="aderenti"></div>
-  <table id="aderenti-output"></table>
+  <div id="aderenti" style="width: 30%">
+    <table id="aderenti-output" class="output"></table>
+  </div>
 
 
   <br>
@@ -98,7 +128,6 @@
           table.removeChild(table.childNodes[0]);
         }
 
-        table.style.border="1px solid whitesmoke;"
 
         //display error if not existing
         if(my_JSON_array === null) {
@@ -108,8 +137,6 @@
         //if data preset
         if(my_JSON_array.length > 0) {
 
-          table.style.border = "1px solid red";
-
           //create header of table
           let thead = table.createTHead() ;
           let row = thead.insertRow();
@@ -117,7 +144,6 @@
           let header = ["Username"];
           for(let key of header) {
             let th = document.createElement("th");
-            th.style.border = "1px solid green";
 
             let text = document.createTextNode(key);
             th.appendChild(text);
@@ -131,7 +157,6 @@
 
             for(let key in current_JSON_object) {
               let cell = row.insertCell();
-              cell.style.border = "1px solid pink";
               let text = document.createTextNode((current_JSON_object[key]));
               cell.appendChild(text);
             }
@@ -168,7 +193,10 @@
 
         Highcharts.chart('container', {
           chart: {
-            type: 'column'
+            type: 'column',
+            backgroundColor: "whitesmoke",
+            borderColor: "black",
+            borderWidth: 3
           },
           title: {
             text: 'Donazioni Tum4World'

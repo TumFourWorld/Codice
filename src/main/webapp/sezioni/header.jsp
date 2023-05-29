@@ -37,7 +37,7 @@
             <li><a href="info.jsp">Chi Siamo</a></li>
             <li><a href="contatti.jsp">Contatti</a></li>
             <li><a href="attivita.jsp">Attivitá</a></li>
-            <li><a href="registrazione.jsp">Sign Up</a></li>
+
             <%
                 if(ses != null) {
                     Boolean simp = (Boolean) session.getAttribute("simp");
@@ -50,6 +50,8 @@
                     if(amm) {
                         out.print("<li><a href='amministratore.jsp'>Amministratore</a></li>");
                     }
+                }else {
+                    out.print("<li><a href='registrazione.jsp'>Sign Up</a></li>");
                 }
             %>
         </ul>

@@ -12,29 +12,6 @@ function wrongPage() {
     window.history.back();
 }
 
-function ValidateData(inputText){
-    alert(inputText);
-    // it will accept two types of format yyyy-mm-dd and yyyy/mm/dd
-    let optimizedBirthday = inputText.replace(/-/g, "/");
-
-    //set date based on birthday at 01:00:00 hours GMT+0100 (CET)
-    let myBirthday = new Date(optimizedBirthday);
-
-    // set current day on 01:00:00 hours GMT+0100 (CET)
-    let currentDate = new Date().toJSON().slice(0,10)+' 01:00:00';
-
-    // calculate age comparing current date and borthday
-    let myAge = ~~((Date.now(currentDate) - myBirthday) / (31557600000));
-
-    if(myAge < 18) {
-        alert("Sei minorenne");
-        return false;
-    }else{
-        return true;
-    }
-
-}
-
 function containsUppercase(str) { /* controlla se contiene almeno una lettera maiuscola. se si ritrona true*/
     return /[A-Z]/.test(str);
 }
@@ -70,15 +47,31 @@ function checkCognome(cognome){
         return true;
     }
 }
+
+function check18(data){
+    var currentDate = new Date();
+    var inputDate = new Date(data);
+    var age = currentDate.getFullYear() - inputDate.getFullYear();
+    var monthDiff = currentDate.getMonth() - inputDate.getMonth();
+    var dayDiff = currentDate.getDate() - inputDate.getDate();
+
+    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+        age--;
+    }
+
+    return age >= 18;
+}
 function checkData(data){
     if(data===""){
         alert("Il campo data è vuoto");
         return false
     }
-    else
-    {
-        return true;
+    if(!check18(data)){
+        alert("Sei minorenne , non puoi iscriverti al sito");
+        return false;
     }
+    return true;
+
 }
 function checkEmail(email){
     if(email===""){
@@ -156,6 +149,14 @@ function checkPass(pass,psw){
     return true;
 }
 
+function checkPass2(pass) {
+    if (pass === "") {
+        alert("Il campo password è vuoto");
+        return false
+    }
+    return true;
+}
+
 function validate() {
     let nome = document.getElementById("nome").value;
     let cognome = document.getElementById("cognome").value;
@@ -184,8 +185,7 @@ function makeRegistration(nome,cognome,data_nascita,email,num_tel,simp,username,
         if (this.status === 200 && this.readyState === 4) {
             let new_risposta = this.responseText;
             if (new_risposta === "success") {
-                alert("Registrazione effettuata con successo!");
-                window.location.href = 'index.jsp';
+                window.location.href = 'regConfermata.jsp';
             } else if (new_risposta === "user_existing") {
                 alert("Utente già registrato")
                 window.location.href = 'registrazione.jsp';
@@ -196,4 +196,43 @@ function makeRegistration(nome,cognome,data_nascita,email,num_tel,simp,username,
     xhttp.open("POST", url,false);
     xhttp.send();
 
+}
+
+function makeLogin(username,password){
+    let url = "loginServlet?username="+username+"&password="+password;
+
+    //make request
+    const xhttp = new XMLHttpRequest();
+
+
+    xhttp.onload=function() {
+        if (this.status === 200 && this.readyState === 4) {
+            let risposta = this.responseText;
+            if (risposta === "success") {
+                window.location.href = 'index.jsp';
+            } else if (risposta === "psw_err") {
+                alert("Hai sbagliato la password");
+                window.location.href = 'login.jsp';
+            } else if(risposta === "user_not_existing"){
+                alert("Non esiste l'utente con questo username");
+                window.location.href = 'login.jsp';
+            }
+        }
+    }
+
+    xhttp.open("GET", url,false);
+    xhttp.send();
+}
+
+function login(){
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if(checkUser(username) && checkPass2(password)){
+        makeLogin(username,password);
+    }
+}
+
+function gobackAtt() {
+    window.location.href = 'attivita.jsp'
 }

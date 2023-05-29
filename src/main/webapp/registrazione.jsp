@@ -38,6 +38,8 @@
         <div id="output"></div>
     </form>
 </div>
+<jsp:include page="sezioni/frase.jsp"/>
+
 <jsp:include page="sezioni/footer.jsp"/>
 </body>
 </html>
