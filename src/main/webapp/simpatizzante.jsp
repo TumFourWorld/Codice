@@ -118,27 +118,27 @@
     xhttp.responseType = "json";
 
     xhttp.onload = function () {
-      if (this.status = 200) {
+      if (this.status === 200) {
         let my_JSON_array = this.response;
         document.getElementById("formAttivita").style.display="block";
 
         if(my_JSON_array.length > 0) {
           let current_JSON_object = JSON.parse(my_JSON_array[0]);
           for(let key in current_JSON_object) {
-            if(key == 'att1') {
-              if(current_JSON_object[key]==true) {
+            if(key === 'att1') {
+              if(current_JSON_object[key]===true) {
                 let checkbox = document.getElementById("att1");
                 checkbox.checked = true;
               }
             }
-            if(key == 'att2') {
-              if(current_JSON_object[key]==true) {
+            if(key === 'att2') {
+              if(current_JSON_object[key]===true) {
                 let checkbox = document.getElementById("att2");
                 checkbox.checked = true;
               }
             }
-            if(key == 'att3') {
-              if(current_JSON_object[key]==true) {
+            if(key === 'att3') {
+              if(current_JSON_object[key]===true) {
                 let checkbox = document.getElementById("att3");
                 checkbox.checked = true;
               }

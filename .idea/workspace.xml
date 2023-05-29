@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="attivita in simpatizzante COMPLETATA" />
+    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="attivita in simpatizzante COMPLETATA + fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,7 +196,7 @@
       <workItem from="1685129849581" duration="456000" />
       <workItem from="1685180529910" duration="5680000" />
       <workItem from="1685208063878" duration="1973000" />
-      <workItem from="1685276516110" duration="6685000" />
+      <workItem from="1685276516110" duration="11500000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -398,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685355029884</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="attivita in simpatizzante COMPLETATA + fix">
+      <created>1685355099590</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1685355099590</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +447,8 @@
     <MESSAGE value="fix vari e bottoni vari + img" />
     <MESSAGE value="attivita in pagine private" />
     <MESSAGE value="attivita in simpatizzante COMPLETATA" />
-    <option name="LAST_COMMIT_MESSAGE" value="attivita in simpatizzante COMPLETATA" />
+    <MESSAGE value="attivita in simpatizzante COMPLETATA + fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="attivita in simpatizzante COMPLETATA + fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
