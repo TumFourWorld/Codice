@@ -94,3 +94,27 @@
 
 
 
+#table-output {
+    margin-top: 30px  ;
+    font-family: Lato;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table-output td, #table-output th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: #24252a;
+    color: whitesmoke;
+}
+
+#table-output tr:nth-child(even){background-color: #f2f2f2;}
+
+#table-output tr:hover {background-color: #ddd;}
+
+#table-output th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #00b1dc;
+}

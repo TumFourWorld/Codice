@@ -20,7 +20,7 @@
                 if (my_JSON_array === null) {
                     document.getElementById("quotes-container").innerHTML = "No data avaiable - No quotes 404";
                 } else if (my_JSON_array.length > 0) {
-                    let randomIndex = Math.floor(Math.random() * (my_JSON_array.length + 1)); //da 0 a array length
+                    let randomIndex = Math.floor(Math.random() * (my_JSON_array.length)); //da 0 a array length
                     //let current_JSON_object = JSON.parse(my_JSON_array[randomIndex]);
 
 

@@ -30,7 +30,11 @@ public class deleteUser extends HttpServlet {
         }
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) {
+        processrequest(request, response);
+    }
+
+    protected void processrequest(HttpServletRequest request, HttpServletResponse response) {
 
         //prendo username da session
         HttpSession session = request.getSession(true);
@@ -46,12 +50,14 @@ public class deleteUser extends HttpServlet {
             int rowsAffected = query.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("UTENTE ELIMINATO CON SUCCESSO");
-                response.sendRedirect("login.jsp");
+                //chiudo sessione lmao
+                session.invalidate();
+                response.getWriter().write("success");
             } else {
                 System.out.println("UTENTE NON TROVATO");
-                response.sendRedirect("login.jsp");
+                response.getWriter().write("failure");
             }
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
     }

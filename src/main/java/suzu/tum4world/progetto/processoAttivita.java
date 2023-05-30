@@ -94,6 +94,7 @@ public class processoAttivita extends HttpServlet {
 
             int rowsAffected = query.executeUpdate();
             if(rowsAffected > 0) {
+
                 response.getWriter().write("success");
             } else {
                 response.getWriter().write("failure");
