@@ -6,6 +6,39 @@
     <title>TUM4WORLD</title>
     <link rel="icon" href="img/Logo.ico"/>
     <script src="script/script.js"></script>
+
+    <style>
+        .cookie-consent {
+            position: fixed;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 250px;
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+            z-index: 9999;
+        }
+
+        .cookie-consent-content {
+            margin-bottom: 10px;
+        }
+
+        .cookie-consent-content span {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .cookie-consent-content button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <jsp:include page="sezioni/header.jsp"/>
 <body>
@@ -24,8 +57,45 @@
     </div>
         <jsp:include page="sezioni/frase.jsp"/>
 
+    <div id="cookieConsent" class="cookie-consent">
+        <div id="cookieConsentContent" class="cookie-consent-content">
+            <span>This website uses cookies to ensure you get the best experience.</span>
+            <button id="acceptCookies" onclick="acceptCookies('true')">Accept</button>
+            <button id="declineCookies" onclick="acceptCookies('false')">Decline</button>
+        </div>
+    </div>
+
 </div>
 <jsp:include page="sezioni/footer.jsp"/>
 </body>
 </html>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log(sessionStorage.getItem("cookieConsentContent"));
+        if (!sessionStorage.getItem("cookieConsentContent")) {
+            showCookiePopup();
+        } else {
+            document.getElementById("cookieConsent").style.display = "none";
+        }
+
+
+    });
+
+    function showCookiePopup() {
+        document.getElementById("cookieConsent").style.display = "block";
+
+    }
+
+    function acceptCookies(risposta) {
+        document.getElementById("cookieConsent").style.display = "none";
+        sessionStorage.setItem("cookieConsentContent", risposta);
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+            let risposta = this.responseText;
+        }
+        let url = "cookie?param="+risposta;
+        xhttp.open("GET",url , true);
+        xhttp.send();
+    }
+</script>
 

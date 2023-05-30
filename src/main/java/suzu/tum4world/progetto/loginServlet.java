@@ -25,6 +25,19 @@ public class loginServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
+
+    public String getCookieValue(HttpServletRequest request, String cookieName) {
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals(cookieName)) {
+                    return cookie.getValue();
+                }
+            }
+        }
+        // Cookie not found
+        return null;
+    }
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 
@@ -51,22 +64,36 @@ public class loginServlet extends HttpServlet {
                     Boolean simp = esiste.getBoolean("SIMP");
                     Boolean amm = esiste.getBoolean("ADMIN");
 
-                    /* metto valori in session */
-                    session.setAttribute("nome", nome);
-                    session.setAttribute("cognome", cognome);
-                    session.setAttribute("dob", dob);
-                    session.setAttribute("email", email);
-                    session.setAttribute("tel", tel);
-                    session.setAttribute("simp", simp);
-                    session.setAttribute("admin", amm);
+                    String myCookieValue = getCookieValue(request, "cookie");
+                    if(myCookieValue.equals("false")) {
+                        /* metto valori in session */
+                        session.setAttribute("nome", nome);
+                        session.setAttribute("cognome", cognome);
+                        session.setAttribute("dob", dob);
+                        session.setAttribute("email", email);
+                        session.setAttribute("tel", tel);
+                        session.setAttribute("simp", simp);
+                        session.setAttribute("admin", amm);
+                    }
+                    else {
 
-                    Cookie cookieUser = new Cookie("username", user);
-                    cookieUser.setMaxAge(3600);
-                    response.addCookie(cookieUser);
+                        session.setAttribute("nome", nome);
+                        session.setAttribute("cognome", cognome);
+                        session.setAttribute("dob", dob);
+                        session.setAttribute("email", email);
+                        session.setAttribute("tel", tel);
+                        session.setAttribute("simp", simp);
+                        session.setAttribute("admin", amm);
 
-                    Cookie cookiePsw = new Cookie("password", psw);
-                    cookiePsw.setMaxAge(3600);
-                    response.addCookie(cookiePsw);
+                        //setto i cookie
+                        Cookie cookieUser = new Cookie("username", user);
+                        cookieUser.setMaxAge(3600);
+                        response.addCookie(cookieUser);
+
+                        Cookie cookiePsw = new Cookie("password", psw);
+                        cookiePsw.setMaxAge(3600);
+                        response.addCookie(cookiePsw);
+                    }
 
 
                     response.getWriter().write("success");

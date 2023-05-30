@@ -48,7 +48,7 @@
   <br><br><hr><br><br>
 
 
-    <input type="button" class="submit delete" onclick="deleteUser()">CANCELLA ISCRIZIONE</input>
+    <input type="button" class="submit delete" onclick="deleteUser()"value="CANCELLA ISCRIZIONE" >
 </div>
 
 

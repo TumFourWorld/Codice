@@ -42,14 +42,14 @@
   <h2>FAI UNA DONAZIONE PER SUPPORTARCI</h2>
   <div id="importoTot"></div>
   Importo della donazione -> <input type="number" step="0.01" name="importo" id="importo">
-  <button type="submit" class="submit att" onclick="dona(document.getElementById('importo').value)" value="Submit">Invia donazione </button>
+  <br><br><button type="submit" class="submit att" onclick="dona(document.getElementById('importo').value)" value="Submit">Invia donazione </button>
   <br>
   <label id="msgDonazione" style="color: whitesmoke;padding: 5px;"></label>
 
   <br><br><hr><br><br>
 
 
-  <input type="button" class="submit delete" onclick="deleteUser()">CANCELLA ISCRIZIONE</input>
+  <input type="button" class="submit delete" onclick="deleteUser()" value="CANCELLA ISCRIZIONE">
 
 </div>
 

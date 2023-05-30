@@ -291,3 +291,19 @@ function validateContact(){
     }
 
 }
+
+function getCookie(nome){
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        const [cookieName, cookieValue] = cookie.split('=');
+
+        if (cookieName === nome) {
+            return decodeURIComponent(cookieValue);
+        }
+    }
+
+    // Cookie not found
+    return null;
+}
+
