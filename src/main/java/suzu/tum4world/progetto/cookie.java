@@ -19,6 +19,7 @@ public class cookie extends HttpServlet {
             Cookie checkCookie = new Cookie("cookie", "true");
             checkCookie.setMaxAge(3600);
             response.addCookie(checkCookie);
+            response.getWriter().write("accettati");
         }
         else {
             //cookie non accettati

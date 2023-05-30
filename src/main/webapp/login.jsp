@@ -6,6 +6,18 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    Boolean checkCookie=false;
+    Cookie[] cookies = request.getCookies();
+    if(cookies!=null){
+        for (Cookie cookie : cookies) {
+            if("cookie".equals(cookie.getName()))
+            {
+                checkCookie=Boolean.parseBoolean(cookie.getValue());
+            }
+        }
+    }
+%>
 <html>
 <head>
     <title>TUM4WORLD</title>
@@ -22,10 +34,9 @@
         <p class="title">Login </p>
 
         <input name="username" type="text" placeholder="username" class="input" id="username" value=<%
-        Cookie[] cookies = request.getCookies();
         if(cookies!=null){
             for (Cookie cookie : cookies) {
-                if ("username".equals(cookie.getName())) {
+                if ("username".equals(cookie.getName()) && checkCookie) {
                     String cookieValue = cookie.getValue();
                     // Process the cookie value as needed
                     out.println(cookieValue);
@@ -40,7 +51,7 @@
         <input name="password" type="password" placeholder="password" class="input" id="password" value=<%
         if(cookies!=null){
             for (Cookie cookie : cookies) {
-                if ("password".equals(cookie.getName())) {
+                if ("password".equals(cookie.getName()) && checkCookie) {
                     String cookieValue = cookie.getValue();
                     // Process the cookie value as needed
                     out.println(cookieValue);

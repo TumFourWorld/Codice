@@ -57,6 +57,7 @@
     </div>
         <jsp:include page="sezioni/frase.jsp"/>
 
+
     <div id="cookieConsent" class="cookie-consent">
         <div id="cookieConsentContent" class="cookie-consent-content">
             <span>This website uses cookies to ensure you get the best experience.</span>
@@ -71,8 +72,7 @@
 </html>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        console.log(sessionStorage.getItem("cookieConsentContent"));
-        if (!sessionStorage.getItem("cookieConsentContent")) {
+        if (!localStorage.getItem("cookie")) {
             showCookiePopup();
         } else {
             document.getElementById("cookieConsent").style.display = "none";
@@ -88,7 +88,7 @@
 
     function acceptCookies(risposta) {
         document.getElementById("cookieConsent").style.display = "none";
-        sessionStorage.setItem("cookieConsentContent", risposta);
+        localStorage.setItem("cookie", risposta);
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
             let risposta = this.responseText;

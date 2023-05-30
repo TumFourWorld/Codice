@@ -26,17 +26,17 @@ public class loginServlet extends HttpServlet {
         }
     }
 
-    public String getCookieValue(HttpServletRequest request, String cookieName) {
+    public boolean getCookieValue(HttpServletRequest request, String cookieName) {
         Cookie[] cookies = request.getCookies();
         if (cookies != null) {
             for (Cookie cookie : cookies) {
                 if (cookie.getName().equals(cookieName)) {
-                    return cookie.getValue();
+                    return true;
                 }
             }
         }
         // Cookie not found
-        return null;
+        return false;
     }
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
@@ -64,27 +64,16 @@ public class loginServlet extends HttpServlet {
                     Boolean simp = esiste.getBoolean("SIMP");
                     Boolean amm = esiste.getBoolean("ADMIN");
 
-                    String myCookieValue = getCookieValue(request, "cookie");
-                    if(myCookieValue.equals("false")) {
-                        /* metto valori in session */
-                        session.setAttribute("nome", nome);
-                        session.setAttribute("cognome", cognome);
-                        session.setAttribute("dob", dob);
-                        session.setAttribute("email", email);
-                        session.setAttribute("tel", tel);
-                        session.setAttribute("simp", simp);
-                        session.setAttribute("admin", amm);
-                    }
-                    else {
+                    /* metto valori in session */
+                    session.setAttribute("nome", nome);
+                    session.setAttribute("cognome", cognome);
+                    session.setAttribute("dob", dob);
+                    session.setAttribute("email", email);
+                    session.setAttribute("tel", tel);
+                    session.setAttribute("simp", simp);
+                    session.setAttribute("admin", amm);
 
-                        session.setAttribute("nome", nome);
-                        session.setAttribute("cognome", cognome);
-                        session.setAttribute("dob", dob);
-                        session.setAttribute("email", email);
-                        session.setAttribute("tel", tel);
-                        session.setAttribute("simp", simp);
-                        session.setAttribute("admin", amm);
-
+                    if(getCookieValue(request, "cookie")) {
                         //setto i cookie
                         Cookie cookieUser = new Cookie("username", user);
                         cookieUser.setMaxAge(3600);

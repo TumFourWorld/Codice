@@ -15,6 +15,7 @@
 
     <%
         String ses = (String) session.getAttribute("username");
+        Boolean admin = (Boolean) session.getAttribute("admin");
         String selectedImage = request.getParameter("option");
         String immagine = "";
         String printText = "";
@@ -42,7 +43,7 @@
         <br><br><hr><br><br>
             <input type="button" class='submit att' value="Torna Indietro" onclick="gobackAtt()">
     <%
-        if(ses != null) {
+        if(ses != null && !admin) {
             out.print("<button type='submit' class='submit att' value='Submit'>ISCRIVITI</button>");
         }
     %>

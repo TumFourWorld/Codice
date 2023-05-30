@@ -85,8 +85,12 @@
 
   <br><br><hr><br><br>
 
-  <input class="cta" type="button" onclick="grafo()" value="Grafo">
-  <input class="cta" type="button" onclick="grafoVisual()" value="Grafo">
+  <input class="cta" type="button" onclick="grafo()" value="Grafo Donazioni">
+  <input class="cta" type="button" onclick="reset('container')" value="Reset" >
+  <br> <br>
+  <input class="cta" type="button" onclick="grafoVisual()" value="Grafo Visite">
+  <input class="cta" type="button" onclick="reset('container')" value="Reset" >
+  <input class="cta" type="button" onclick="resetVisite()" value="ResetVisite" >
   <br><br>
   <div id="container" style="width:100%; height:600px;"></div>
 
@@ -98,6 +102,12 @@
 </body>
 </html>
 <script type="text/javascript">
+  function resetVisite(){
+    //make request
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "resetVisual",false);
+    xhttp.send();
+  }
   function reset(id){
     document.getElementById(id).style.display="none";
   }
@@ -173,6 +183,7 @@
 
 
   function grafo(){
+    document.getElementById('container').style.display="block";
     const xhttp= new XMLHttpRequest();
     let anno = new Date().getFullYear();
 
@@ -240,6 +251,7 @@
   }
 
   function grafoVisual(){
+    document.getElementById('container').style.display="block";
     const xhttp= new XMLHttpRequest();
 
     xhttp.open("GET","visualServlet");
