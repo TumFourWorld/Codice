@@ -62,6 +62,17 @@
   </div>
 
   <br><br><hr><br><br>
+  <input class="cta" type="button" onclick="getAttivita()" value="Visualizza Iscrizioni" >
+  <form name="attivita" method="post" id="formAttivita" style="display: none;">
+    Sensibilizzazione Comunità<input type="checkbox" id="att1" name="att1">
+    <br>
+    Pulizia Ambienti Marini<input type="checkbox" id="att2" name="att2" >
+    <br>
+    Pratiche Sostenibili<input type="checkbox" id="att3" name="att3">
+    <br><br>
+    <input type="button"  class="simpAmm" value="Registrati" onclick="registraAttivita()">
+  </form>
+  <br><br><hr><br><br>
 
 
   <form method="POST" name="deleteUser" action="deleteUser" class="form">
@@ -76,6 +87,70 @@
 </html>
 
 <script>
+
+  function registraAttivita(value) {
+    const xhttp = new XMLHttpRequest();
+
+    let att1 = document.getElementById("att1").checked ? true : false;
+    let att2 = document.getElementById("att2").checked ? true : false;
+    let att3 = document.getElementById("att3").checked ? true : false;
+
+    let url = "processoAttivita?att1="+att1+"&att2="+att2+"&att3="+att3;
+    xhttp.open("POST", url, true);
+
+    xhttp.onload = function () {
+      if (this.status = 200) {
+        let new_risposta = this.responseText;
+        if (new_risposta === 'success') {
+          alert("Registrazione ad attivita effettuata con successo");
+        } else if(new_risposta === 'failure'){
+          alert("Errore in registrazione, per favore ritenta");
+        }
+      }
+    }
+    xhttp.send();
+  }
+
+
+  function getAttivita() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "processoAttivita", true);
+    xhttp.responseType = "json";
+
+    xhttp.onload = function () {
+      if (this.status === 200) {
+        let my_JSON_array = this.response;
+        document.getElementById("formAttivita").style.display="block";
+
+        if(my_JSON_array.length > 0) {
+          let current_JSON_object = JSON.parse(my_JSON_array[0]);
+          for(let key in current_JSON_object) {
+            if(key === 'att1') {
+              if(current_JSON_object[key]===true) {
+                let checkbox = document.getElementById("att1");
+                checkbox.checked = true;
+              }
+            }
+            if(key === 'att2') {
+              if(current_JSON_object[key]===true) {
+                let checkbox = document.getElementById("att2");
+                checkbox.checked = true;
+              }
+            }
+            if(key === 'att3') {
+              if(current_JSON_object[key]===true) {
+                let checkbox = document.getElementById("att3");
+                checkbox.checked = true;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    xhttp.send();
+  }
+
   function getUserData() {
     const xhttp = new XMLHttpRequest();
     xhttp.open("GET", "retrieveUserData", true);
