@@ -250,7 +250,6 @@
       if(xhttp.readyState=== 4 && xhttp.status===200){
         var data = this.response;
         var arrayVisual=[];
-        console.log(data);
         for(let i=0;i<data.length;i++){
           var data2=JSON.parse(data[i]);
           arrayVisual.push(data2.visual);
