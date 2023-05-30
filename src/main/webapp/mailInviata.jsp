@@ -9,8 +9,7 @@
 <body>
 <jsp:include page="sezioni/header.jsp"/>
 <div class="content">
-  <h1>EMAIL MANDATA CON SUCCESSO</h1>
-  <jsp:include page="sezioni/frase.jsp"/>
+  <h1 style="padding-top:10%;text-align: center;margin: 10px;color:whitesmoke;font-family: Lato;font-size: 30px;">EMAIL MANDATA CON SUCCESSO</h1>
 
 </div>
 <jsp:include page="sezioni/footer.jsp"/>

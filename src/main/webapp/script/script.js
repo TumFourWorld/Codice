@@ -262,3 +262,32 @@ function incrementa(pagina){
     xhttp.open("POST", url,false);
     xhttp.send();
 }
+
+function checkMotivo(motivo){
+    if(motivo===""){
+        alert("Il campo motivo è vuoto");
+        return false;
+    }
+    return true;
+}
+
+function checkText(testo){
+    if(testo===""){
+        alert("La text area è vuota");
+        return false;
+    }
+    return true;
+}
+
+function validateContact(){
+    let nome = document.getElementById("nome").value;
+    let cognome = document.getElementById("cognome").value;
+    let email = document.getElementById("email").value;
+    let motivo = document.getElementById("motCont").value;
+    let testo = document.getElementById("textarea").value;
+
+    if(checkNome(nome) && checkCognome(cognome) && checkEmail(email) && checkMotivo(motivo) && checkText(testo)){
+        sendMail(nome,cognome,email,motivo,testo);
+    }
+
+}

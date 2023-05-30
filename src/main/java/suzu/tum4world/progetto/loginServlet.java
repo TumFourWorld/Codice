@@ -60,6 +60,15 @@ public class loginServlet extends HttpServlet {
                     session.setAttribute("simp", simp);
                     session.setAttribute("admin", amm);
 
+                    Cookie cookieUser = new Cookie("username", user);
+                    cookieUser.setMaxAge(3600);
+                    response.addCookie(cookieUser);
+
+                    Cookie cookiePsw = new Cookie("password", psw);
+                    cookiePsw.setMaxAge(3600);
+                    response.addCookie(cookiePsw);
+
+
                     response.getWriter().write("success");
                 }
                 else{

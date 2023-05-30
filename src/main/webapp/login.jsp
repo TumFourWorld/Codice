@@ -21,9 +21,37 @@
     <form name="loginForm" class="form" style="width: 350px">
         <p class="title">Login </p>
 
-        <input name="username" type="text" placeholder="username" class="input" id="username">
+        <input name="username" type="text" placeholder="username" class="input" id="username" value=<%
+        Cookie[] cookies = request.getCookies();
+        if(cookies!=null){
+            for (Cookie cookie : cookies) {
+                if ("username".equals(cookie.getName())) {
+                    String cookieValue = cookie.getValue();
+                    // Process the cookie value as needed
+                    out.println(cookieValue);
+                }
+            }
+        }
+        else {
+            out.println("");
+        }
+        %>>
 
-        <input name="password" type="password" placeholder="password" class="input" id="password">
+        <input name="password" type="password" placeholder="password" class="input" id="password" value=<%
+        if(cookies!=null){
+            for (Cookie cookie : cookies) {
+                if ("password".equals(cookie.getName())) {
+                    String cookieValue = cookie.getValue();
+                    // Process the cookie value as needed
+                    out.println(cookieValue);
+                }
+            }
+        }
+        else {
+            out.println("");
+        }
+        %>>
+
 
         <input name="submit" class="submit login" type="button" onclick="login()" value="Loggati">
     </form>
