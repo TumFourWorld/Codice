@@ -59,10 +59,10 @@
 
         xhttp.onload = function () {
             if (xhttp.readyState === 4 && xhttp.status === 200) {
-                var data = this.response;
+
             }
         }
-        xhttp.open("POST", "processoAttivita");
+        xhttp.open("POST", "processoAttivita?img="+selectedImage);
         xhttp.send();
     }
 

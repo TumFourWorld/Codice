@@ -10,7 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="fix incrementa views pagine">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/loginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/loginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/processoAttivita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/suzu/tum4world/progetto/processoAttivita.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/attivita_spec.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/attivita_spec.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +223,7 @@
       <workItem from="1685438099202" duration="7967000" />
       <workItem from="1685461759821" duration="6172000" />
       <workItem from="1685471714232" duration="9006000" />
-      <workItem from="1685524414533" duration="2854000" />
+      <workItem from="1685524414533" duration="6434000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -507,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685528413056</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="fix incrementa views pagine">
+      <created>1685528465211</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1685528465211</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

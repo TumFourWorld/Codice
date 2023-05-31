@@ -63,6 +63,10 @@ public class loginServlet extends HttpServlet {
                     String tel = esiste.getString("NUM_TEL");
                     Boolean simp = esiste.getBoolean("SIMP");
                     Boolean amm = esiste.getBoolean("ADMIN");
+                    Boolean att1 = esiste.getBoolean("ATT1");
+                    Boolean att2 = esiste.getBoolean("ATT2");
+                    Boolean att3 = esiste.getBoolean("ATT3");
+
 
                     /* metto valori in session */
                     session.setAttribute("nome", nome);
@@ -72,6 +76,9 @@ public class loginServlet extends HttpServlet {
                     session.setAttribute("tel", tel);
                     session.setAttribute("simp", simp);
                     session.setAttribute("admin", amm);
+                    session.setAttribute("att1",att1);
+                    session.setAttribute("att2",att2);
+                    session.setAttribute("att3",att3);
 
                     if(getCookieValue(request, "cookie")) {
                         //setto i cookie

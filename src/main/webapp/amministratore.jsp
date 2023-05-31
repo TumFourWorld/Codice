@@ -108,6 +108,7 @@
   function resetVisite(){
     //make request
     const xhttp = new XMLHttpRequest();
+
     xhttp.open("POST", "resetVisual",false);
     xhttp.send();
   }

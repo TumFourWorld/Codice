@@ -79,16 +79,17 @@ public class processoAttivita extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
-        HttpSession session = request.getSession(true);
-        String user =(String) session.getAttribute("username");
-
-
-        Boolean att1 = (request.getParameter("att1") != null && request.getParameter("att1").equals("true")) ? true : false;
-        Boolean att2 = (request.getParameter("att2") != null && request.getParameter("att2").equals("true")) ? true : false;
-        Boolean att3 = (request.getParameter("att3") != null && request.getParameter("att3").equals("true")) ? true : false;
-
         try {
+            HttpSession session = request.getSession(true);
+            String user =(String) session.getAttribute("username");
+
+
+
+            Boolean att1 = (request.getParameter("att1") != null && request.getParameter("att1").equals("true")) ? true : false;
+            Boolean att2 = (request.getParameter("att2") != null && request.getParameter("att2").equals("true")) ? true : false;
+            Boolean att3 = (request.getParameter("att3") != null && request.getParameter("att3").equals("true")) ? true : false;
+
+
             String preparedQuery = "UPDATE UTENTE SET ATT1 = " + att1+ ", ATT2 = "+att2+", ATT3 = "+att3+"  WHERE USERNAME='"+user+"'";
             PreparedStatement query = connection.prepareStatement(preparedQuery);
 
