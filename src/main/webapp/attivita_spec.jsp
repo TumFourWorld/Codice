@@ -41,8 +41,10 @@
         <div class="text-box">
         <%=printText%>
         <br><br><hr><br><br>
+            <input class='submit att' onclick="iscrizione('<%out.print(selectedImage);%>')" value="ISCRIVITI" type='<%if(ses != null && !admin){out.print("button");}else{out.print("hidden");}%>'>
+            <input class='submit att' onclick="disiscriviti('<%out.print(selectedImage);%>')" value="DISISCRIVITI" type='<%if(ses != null && !admin){out.print("button");}else{out.print("hidden");}%>'>
+            <br><br>
             <input type="button" class='submit att' value="Torna Indietro" onclick="gobackAtt()">
-            <input class='submit att' onclick="checkIscrizione('<%out.print(selectedImage);%>')" value="ISCRIVITI" type='<%if(ses != null && !admin){out.print("button");}else{out.print("hidden");}%>'>
         </div>
     </form>
 </div>
@@ -54,28 +56,33 @@
 </body>
 </html>
 <script>
-    function checkIscrizione(selectedImage) {
+    function iscrizione(selectedImage) {
         const xhttp = new XMLHttpRequest();
 
         xhttp.onload = function () {
             if (xhttp.readyState === 4 && xhttp.status === 200) {
-
+                if(this.responseText==="Iscritto"){
+                    alert("Ti sei iscritto all'attività ");
+                    gobackAtt();
+                }
             }
         }
-        xhttp.open("POST", "processoAttivita?img="+selectedImage);
+        xhttp.open("POST", "iscrizioneAtt?img-att="+selectedImage);
         xhttp.send();
     }
 
-    function checkIscrizione(selectedImage){
-        if(selectedImage.toString()==="img1") {
-            //selezione prima attività
-            alert("Ti sei iscritto all'attività 1");
-        } else if(selectedImage.toString()==="img2") {
-            //selezione prima attività
-            alert("Ti sei iscritto all'attività 2");
-        } else if(selectedImage.toString()==="img3") {
-            //selezione prima attività
-            alert("Ti sei iscritto all'attività 3");
+    function disiscriviti(selectedImage) {
+        const xhttp = new XMLHttpRequest();
+
+        xhttp.onload = function () {
+            if (xhttp.readyState === 4 && xhttp.status === 200) {
+                if(this.responseText==="Disiscritto"){
+                    alert("Ti sei disiscritto all'attività ");
+                    gobackAtt();
+                }
+            }
         }
+        xhttp.open("POST", "disiscrizioneAtt?img-att="+selectedImage);
+        xhttp.send();
     }
 </script>

@@ -18,6 +18,8 @@
             padding: 10px;
             text-align: center;
             z-index: 9999;
+            display: flex;
+            margin-top: 20%;
         }
 
         .cookie-consent-content {
@@ -72,7 +74,7 @@
 </html>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        if (!localStorage.getItem("cookie")) {
+        if (!sessionStorage.getItem("cookie")) {
             showCookiePopup();
         } else {
             document.getElementById("cookieConsent").style.display = "none";
@@ -88,7 +90,7 @@
 
     function acceptCookies(risposta) {
         document.getElementById("cookieConsent").style.display = "none";
-        localStorage.setItem("cookie", risposta);
+        sessionStorage.setItem("cookie", risposta);
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
             let risposta = this.responseText;

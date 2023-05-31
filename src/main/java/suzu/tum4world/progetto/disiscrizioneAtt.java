@@ -8,8 +8,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.*;
 
-@WebServlet(name = "iscrizioneAtt", value = "/iscrizioneAtt")
-public class iscrizioneAtt extends HttpServlet {
+@WebServlet(name = "disiscrizioneAtt", value = "/disiscrizioneAtt")
+public class disiscrizioneAtt extends HttpServlet {
 
     private String message;
     Connection connection;
@@ -42,13 +42,13 @@ public class iscrizioneAtt extends HttpServlet {
             }
             switch(img) {
                 case "img1":
-                    updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT1 = true WHERE t.USERNAME LIKE '"+user+"' ";
+                    updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT1 = false WHERE t.USERNAME LIKE '"+user+"' ";
                     break;
                 case "img2":
-                    updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT2 = true WHERE t.USERNAME LIKE '"+user+"' ";
+                    updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT2 = false WHERE t.USERNAME LIKE '"+user+"' ";
                     break;
                 case "img3":
-                    updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT3 = true WHERE t.USERNAME LIKE '"+user+"' ";
+                    updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT3 = false WHERE t.USERNAME LIKE '"+user+"' ";
                     break;
                 default:
                     System.out.println("ERRORE IN GET");
@@ -59,11 +59,11 @@ public class iscrizioneAtt extends HttpServlet {
             int rowsAffected = query.executeUpdate();
 
             if (rowsAffected > 0) {
-                System.out.println("ISCRITTO AD ATTIVITA CON SUCCESSO");
-                response.getWriter().write("Iscritto");
+                System.out.println("DISISCRITTO DALL' ATTIVITA CON SUCCESSO");
+                response.getWriter().write("Disiscritto");
             } else {
-                System.out.println("UTENTE NON TROVATO - NON ISCRITTO AD ATTIVITA");
-                response.getWriter().write("Non Iscritto");
+                System.out.println("UTENTE NON TROVATO - NON DISISCRITTO DALL' ATTIVITA");
+                response.getWriter().write("Non Disiscritto");
             }
 
         } catch (SQLException e) {
