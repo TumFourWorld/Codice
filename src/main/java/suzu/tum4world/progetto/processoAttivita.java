@@ -97,6 +97,10 @@ public class processoAttivita extends HttpServlet {
             if(rowsAffected > 0) {
 
                 response.getWriter().write("success");
+
+                request.getSession().setAttribute("att1",att1);
+                request.getSession().setAttribute("att2",att2);
+                request.getSession().setAttribute("att3",att3);
             } else {
                 response.getWriter().write("failure");
             }

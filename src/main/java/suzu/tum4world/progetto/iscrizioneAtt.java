@@ -43,12 +43,15 @@ public class iscrizioneAtt extends HttpServlet {
             switch(img) {
                 case "img1":
                     updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT1 = true WHERE t.USERNAME LIKE '"+user+"' ";
+                    request.getSession().setAttribute("att1",true);
                     break;
                 case "img2":
                     updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT2 = true WHERE t.USERNAME LIKE '"+user+"' ";
+                    request.getSession().setAttribute("att2",true);
                     break;
                 case "img3":
                     updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT3 = true WHERE t.USERNAME LIKE '"+user+"' ";
+                    request.getSession().setAttribute("att3",true);
                     break;
                 default:
                     System.out.println("ERRORE IN GET");

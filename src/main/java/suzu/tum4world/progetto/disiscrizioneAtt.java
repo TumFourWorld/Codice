@@ -43,12 +43,15 @@ public class disiscrizioneAtt extends HttpServlet {
             switch(img) {
                 case "img1":
                     updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT1 = false WHERE t.USERNAME LIKE '"+user+"' ";
+                    request.getSession().setAttribute("att1",false);
                     break;
                 case "img2":
                     updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT2 = false WHERE t.USERNAME LIKE '"+user+"' ";
+                    request.getSession().setAttribute("att2",false);
                     break;
                 case "img3":
                     updateQuery = "UPDATE PROVA.UTENTE t SET t.ATT3 = false WHERE t.USERNAME LIKE '"+user+"' ";
+                    request.getSession().setAttribute("att3",false);
                     break;
                 default:
                     System.out.println("ERRORE IN GET");
