@@ -22,6 +22,9 @@
   %>
 
 </head>
+<script>
+  incrementa("simpatizzante");
+</script>
 <jsp:include page="sezioni/header.jsp"/>
 <body>
 

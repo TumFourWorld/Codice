@@ -16,6 +16,9 @@
 </head>
 <jsp:include page="sezioni/header.jsp"/>
 <body>
+<script>
+  incrementa("aderente");
+</script>
 
 <div class="content">
   <h1>Dati Personali</h1>

@@ -35,18 +35,14 @@
 
 <body>
 <div class="wrapper">
-    <form action="iscrizioneAtt" method="POST" class="form">
+    <form class="form">
         <img src="<%=immagine%>">
         <input type="hidden" name="img-att" value="<%=selectedImage%>">
         <div class="text-box">
         <%=printText%>
         <br><br><hr><br><br>
             <input type="button" class='submit att' value="Torna Indietro" onclick="gobackAtt()">
-    <%
-        if(ses != null && !admin) {
-            out.print("<button type='submit' class='submit att' value='Submit'>ISCRIVITI</button>");
-        }
-    %>
+            <input class='submit att' onclick="checkIscrizione('<%out.print(selectedImage);%>')" value="ISCRIVITI" type='<%if(ses != null && !admin){out.print("button");}else{out.print("hidden");}%>'>
         </div>
     </form>
 </div>
@@ -57,3 +53,29 @@
 
 </body>
 </html>
+<script>
+    function checkIscrizione(selectedImage) {
+        const xhttp = new XMLHttpRequest();
+
+        xhttp.onload = function () {
+            if (xhttp.readyState === 4 && xhttp.status === 200) {
+                var data = this.response;
+            }
+        }
+        xhttp.open("POST", "processoAttivita");
+        xhttp.send();
+    }
+
+    function checkIscrizione(selectedImage){
+        if(selectedImage.toString()==="img1") {
+            //selezione prima attività
+            alert("Ti sei iscritto all'attività 1");
+        } else if(selectedImage.toString()==="img2") {
+            //selezione prima attività
+            alert("Ti sei iscritto all'attività 2");
+        } else if(selectedImage.toString()==="img3") {
+            //selezione prima attività
+            alert("Ti sei iscritto all'attività 3");
+        }
+    }
+</script>

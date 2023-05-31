@@ -11,9 +11,14 @@
     <title>TUM4WORLD</title>
     <link rel="icon" href="img/Logo.ico"/>
     <link rel="stylesheet" href="css/chiSiamo.css">
+    <script src="script/script.js"></script>
 </head>
 
+<script>
+    incrementa("info");
+</script>
 <body>
+
 <jsp:include page="sezioni/header.jsp"/>
     <div class="content">
         <h1>Come siamo nati?</h1>
