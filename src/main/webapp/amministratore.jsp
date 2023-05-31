@@ -48,6 +48,9 @@
 </head>
 <jsp:include page="sezioni/header.jsp"/>
 <body>
+<script>
+  incrementa("amministratore");
+</script>
 
 <div class="content">
   <h2>Visualizza Utenti</h2>
