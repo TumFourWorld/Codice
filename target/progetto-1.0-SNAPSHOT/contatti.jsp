@@ -13,6 +13,7 @@
     <script src="script/script.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="text/javascript">
+        incrementa("contatti");
         function sendMail(nome,cognome,email,motivo,text) {
             Email.send({
                 SecureToken : "90f62c4e-3fd6-46c7-9d46-31a32fd61556",

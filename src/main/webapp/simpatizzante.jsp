@@ -11,6 +11,7 @@
   <link rel="icon" href="img/Logo.ico"/>
   <link rel="stylesheet" href="css/private.css">
   <script src="script/script-private.js"></script>
+  <script src="script/script.js"></script>
   <%
     String ses = (String) session.getAttribute("username");
     Boolean simp = (Boolean) session.getAttribute("simp");

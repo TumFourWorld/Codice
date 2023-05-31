@@ -26,6 +26,9 @@
     <link href="css/info.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<script>
+    incrementa("login");
+</script>
 <jsp:include page="sezioni/header.jsp"/>
 <br>
 

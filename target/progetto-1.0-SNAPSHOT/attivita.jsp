@@ -48,6 +48,15 @@
 <%-- funzione che prende id immagine quando selezionata e fa submit del form in post --%>
 <script>
     function selectImage(option) {
+        if(option==="img1"){
+            incrementa("att1");
+        }
+        else if(option==="img2"){
+            incrementa("att2");
+        }
+        else if(option==="img3"){
+            incrementa("att3");
+        }
         document.getElementById('selectedOption').value = option;
         document.getElementById('imageForm').submit();
 

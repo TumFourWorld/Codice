@@ -7,6 +7,9 @@
     <script src="script/script.js"></script>
 
 </head>
+<script>
+    incrementa("registrazione");
+</script>
 <body>
 <jsp:include page="sezioni/header.jsp"/>
 <br>
