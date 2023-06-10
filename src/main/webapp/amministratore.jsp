@@ -3,6 +3,7 @@
   <title>TUM4WORLD</title>
   <link rel="icon" href="img/Logo.ico"/>
   <link rel="stylesheet" href="css/private.css">
+  <link rel="stylesheet" href="css/amm.css">
   <script src="script/script.js"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
 
@@ -47,7 +48,7 @@
 
 </head>
 <jsp:include page="sezioni/header.jsp"/>
-<body>
+<body class="amministratore">
 <script>
   incrementa("amministratore");
 </script>

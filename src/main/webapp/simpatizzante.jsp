@@ -10,6 +10,7 @@
   <title>TUM4WORLD</title>
   <link rel="icon" href="img/Logo.ico"/>
   <link rel="stylesheet" href="css/private.css">
+  <link rel="stylesheet" href="css/simp.css">
   <script src="script/script-private.js"></script>
   <script src="script/script.js"></script>
   <%
@@ -27,7 +28,7 @@
   incrementa("simpatizzante");
 </script>
 <jsp:include page="sezioni/header.jsp"/>
-<body>
+<body class="simp">
 
 <div class="content">
   <h1>Dati Personali</h1>

@@ -3,8 +3,10 @@
   <title>TUM4WORLD</title>
   <link rel="icon" href="img/Logo.ico"/>
   <link rel="stylesheet" href="css/private.css">
+  <link rel="stylesheet" href="css/aderente.css">
   <script src="script/script-private.js"></script>
-  <script src="script/script.js"></script> <%
+  <script src="script/script.js"></script>
+  <%
     String ses = (String) session.getAttribute("username");
     Boolean simp = (Boolean) session.getAttribute("simp");
     if(ses == null) {
@@ -16,7 +18,7 @@
 
 </head>
 <jsp:include page="sezioni/header.jsp"/>
-<body>
+<body class="aderente">
 <script>
   incrementa("aderente");
 </script>
