@@ -187,7 +187,7 @@ function makeRegistration(nome,cognome,data_nascita,email,num_tel,simp,username,
             if (new_risposta === "success") {
                 window.location.href = 'regConfermata.jsp';
             } else if (new_risposta === "user_existing") {
-                alert("Utente già registrato")
+                alert("28:Utente già registrato")
                 window.location.href = 'registrazione.jsp';
             }
         }
@@ -211,10 +211,10 @@ function makeLogin(username,password){
             if (risposta === "success") {
                 window.location.href = 'index.jsp';
             } else if (risposta === "psw_err") {
-                alert("Hai sbagliato la password");
+                alert("28:Hai sbagliato la password");
                 window.location.href = 'login.jsp';
             } else if(risposta === "user_not_existing"){
-                alert("Non esiste l'utente con questo username");
+                alert("28:Non esiste l'utente con questo username");
                 window.location.href = 'login.jsp';
             }
         }

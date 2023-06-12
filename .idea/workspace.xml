@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="fix donazioni">
+    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/registrazione.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registrazione.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/script/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/script/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/registrazione.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/registrazione.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,32 +71,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/manuv/DONAZIONI.csv&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.40804598&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
-    &quot;sql.rename.search.for.storage.occurrences&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "last_opened_file_path": "C:/Users/manuv/DONAZIONI.csv",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.40804598",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "sql.rename.search.for.storage.occurrences": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;derby&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "derby"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="suzu.tum4world.progetto" />
@@ -225,7 +226,7 @@
       <workItem from="1686400442553" duration="3678000" />
       <workItem from="1686411079054" duration="1816000" />
       <workItem from="1686513883893" duration="1815000" />
-      <workItem from="1686560359770" duration="2185000" />
+      <workItem from="1686560359770" duration="3168000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -563,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686562230313</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="fix">
+      <created>1686562598231</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1686562598231</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -626,7 +634,6 @@
     <MESSAGE value="totale donazioni" />
     <MESSAGE value="donazioni fixate" />
     <MESSAGE value="boh" />
-    <MESSAGE value="fix" />
     <MESSAGE value="registrazione fix" />
     <MESSAGE value="simp stampa" />
     <MESSAGE value="cambio amministratore simp ed header" />
@@ -646,6 +653,7 @@
     <MESSAGE value="cambio stile e colori per pagine priv" />
     <MESSAGE value="fix amministratore" />
     <MESSAGE value="fix donazioni" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix donazioni" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>
