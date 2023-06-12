@@ -35,7 +35,8 @@
 <div style=" justify-content: center;   align-items: center; display: flex;">
     <form name="contactForm" class="form" >
         <p class="title">Contattaci </p>
-        <p>Numero di Telefono </p>
+        <label>Numero di Telefono: 3205351132</label>
+        <label>Email : tum4world@nessunonoluogonoesiste.com</label>
         <div class="flex">
             <input id="nome" name="nome" type="text" placeholder="nome" class="input">
 

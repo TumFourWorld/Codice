@@ -62,9 +62,9 @@
 
     <div id="cookieConsent" class="cookie-consent">
         <div id="cookieConsentContent" class="cookie-consent-content">
-            <span>This website uses cookies to ensure you get the best experience.</span>
-            <button id="acceptCookies" onclick="acceptCookies('true')">Accept</button>
-            <button id="declineCookies" onclick="acceptCookies('false')">Decline</button>
+            <span>Questo sito Web utilizza i cookie per assicurarti un'esperienza migliore.</span>
+            <button id="acceptCookies" onclick="acceptCookies('true')">Accetta</button>
+            <button id="declineCookies" onclick="acceptCookies('false')">Rifiuta</button>
         </div>
     </div>
 
