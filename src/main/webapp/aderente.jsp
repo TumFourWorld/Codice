@@ -70,6 +70,10 @@
   };
 
   function dona(importo){
+    if(importo==="" || importo<=0){
+      alert("Importo non valido");
+      return;
+    }
     const xhttp= new XMLHttpRequest();
     xhttp.onload=function (){
     document.getElementById('msgDonazione').innerHTML=this.responseText;

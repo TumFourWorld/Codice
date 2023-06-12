@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="cambio stile e colori per pagine priv">
+    <list default="true" id="ad4ad19a-075c-4c9b-8472-007c6e374356" name="Changes" comment="fix amministratore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/progetto-1.0-SNAPSHOT/info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/aderente.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/aderente.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +225,7 @@
       <workItem from="1686400442553" duration="3678000" />
       <workItem from="1686411079054" duration="1816000" />
       <workItem from="1686513883893" duration="1815000" />
-      <workItem from="1686560359770" duration="1529000" />
+      <workItem from="1686560359770" duration="1828000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1684447787129</created>
@@ -551,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686403397385</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="fix amministratore">
+      <created>1686561910914</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1686561910914</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="modifiche stampa button amministratore" />
     <MESSAGE value="modifiche registrazione" />
     <MESSAGE value="cambio servlet init e destroy" />
     <MESSAGE value="donazioni" />
@@ -634,6 +638,7 @@
     <MESSAGE value="fix e bottone disiscriviti" />
     <MESSAGE value="fix bottone disiscriviti e modifica att in session" />
     <MESSAGE value="cambio stile e colori per pagine priv" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambio stile e colori per pagine priv" />
+    <MESSAGE value="fix amministratore" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix amministratore" />
   </component>
 </project>
