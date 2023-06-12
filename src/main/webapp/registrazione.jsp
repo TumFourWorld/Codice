@@ -35,7 +35,7 @@
         <input name="password" type="password" placeholder="password" class="input" id="psw">
         <input name="password" type="password" placeholder="ripeti password" class="input" id="pswcheck">
         <div class="flex">
-            <input id="make_query" class="submit iscriviti" value="iscriviti" onclick="validate()">
+            <input id="make_query" class="submit iscriviti" value="Iscriviti" onclick="validate()">
             <input type="reset" class="submit reset" value="Reset">
         </div>
         <div id="output"></div>
