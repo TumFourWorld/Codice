@@ -208,9 +208,13 @@ function makeLogin(username,password){
     xhttp.onload=function() {
         if (this.status === 200 && this.readyState === 4) {
             let risposta = this.responseText;
-            if (risposta === "success") {
-                window.location.href = 'index.jsp';
-            } else if (risposta === "psw_err") {
+            if (risposta === "successSimp") {
+                window.location.href = 'simpatizzante.jsp';
+            } else if(risposta==="successAderente"){
+                window.location.href = 'aderente.jsp';
+            } else if(risposta==="successAdmin"){
+                window.location.href = 'amministratore.jsp';
+            }else if (risposta === "psw_err") {
                 alert("28:Hai sbagliato la password");
                 window.location.href = 'login.jsp';
             } else if(risposta === "user_not_existing"){

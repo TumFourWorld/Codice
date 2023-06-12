@@ -47,22 +47,24 @@ public class utentiServlet extends HttpServlet {
             //PrintWriter out = response.getWriter();
             while (esiste.next()) {
                 USER retrieved_user = new USER();
-                if (parameter.equals("registrati")) {
-                    //TUTTI GLI UTENTI
-                    //out.write("<p>" + esiste.getString("USERNAME") + "</p>");
-                    retrieved_user.setUsername(esiste.getString("USERNAME"));
-                } else if (parameter.equals("simp")) {
-                    //tutti i simp
-                    if (esiste.getBoolean("SIMP")) {
-                        //SE SONO SIMP PRENDO TUTTI I SIMP
+                if (!esiste.getString("USERNAME").equals("admin")){
+                    if (parameter.equals("registrati")) {
+                        //TUTTI GLI UTENTI
                         //out.write("<p>" + esiste.getString("USERNAME") + "</p>");
                         retrieved_user.setUsername(esiste.getString("USERNAME"));
-                    }
-                } else if (parameter.equals("aderenti")) {
-                    if (!esiste.getBoolean("SIMP")) {
-                        //SE SONO ADERENTI PRENDO TUTTI ADERENTI
-                        //out.write("<p>" + esiste.getString("USERNAME") + "</p>");
-                        retrieved_user.setUsername(esiste.getString("USERNAME"));
+                    } else if (parameter.equals("simp")) {
+                        //tutti i simp
+                        if (esiste.getBoolean("SIMP")) {
+                            //SE SONO SIMP PRENDO TUTTI I SIMP
+                            //out.write("<p>" + esiste.getString("USERNAME") + "</p>");
+                            retrieved_user.setUsername(esiste.getString("USERNAME"));
+                        }
+                    } else if (parameter.equals("aderenti")) {
+                        if (!esiste.getBoolean("SIMP")) {
+                            //SE SONO ADERENTI PRENDO TUTTI ADERENTI
+                            //out.write("<p>" + esiste.getString("USERNAME") + "</p>");
+                            retrieved_user.setUsername(esiste.getString("USERNAME"));
+                        }
                     }
                 }
                 output.add(retrieved_user); //metto dentro array di USER

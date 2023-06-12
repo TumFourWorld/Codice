@@ -52,6 +52,7 @@
         </div>
     </form>
 </div>
+<jsp:include page="sezioni/frase.jsp"/>
 
 
 

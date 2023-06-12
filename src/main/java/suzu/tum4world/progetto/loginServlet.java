@@ -92,7 +92,15 @@ public class loginServlet extends HttpServlet {
                     }
 
 
-                    response.getWriter().write("success");
+                    if(amm){
+                        response.getWriter().write("successAdmin");
+                    }
+                    else if(simp){
+                        response.getWriter().write("successSimp");
+                    }
+                    else {
+                        response.getWriter().write("successAderente");
+                    }
                 }
                 else{
                     System.out.println("ESISTE MA HAI SBAGLIATO LA PSW");

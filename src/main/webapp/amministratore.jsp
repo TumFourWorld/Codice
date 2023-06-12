@@ -80,13 +80,6 @@
     <table id="aderenti-output" class="output"></table>
   </div>
 
-
-  <br>
-  <form method="POST" name="deleteUser" action="deleteUser" class="form">
-    <button action="deleteUser" name="submit" class="submit delete" type="submit">CANCELLA ISCRIZIONE</button>
-  </form>
-
-
   <br><br><hr><br><br>
 
   <input class="cta" type="button" onclick="grafo()" value="Grafo Donazioni">
@@ -267,9 +260,11 @@
       if(xhttp.readyState=== 4 && xhttp.status===200){
         var data = this.response;
         var arrayVisual=[];
+        var somma=0;
         for(let i=0;i<data.length;i++){
           var data2=JSON.parse(data[i]);
           arrayVisual.push(data2.visual);
+          somma+=data2.visual;
         }
 
         Highcharts.chart('container', {
@@ -283,7 +278,7 @@
             text: 'Visualizzazioni Tum4World'
           },
           subtitle: {
-            text: 'Visualizzazioni per pagina',
+            text: 'Visualizzazioni per pagina e visualizzazioni totali : '+somma,
           },
           xAxis: {
             categories: ["attivita", "att1", "att2", "att3", "contatti", "home", "info", "login", "registrazione", "simpatizzanmte", "aderente", "amministratore"],
