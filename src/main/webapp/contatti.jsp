@@ -35,7 +35,7 @@
 <div style=" justify-content: center;   align-items: center; display: flex;">
     <form name="contactForm" class="form" >
         <p class="title">Contattaci </p>
-        <label>Numero di Telefono: 3205351132</label>
+        <label>Numero di Telefono: 347 827 1289</label>
         <label>Email : tum4world@nessunonoluogonoesiste.com</label>
         <div class="flex">
             <input id="nome" name="nome" type="text" placeholder="nome" class="input">
