@@ -32,7 +32,6 @@
         <hr>
         <h1>dove siamo?</h1>
         <p>Dopo aver creato la prima sede a Trento, Tum 4 World ha rapidamente guadagnato un grande seguito e ha ricevuto diversi riconoscimenti per il suo impegno nella salvaguardia dell'ambiente marino. Grazie al successo ottenuto, l'associazione ha deciso di espandersi, creando altre 7 sedi in tutto il mondo. Ogni sede locale di T4W ha la sua autonomia e il suo team di volontari che si occupano di organizzare eventi e attività per sensibilizzare la comunità locale sulle problematiche ambientali che affliggono il mare. Queste attività includono pulizie delle spiagge e delle coste, incontri pubblici, conferenze, proiezioni di documentari, attività educative per le scuole e molto altro ancora.</p>
-        <p>Ogni sede locale di T4W ha la sua autonomia e il suo team di volontari che si occupano di organizzare eventi e attività per sensibilizzare la comunità locale sulle problematiche ambientali che affliggono il mare. Queste attività includono pulizie delle spiagge e delle coste, incontri pubblici, conferenze, proiezioni di documentari, attività educative per le scuole e molto altro ancora.</p>
 
         <jsp:include page="sezioni/frase.jsp"/>
 
