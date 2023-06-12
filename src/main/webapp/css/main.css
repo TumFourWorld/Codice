@@ -45,7 +45,6 @@ header {
 
 .sectionhome {
     display: flex;
-    /*justify-content: space-between;*/
     font-family: "Lato";
     text-align: left;
     background-color: #24252a;

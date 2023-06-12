@@ -129,7 +129,6 @@
       if(xhttp.readyState === done && xhttp.status === ok) {
         let my_JSON_array = this.response;
 
-        //roba brutte
         let tablename = id+"-output";
         let table = document.getElementById(tablename);
 

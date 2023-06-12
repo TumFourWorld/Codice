@@ -50,7 +50,7 @@ public class deleteUser extends HttpServlet {
             int rowsAffected = query.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("UTENTE ELIMINATO CON SUCCESSO");
-                //chiudo sessione lmao
+                //chiudo sessione
                 session.invalidate();
                 response.getWriter().write("success");
             } else {
